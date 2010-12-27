@@ -1,0 +1,296 @@
+--------------------------------------------------------------------------------------
+Timing Analyzer Summary
+--------------------------------------------------------------------------------------
+
+Type           : Worst-case tsu
+Slack          : -4.528 ns
+Required Time  : 1.000 ns
+Actual Time    : 5.528 ns
+From           : MAIN_CLK
+To             : altpll_reconfig1:inst7|altpll_reconfig1_pllrcfg_t4q:altpll_reconfig1_pllrcfg_t4q_component|idle_state
+From Clock     : --
+To Clock       : MAIN_CLK
+Failed Paths   : 6867
+
+Type           : Worst-case tco
+Slack          : -14.840 ns
+Required Time  : 1.000 ns
+Actual Time    : 15.840 ns
+From           : interrupt_handler:nobody|INT_LATCH[8]
+To             : nIRQ[5]
+From Clock     : MAIN_CLK
+To Clock       : --
+Failed Paths   : 4976
+
+Type           : Worst-case tpd
+Slack          : -11.944 ns
+Required Time  : 1.000 ns
+Actual Time    : 12.944 ns
+From           : nFB_CS1
+To             : FB_AD[18]
+From Clock     : --
+To Clock       : --
+Failed Paths   : 514
+
+Type           : Worst-case th
+Slack          : -0.401 ns
+Required Time  : 1.000 ns
+Actual Time    : 1.401 ns
+From           : FB_AD[25]
+To             : Video:Fredi_Aschwanden|VIDEO_MOD_MUX_CLUTCTR:VIDEO_MOD_MUX_CLUTCTR|VDL_HBE[9]
+From Clock     : --
+To Clock       : MAIN_CLK
+Failed Paths   : 117
+
+Type           : Clock Setup: 'CLK33M'
+Slack          : -5.966 ns
+Required Time  : 33.00 MHz ( period = 30.303 ns )
+Actual Time    : N/A
+From           : Video:Fredi_Aschwanden|lpm_fifoDZ:inst63|scfifo:scfifo_component|scfifo_lk21:auto_generated|a_dpfifo_oq21:dpfifo|altsyncram_gj81:FIFOram|ram_block1a1~portb_address_reg0
+To             : Video:Fredi_Aschwanden|lpm_muxDZ:inst62|lpm_mux:lpm_mux_component|mux_dcf:auto_generated|external_latency_ffsa[35]
+From Clock     : altpll3:inst13|altpll:altpll_component|altpll_41p2:auto_generated|clk[2]
+To Clock       : CLK33M
+Failed Paths   : 3741
+
+Type           : Clock Setup: 'altpll3:inst13|altpll:altpll_component|altpll_41p2:auto_generated|clk[2]'
+Slack          : -4.615 ns
+Required Time  : 24.98 MHz ( period = 40.033 ns )
+Actual Time    : N/A
+From           : Video:Fredi_Aschwanden|lpm_fifoDZ:inst63|scfifo:scfifo_component|scfifo_lk21:auto_generated|a_dpfifo_oq21:dpfifo|altsyncram_gj81:FIFOram|ram_block1a1~portb_address_reg0
+To             : Video:Fredi_Aschwanden|lpm_muxDZ:inst62|lpm_mux:lpm_mux_component|mux_dcf:auto_generated|external_latency_ffsa[35]
+From Clock     : altpll4:inst22|altpll:altpll_component|altpll_c6j2:auto_generated|clk[0]
+To Clock       : altpll3:inst13|altpll:altpll_component|altpll_41p2:auto_generated|clk[2]
+Failed Paths   : 3741
+
+Type           : Clock Setup: 'altpll4:inst22|altpll:altpll_component|altpll_c6j2:auto_generated|clk[0]'
+Slack          : -4.294 ns
+Required Time  : 95.92 MHz ( period = 10.425 ns )
+Actual Time    : N/A
+From           : Video:Fredi_Aschwanden|lpm_fifoDZ:inst63|scfifo:scfifo_component|scfifo_lk21:auto_generated|a_dpfifo_oq21:dpfifo|altsyncram_gj81:FIFOram|ram_block1a1~portb_address_reg0
+To             : Video:Fredi_Aschwanden|lpm_muxDZ:inst62|lpm_mux:lpm_mux_component|mux_dcf:auto_generated|external_latency_ffsa[35]
+From Clock     : altpll3:inst13|altpll:altpll_component|altpll_41p2:auto_generated|clk[2]
+To Clock       : altpll4:inst22|altpll:altpll_component|altpll_c6j2:auto_generated|clk[0]
+Failed Paths   : 3741
+
+Type           : Clock Setup: 'MAIN_CLK'
+Slack          : -4.261 ns
+Required Time  : 33.00 MHz ( period = 30.303 ns )
+Actual Time    : N/A
+From           : FB_ALE
+To             : FalconIO_SDCard_IDE_CF:Wolfgang_Foerster_and_Fredi_Aschwanden|dcfifo0:RDF|dcfifo_mixed_widths:dcfifo_mixed_widths_component|dcfifo_0hh1:auto_generated|a_graycounter_k47:rdptr_g1p|counter5a7
+From Clock     : altpll2:inst12|altpll:altpll_component|altpll_isv2:auto_generated|clk[1]
+To Clock       : MAIN_CLK
+Failed Paths   : 27347
+
+Type           : Clock Setup: 'altpll2:inst12|altpll:altpll_component|altpll_isv2:auto_generated|clk[0]'
+Slack          : -2.673 ns
+Required Time  : 132.01 MHz ( period = 7.575 ns )
+Actual Time    : N/A
+From           : FB_ALE
+To             : Video:Fredi_Aschwanden|DDR_CTR:DDR_CTR|BUS_CYC
+From Clock     : altpll2:inst12|altpll:altpll_component|altpll_isv2:auto_generated|clk[2]
+To Clock       : altpll2:inst12|altpll:altpll_component|altpll_isv2:auto_generated|clk[0]
+Failed Paths   : 86
+
+Type           : Clock Setup: 'altpll2:inst12|altpll:altpll_component|altpll_isv2:auto_generated|clk[4]'
+Slack          : -1.712 ns
+Required Time  : 66.00 MHz ( period = 15.151 ns )
+Actual Time    : N/A
+From           : FB_ALE
+To             : Video:Fredi_Aschwanden|DDR_CTR:DDR_CTR|CPU_REQ
+From Clock     : altpll2:inst12|altpll:altpll_component|altpll_isv2:auto_generated|clk[3]
+To Clock       : altpll2:inst12|altpll:altpll_component|altpll_isv2:auto_generated|clk[4]
+Failed Paths   : 29
+
+Type           : Clock Setup: 'altpll2:inst12|altpll:altpll_component|altpll_isv2:auto_generated|clk[3]'
+Slack          : 1.672 ns
+Required Time  : 132.01 MHz ( period = 7.575 ns )
+Actual Time    : N/A
+From           : Video:Fredi_Aschwanden|lpm_ff0:inst13|lpm_ff:lpm_ff_component|dffs[2]
+To             : Video:Fredi_Aschwanden|altddio_bidir0:inst1|altddio_bidir:altddio_bidir_component|ddio_bidir_3jl:auto_generated|ddio_outa[2]~DFFHI
+From Clock     : altpll2:inst12|altpll:altpll_component|altpll_isv2:auto_generated|clk[4]
+To Clock       : altpll2:inst12|altpll:altpll_component|altpll_isv2:auto_generated|clk[3]
+Failed Paths   : 0
+
+Type           : Clock Setup: 'altpll2:inst12|altpll:altpll_component|altpll_isv2:auto_generated|clk[1]'
+Slack          : 2.965 ns
+Required Time  : 132.01 MHz ( period = 7.575 ns )
+Actual Time    : Restricted to 500.00 MHz ( period = 2.000 ns )
+From           : Video:Fredi_Aschwanden|altddio_bidir0:inst1|altddio_bidir:altddio_bidir_component|ddio_bidir_3jl:auto_generated|input_cell_l[6]
+To             : Video:Fredi_Aschwanden|altddio_bidir0:inst1|altddio_bidir:altddio_bidir_component|ddio_bidir_3jl:auto_generated|input_latch_l[6]
+From Clock     : altpll2:inst12|altpll:altpll_component|altpll_isv2:auto_generated|clk[1]
+To Clock       : altpll2:inst12|altpll:altpll_component|altpll_isv2:auto_generated|clk[1]
+Failed Paths   : 0
+
+Type           : Clock Setup: 'altpll2:inst12|altpll:altpll_component|altpll_isv2:auto_generated|clk[2]'
+Slack          : 5.299 ns
+Required Time  : 132.01 MHz ( period = 7.575 ns )
+Actual Time    : N/A
+From           : Video:Fredi_Aschwanden|DDR_CTR:DDR_CTR|SR_VDMP[3]
+To             : Video:Fredi_Aschwanden|lpm_ff5:inst97|lpm_ff:lpm_ff_component|dffs[3]
+From Clock     : altpll2:inst12|altpll:altpll_component|altpll_isv2:auto_generated|clk[0]
+To Clock       : altpll2:inst12|altpll:altpll_component|altpll_isv2:auto_generated|clk[2]
+Failed Paths   : 0
+
+Type           : Clock Setup: 'altpll3:inst13|altpll:altpll_component|altpll_41p2:auto_generated|clk[1]'
+Slack          : 28.590 ns
+Required Time  : 15.99 MHz ( period = 62.552 ns )
+Actual Time    : 186.15 MHz ( period = 5.372 ns )
+From           : FalconIO_SDCard_IDE_CF:Wolfgang_Foerster_and_Fredi_Aschwanden|WF1772IP_TOP_SOC:I_FDC|WF1772IP_DIGITAL_PLL:I_DIGITAL_PLL|RD_In
+To             : FalconIO_SDCard_IDE_CF:Wolfgang_Foerster_and_Fredi_Aschwanden|WF1772IP_TOP_SOC:I_FDC|WF1772IP_DIGITAL_PLL:I_DIGITAL_PLL|\EDGEDETECT:LOCK
+From Clock     : altpll3:inst13|altpll:altpll_component|altpll_41p2:auto_generated|clk[1]
+To Clock       : altpll3:inst13|altpll:altpll_component|altpll_41p2:auto_generated|clk[1]
+Failed Paths   : 0
+
+Type           : Clock Setup: 'altpll3:inst13|altpll:altpll_component|altpll_41p2:auto_generated|clk[0]'
+Slack          : 498.663 ns
+Required Time  : 2.00 MHz ( period = 500.416 ns )
+Actual Time    : Restricted to 500.00 MHz ( period = 2.000 ns )
+From           : FalconIO_SDCard_IDE_CF:Wolfgang_Foerster_and_Fredi_Aschwanden|AMKB_REG[4]
+To             : FalconIO_SDCard_IDE_CF:Wolfgang_Foerster_and_Fredi_Aschwanden|AMKB_REG[0]
+From Clock     : altpll3:inst13|altpll:altpll_component|altpll_41p2:auto_generated|clk[0]
+To Clock       : altpll3:inst13|altpll:altpll_component|altpll_41p2:auto_generated|clk[0]
+Failed Paths   : 0
+
+Type           : Clock Setup: 'altpll1:inst|altpll:altpll_component|altpll_pul2:auto_generated|clk[0]'
+Slack          : 1997.239 ns
+Required Time  : 0.50 MHz ( period = 1999.998 ns )
+Actual Time    : 362.45 MHz ( period = 2.759 ns )
+From           : lpm_counter0:inst18|lpm_counter:lpm_counter_component|cntr_mph:auto_generated|counter_reg_bit[0]
+To             : lpm_counter0:inst18|lpm_counter:lpm_counter_component|cntr_mph:auto_generated|counter_reg_bit[17]
+From Clock     : altpll1:inst|altpll:altpll_component|altpll_pul2:auto_generated|clk[0]
+To Clock       : altpll1:inst|altpll:altpll_component|altpll_pul2:auto_generated|clk[0]
+Failed Paths   : 0
+
+Type           : Clock Hold: 'MAIN_CLK'
+Slack          : -3.786 ns
+Required Time  : 33.00 MHz ( period = 30.303 ns )
+Actual Time    : N/A
+From           : Video:Fredi_Aschwanden|VIDEO_MOD_MUX_CLUTCTR:VIDEO_MOD_MUX_CLUTCTR|VDL_VCT[6]
+To             : Video:Fredi_Aschwanden|VIDEO_MOD_MUX_CLUTCTR:VIDEO_MOD_MUX_CLUTCTR|VERZ[1][0]
+From Clock     : MAIN_CLK
+To Clock       : MAIN_CLK
+Failed Paths   : 108
+
+Type           : Clock Hold: 'CLK33M'
+Slack          : -0.687 ns
+Required Time  : 33.00 MHz ( period = 30.303 ns )
+Actual Time    : N/A
+From           : Video:Fredi_Aschwanden|lpm_fifoDZ:inst63|scfifo:scfifo_component|scfifo_lk21:auto_generated|a_dpfifo_oq21:dpfifo|low_addressa[6]
+To             : Video:Fredi_Aschwanden|lpm_fifoDZ:inst63|scfifo:scfifo_component|scfifo_lk21:auto_generated|a_dpfifo_oq21:dpfifo|low_addressa[6]
+From Clock     : CLK33M
+To Clock       : CLK33M
+Failed Paths   : 26
+
+Type           : Clock Hold: 'altpll3:inst13|altpll:altpll_component|altpll_41p2:auto_generated|clk[2]'
+Slack          : -0.454 ns
+Required Time  : 24.98 MHz ( period = 40.033 ns )
+Actual Time    : N/A
+From           : Video:Fredi_Aschwanden|lpm_fifoDZ:inst63|scfifo:scfifo_component|scfifo_lk21:auto_generated|a_dpfifo_oq21:dpfifo|low_addressa[6]
+To             : Video:Fredi_Aschwanden|lpm_fifoDZ:inst63|scfifo:scfifo_component|scfifo_lk21:auto_generated|a_dpfifo_oq21:dpfifo|low_addressa[6]
+From Clock     : altpll3:inst13|altpll:altpll_component|altpll_41p2:auto_generated|clk[2]
+To Clock       : altpll3:inst13|altpll:altpll_component|altpll_41p2:auto_generated|clk[2]
+Failed Paths   : 26
+
+Type           : Clock Hold: 'altpll3:inst13|altpll:altpll_component|altpll_41p2:auto_generated|clk[1]'
+Slack          : 0.502 ns
+Required Time  : 15.99 MHz ( period = 62.552 ns )
+Actual Time    : N/A
+From           : FalconIO_SDCard_IDE_CF:Wolfgang_Foerster_and_Fredi_Aschwanden|WF1772IP_TOP_SOC:I_FDC|WF1772IP_CONTROL:I_CONTROL|WG~_Duplicate_1
+To             : FalconIO_SDCard_IDE_CF:Wolfgang_Foerster_and_Fredi_Aschwanden|WF1772IP_TOP_SOC:I_FDC|WF1772IP_CONTROL:I_CONTROL|WG~_Duplicate_1
+From Clock     : altpll3:inst13|altpll:altpll_component|altpll_41p2:auto_generated|clk[1]
+To Clock       : altpll3:inst13|altpll:altpll_component|altpll_41p2:auto_generated|clk[1]
+Failed Paths   : 0
+
+Type           : Clock Hold: 'altpll2:inst12|altpll:altpll_component|altpll_isv2:auto_generated|clk[0]'
+Slack          : 0.502 ns
+Required Time  : 132.01 MHz ( period = 7.575 ns )
+Actual Time    : N/A
+From           : Video:Fredi_Aschwanden|lpm_fifo_dc0:inst|dcfifo:dcfifo_component|dcfifo_8fi1:auto_generated|a_graycounter_njc:wrptr_gp|counter13a[6]
+To             : Video:Fredi_Aschwanden|lpm_fifo_dc0:inst|dcfifo:dcfifo_component|dcfifo_8fi1:auto_generated|a_graycounter_njc:wrptr_gp|counter13a[6]
+From Clock     : altpll2:inst12|altpll:altpll_component|altpll_isv2:auto_generated|clk[0]
+To Clock       : altpll2:inst12|altpll:altpll_component|altpll_isv2:auto_generated|clk[0]
+Failed Paths   : 0
+
+Type           : Clock Hold: 'altpll4:inst22|altpll:altpll_component|altpll_c6j2:auto_generated|clk[0]'
+Slack          : 0.502 ns
+Required Time  : 95.92 MHz ( period = 10.425 ns )
+Actual Time    : N/A
+From           : Video:Fredi_Aschwanden|lpm_fifoDZ:inst63|scfifo:scfifo_component|scfifo_lk21:auto_generated|a_dpfifo_oq21:dpfifo|low_addressa[6]
+To             : Video:Fredi_Aschwanden|lpm_fifoDZ:inst63|scfifo:scfifo_component|scfifo_lk21:auto_generated|a_dpfifo_oq21:dpfifo|low_addressa[6]
+From Clock     : altpll4:inst22|altpll:altpll_component|altpll_c6j2:auto_generated|clk[0]
+To Clock       : altpll4:inst22|altpll:altpll_component|altpll_c6j2:auto_generated|clk[0]
+Failed Paths   : 0
+
+Type           : Clock Hold: 'altpll3:inst13|altpll:altpll_component|altpll_41p2:auto_generated|clk[0]'
+Slack          : 0.564 ns
+Required Time  : 2.00 MHz ( period = 500.416 ns )
+Actual Time    : N/A
+From           : FalconIO_SDCard_IDE_CF:Wolfgang_Foerster_and_Fredi_Aschwanden|AMKB_REG[4]
+To             : FalconIO_SDCard_IDE_CF:Wolfgang_Foerster_and_Fredi_Aschwanden|AMKB_REG[4]
+From Clock     : altpll3:inst13|altpll:altpll_component|altpll_41p2:auto_generated|clk[0]
+To Clock       : altpll3:inst13|altpll:altpll_component|altpll_41p2:auto_generated|clk[0]
+Failed Paths   : 0
+
+Type           : Clock Hold: 'altpll1:inst|altpll:altpll_component|altpll_pul2:auto_generated|clk[0]'
+Slack          : 0.825 ns
+Required Time  : 0.50 MHz ( period = 1999.998 ns )
+Actual Time    : N/A
+From           : lpm_counter0:inst18|lpm_counter:lpm_counter_component|cntr_mph:auto_generated|counter_reg_bit[10]
+To             : lpm_counter0:inst18|lpm_counter:lpm_counter_component|cntr_mph:auto_generated|counter_reg_bit[10]
+From Clock     : altpll1:inst|altpll:altpll_component|altpll_pul2:auto_generated|clk[0]
+To Clock       : altpll1:inst|altpll:altpll_component|altpll_pul2:auto_generated|clk[0]
+Failed Paths   : 0
+
+Type           : Clock Hold: 'altpll2:inst12|altpll:altpll_component|altpll_isv2:auto_generated|clk[2]'
+Slack          : 1.825 ns
+Required Time  : 132.01 MHz ( period = 7.575 ns )
+Actual Time    : N/A
+From           : Video:Fredi_Aschwanden|DDR_CTR:DDR_CTR|SR_VDMP[6]
+To             : Video:Fredi_Aschwanden|lpm_ff5:inst97|lpm_ff:lpm_ff_component|dffs[6]
+From Clock     : altpll2:inst12|altpll:altpll_component|altpll_isv2:auto_generated|clk[0]
+To Clock       : altpll2:inst12|altpll:altpll_component|altpll_isv2:auto_generated|clk[2]
+Failed Paths   : 0
+
+Type           : Clock Hold: 'altpll2:inst12|altpll:altpll_component|altpll_isv2:auto_generated|clk[4]'
+Slack          : 2.664 ns
+Required Time  : 66.00 MHz ( period = 15.151 ns )
+Actual Time    : N/A
+From           : FB_ALE
+To             : lpm_ff0:inst1|lpm_ff:lpm_ff_component|dffs[2]
+From Clock     : altpll2:inst12|altpll:altpll_component|altpll_isv2:auto_generated|clk[4]
+To Clock       : altpll2:inst12|altpll:altpll_component|altpll_isv2:auto_generated|clk[4]
+Failed Paths   : 0
+
+Type           : Clock Hold: 'altpll2:inst12|altpll:altpll_component|altpll_isv2:auto_generated|clk[3]'
+Slack          : 3.263 ns
+Required Time  : 132.01 MHz ( period = 7.575 ns )
+Actual Time    : N/A
+From           : Video:Fredi_Aschwanden|lpm_ff0:inst14|lpm_ff:lpm_ff_component|dffs[29]
+To             : Video:Fredi_Aschwanden|altddio_bidir0:inst1|altddio_bidir:altddio_bidir_component|ddio_bidir_3jl:auto_generated|ddio_outa[29]~DFFLO
+From Clock     : altpll2:inst12|altpll:altpll_component|altpll_isv2:auto_generated|clk[4]
+To Clock       : altpll2:inst12|altpll:altpll_component|altpll_isv2:auto_generated|clk[3]
+Failed Paths   : 0
+
+Type           : Clock Hold: 'altpll2:inst12|altpll:altpll_component|altpll_isv2:auto_generated|clk[1]'
+Slack          : 4.336 ns
+Required Time  : 132.01 MHz ( period = 7.575 ns )
+Actual Time    : N/A
+From           : Video:Fredi_Aschwanden|altddio_bidir0:inst1|altddio_bidir:altddio_bidir_component|ddio_bidir_3jl:auto_generated|input_cell_l[2]
+To             : Video:Fredi_Aschwanden|altddio_bidir0:inst1|altddio_bidir:altddio_bidir_component|ddio_bidir_3jl:auto_generated|input_latch_l[2]
+From Clock     : altpll2:inst12|altpll:altpll_component|altpll_isv2:auto_generated|clk[1]
+To Clock       : altpll2:inst12|altpll:altpll_component|altpll_isv2:auto_generated|clk[1]
+Failed Paths   : 0
+
+Type           : Total number of failed paths
+Slack          : 
+Required Time  : 
+Actual Time    : 
+From           : 
+To             : 
+From Clock     : 
+To Clock       : 
+Failed Paths   : 51319
+
+--------------------------------------------------------------------------------------
+
