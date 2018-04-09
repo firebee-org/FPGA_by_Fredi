@@ -33,7 +33,7 @@
  --					Bank 5:		2.5V
  --					Bank 6:		3.0V
  --					Bank 7:		3.3V
- --					Bank 8:		3.3V
+ --					Bank 8:		3.0V
  -- GND           : Dedicated ground pin. Dedicated GND pins MUST be connected to GND.
  --					It can also be used to report unused dedicated pins. The connection
  --					on the board for unused dedicated pins depends on whether this will
@@ -72,15 +72,15 @@ CHIP  "firebee1"  ASSIGNED TO AN: EP3C40F484C6
 Pin Name/Usage               : Location  : Dir.   : I/O Standard      : Voltage : I/O Bank  : User Assignment
 -------------------------------------------------------------------------------------------------------------
 GND                          : A1        : gnd    :                   :         :           :                
-VCCIO8                       : A2        : power  :                   : 3.3V    : 8         :                
-LP_D[6]                      : A3        : bidir  : 3.3-V LVTTL       :         : 8         : Y              
-nSRBLE                       : A4        : output : 3.3-V LVTTL       :         : 8         : Y              
-SRD[1]                       : A5        : bidir  : 3.3-V LVTTL       :         : 8         : Y              
-IO[3]                        : A6        : bidir  : 3.3-V LVTTL       :         : 8         : Y              
-IO[1]                        : A7        : bidir  : 3.3-V LVTTL       :         : 8         : Y              
-IO[0]                        : A8        : bidir  : 3.3-V LVTTL       :         : 8         : Y              
-SRD[10]                      : A9        : bidir  : 3.3-V LVTTL       :         : 8         : Y              
-SRD[9]                       : A10       : bidir  : 3.3-V LVTTL       :         : 8         : Y              
+VCCIO8                       : A2        : power  :                   : 3.0V    : 8         :                
+LP_D[6]                      : A3        : bidir  : 3.0-V LVCMOS      :         : 8         : Y              
+nSRBLE                       : A4        : output : 3.0-V LVCMOS      :         : 8         : Y              
+SRD[1]                       : A5        : bidir  : 3.0-V LVCMOS      :         : 8         : Y              
+IO[3]                        : A6        : bidir  : 3.0-V LVCMOS      :         : 8         : Y              
+IO[1]                        : A7        : bidir  : 3.0-V LVCMOS      :         : 8         : Y              
+IO[0]                        : A8        : bidir  : 3.0-V LVCMOS      :         : 8         : Y              
+SRD[10]                      : A9        : bidir  : 3.0-V LVCMOS      :         : 8         : Y              
+SRD[9]                       : A10       : bidir  : 3.0-V LVCMOS      :         : 8         : Y              
 DVI_INT                      : A11       : input  : 3.3-V LVTTL       :         : 8         : Y              
 nDACK1                       : A12       : input  : 3.3-V LVTTL       :         : 7         : Y              
 IO[16]                       : A13       : bidir  : 3.3-V LVTTL       :         : 7         : Y              
@@ -126,7 +126,7 @@ FB_AD[23]                    : AB8       : bidir  : 3.3-V LVTTL       :         
 FB_AD[26]                    : AB9       : bidir  : 3.3-V LVTTL       :         : 3         : Y              
 CLK24M576                    : AB10      : output : 3.3-V LVTTL       :         : 3         : Y              
 GND+                         : AB11      :        :                   :         : 3         :                
-CLK33M                       : AB12      : input  : 3.3-V LVTTL       :         : 4         : Y              
+CLK33MDIR                    : AB12      : input  : 3.3-V LVTTL       :         : 4         : Y              
 VD[29]                       : AB13      : bidir  : 2.5 V             :         : 4         : Y              
 VD[26]                       : AB14      : bidir  : 2.5 V             :         : 4         : Y              
 VD[24]                       : AB15      : bidir  : 2.5 V             :         : 4         : Y              
@@ -139,14 +139,14 @@ VCCIO4                       : AB21      : power  :                   : 2.5V    
 GND                          : AB22      : gnd    :                   :         :           :                
 ACSI_D[0]                    : B1        : bidir  : 3.3-V LVTTL       :         : 1         : Y              
 MIDI_TLR                     : B2        : output : 3.3-V LVTTL       :         : 1         : Y              
-LP_D[5]                      : B3        : bidir  : 3.3-V LVTTL       :         : 8         : Y              
-nSRBHE                       : B4        : output : 3.3-V LVTTL       :         : 8         : Y              
-SRD[0]                       : B5        : bidir  : 3.3-V LVTTL       :         : 8         : Y              
-IO[4]                        : B6        : bidir  : 3.3-V LVTTL       :         : 8         : Y              
-IO[2]                        : B7        : bidir  : 3.3-V LVTTL       :         : 8         : Y              
-nSRCS                        : B8        : output : 3.3-V LVTTL       :         : 8         : Y              
-SRD[8]                       : B9        : bidir  : 3.3-V LVTTL       :         : 8         : Y              
-SRD[11]                      : B10       : bidir  : 3.3-V LVTTL       :         : 8         : Y              
+LP_D[5]                      : B3        : bidir  : 3.0-V LVCMOS      :         : 8         : Y              
+nSRBHE                       : B4        : output : 3.0-V LVCMOS      :         : 8         : Y              
+SRD[0]                       : B5        : bidir  : 3.0-V LVCMOS      :         : 8         : Y              
+IO[4]                        : B6        : bidir  : 3.0-V LVCMOS      :         : 8         : Y              
+IO[2]                        : B7        : bidir  : 3.0-V LVCMOS      :         : 8         : Y              
+nSRCS                        : B8        : output : 3.0-V LVCMOS      :         : 8         : Y              
+SRD[8]                       : B9        : bidir  : 3.0-V LVCMOS      :         : 8         : Y              
+SRD[11]                      : B10       : bidir  : 3.0-V LVCMOS      :         : 8         : Y              
 nRSTO_MCF                    : B11       : input  : 3.3-V LVTTL       :         : 8         : Y              
 nDACK0                       : B12       : input  : 3.3-V LVTTL       :         : 7         : Y              
 IO[17]                       : B13       : bidir  : 3.3-V LVTTL       :         : 7         : Y              
@@ -161,14 +161,14 @@ VB[5]                        : B21       : output : 3.0-V LVTTL       :         
 VB[4]                        : B22       : output : 3.0-V LVTTL       :         : 6         : Y              
 ACSI_D[4]                    : C1        : bidir  : 3.3-V LVTTL       :         : 1         : Y              
 ACSI_D[3]                    : C2        : bidir  : 3.3-V LVTTL       :         : 1         : Y              
-LP_D[2]                      : C3        : bidir  : 3.3-V LVTTL       :         : 8         : Y              
-LP_D[1]                      : C4        : bidir  : 3.3-V LVTTL       :         : 8         : Y              
+LP_D[2]                      : C3        : bidir  : 3.0-V LVCMOS      :         : 8         : Y              
+LP_D[1]                      : C4        : bidir  : 3.0-V LVCMOS      :         : 8         : Y              
 GND                          : C5        : gnd    :                   :         :           :                
-SRD[2]                       : C6        : bidir  : 3.3-V LVTTL       :         : 8         : Y              
-IO[7]                        : C7        : bidir  : 3.3-V LVTTL       :         : 8         : Y              
-IO[6]                        : C8        : bidir  : 3.3-V LVTTL       :         : 8         : Y              
+SRD[2]                       : C6        : bidir  : 3.0-V LVCMOS      :         : 8         : Y              
+IO[7]                        : C7        : bidir  : 3.0-V LVCMOS      :         : 8         : Y              
+IO[6]                        : C8        : bidir  : 3.0-V LVCMOS      :         : 8         : Y              
 GND                          : C9        : gnd    :                   :         :           :                
-SRD[4]                       : C10       : bidir  : 3.3-V LVTTL       :         : 8         : Y              
+SRD[4]                       : C10       : bidir  : 3.0-V LVCMOS      :         : 8         : Y              
 GND                          : C11       : gnd    :                   :         :           :                
 GND                          : C12       : gnd    :                   :         :           :                
 IO[11]                       : C13       : bidir  : 3.3-V LVTTL       :         : 7         : Y              
@@ -185,13 +185,13 @@ VB[2]                        : C22       : output : 3.0-V LVTTL       :         
 ACSI_D[5]                    : D2        : bidir  : 3.3-V LVTTL       :         : 1         : Y              
 GND                          : D3        : gnd    :                   :         :           :                
 VCCIO1                       : D4        : power  :                   : 3.3V    : 1         :                
-VCCIO8                       : D5        : power  :                   : 3.3V    : 8         :                
-LP_D[4]                      : D6        : bidir  : 3.3-V LVTTL       :         : 8         : Y              
+VCCIO8                       : D5        : power  :                   : 3.0V    : 8         :                
+LP_D[4]                      : D6        : bidir  : 3.0-V LVCMOS      :         : 8         : Y              
 RESERVED_INPUT_WITH_WEAK_PULLUP : D7        :        :                   :         : 8         :                
 GND                          : D8        : gnd    :                   :         :           :                
-VCCIO8                       : D9        : power  :                   : 3.3V    : 8         :                
-SRD[12]                      : D10       : bidir  : 3.3-V LVTTL       :         : 8         : Y              
-VCCIO8                       : D11       : power  :                   : 3.3V    : 8         :                
+VCCIO8                       : D9        : power  :                   : 3.0V    : 8         :                
+SRD[12]                      : D10       : bidir  : 3.0-V LVCMOS      :         : 8         : Y              
+VCCIO8                       : D11       : power  :                   : 3.0V    : 8         :                
 VCCIO7                       : D12       : power  :                   : 3.3V    : 7         :                
 IO[12]                       : D13       : bidir  : 3.3-V LVTTL       :         : 7         : Y              
 VCCIO7                       : D14       : power  :                   : 3.3V    : 7         :                
@@ -207,14 +207,14 @@ SCSI_D[1]                    : E1        : bidir  : 3.3-V LVTTL       :         
 ~ALTERA_FLASH_nCE_nCSO~ / RESERVED_INPUT : E2        : input  : 3.3-V LVTTL       :         : 1         : N              
 ACSI_D[2]                    : E3        : bidir  : 3.3-V LVTTL       :         : 1         : Y              
 RESERVED_INPUT_WITH_WEAK_PULLUP : E4        :        :                   :         : 1         :                
-LPDIR                        : E5        : output : 3.3-V LVTTL       :         : 8         : Y              
-LP_STR                       : E6        : output : 3.3-V LVTTL       :         : 8         : Y              
-LP_D[3]                      : E7        : bidir  : 3.3-V LVTTL       :         : 8         : Y              
-VCCIO8                       : E8        : power  :                   : 3.3V    : 8         :                
-IO[5]                        : E9        : bidir  : 3.3-V LVTTL       :         : 8         : Y              
-SRD[6]                       : E10       : bidir  : 3.3-V LVTTL       :         : 8         : Y              
+LPDIR                        : E5        : output : 3.0-V LVCMOS      :         : 8         : Y              
+LP_STR                       : E6        : output : 3.0-V LVCMOS      :         : 8         : Y              
+LP_D[3]                      : E7        : bidir  : 3.0-V LVCMOS      :         : 8         : Y              
+VCCIO8                       : E8        : power  :                   : 3.0V    : 8         :                
+IO[5]                        : E9        : bidir  : 3.0-V LVCMOS      :         : 8         : Y              
+SRD[6]                       : E10       : bidir  : 3.0-V LVCMOS      :         : 8         : Y              
 nDREQ1                       : E11       : output : 3.3-V LVTTL       :         : 7         : Y              
-MIDI_IN                      : E12       : input  : 3.3-V LVTTL       :         : 7         : Y              
+MIDI_IN_PIN                  : E12       : bidir  : 3.3-V LVTTL       :         : 7         : Y              
 IO[13]                       : E13       : bidir  : 3.3-V LVTTL       :         : 7         : Y              
 SD_CMD_D1                    : E14       : bidir  : 3.3-V LVTTL       :         : 7         : Y              
 YM_QC                        : E15       : output : 3.3-V LVTTL       :         : 7         : Y              
@@ -231,10 +231,10 @@ GND                          : F3        : gnd    :                   :         
 VCCIO1                       : F4        : power  :                   : 3.3V    : 1         :                
 GNDA3                        : F5        : gnd    :                   :         :           :                
 VCCD_PLL3                    : F6        : power  :                   : 1.2V    :           :                
-LP_D[0]                      : F7        : bidir  : 3.3-V LVTTL       :         : 8         : Y              
-nSRWE                        : F8        : output : 3.3-V LVTTL       :         : 8         : Y              
-SRD[5]                       : F9        : bidir  : 3.3-V LVTTL       :         : 8         : Y              
-SRD[13]                      : F10       : bidir  : 3.3-V LVTTL       :         : 8         : Y              
+LP_D[0]                      : F7        : bidir  : 3.0-V LVCMOS      :         : 8         : Y              
+nSRWE                        : F8        : output : 3.0-V LVCMOS      :         : 8         : Y              
+SRD[5]                       : F9        : bidir  : 3.0-V LVCMOS      :         : 8         : Y              
+SRD[13]                      : F10       : bidir  : 3.0-V LVCMOS      :         : 8         : Y              
 nSROE                        : F11       : output : 3.3-V LVTTL       :         : 7         : Y              
 GND                          : F12       : gnd    :                   :         :           :                
 SD_CD_DATA3                  : F13       : bidir  : 3.3-V LVTTL       :         : 7         : Y              
@@ -254,10 +254,10 @@ SCSI_D[4]                    : G4        : bidir  : 3.3-V LVTTL       :         
 ACSI_D[1]                    : G5        : bidir  : 3.3-V LVTTL       :         : 1         : Y              
 VCCA3                        : G6        : power  :                   : 2.5V    :           :                
 LP_BUSY                      : G7        : input  : 3.3-V LVTTL       :         : 8         : Y              
-LP_D[7]                      : G8        : bidir  : 3.3-V LVTTL       :         : 8         : Y              
-SRD[14]                      : G9        : bidir  : 3.3-V LVTTL       :         : 8         : Y              
-IO[8]                        : G10       : bidir  : 3.3-V LVTTL       :         : 8         : Y              
-SRD[3]                       : G11       : bidir  : 3.3-V LVTTL       :         : 8         : Y              
+LP_D[7]                      : G8        : bidir  : 3.0-V LVCMOS      :         : 8         : Y              
+SRD[14]                      : G9        : bidir  : 3.0-V LVCMOS      :         : 8         : Y              
+IO[8]                        : G10       : bidir  : 3.0-V LVCMOS      :         : 8         : Y              
+SRD[3]                       : G11       : bidir  : 3.0-V LVCMOS      :         : 8         : Y              
 VCCINT                       : G12       : power  :                   : 1.2V    :           :                
 YM_QB                        : G13       : output : 3.3-V LVTTL       :         : 7         : Y              
 nWR                          : G14       : output : 3.3-V LVTTL       :         : 7         : Y              
@@ -278,8 +278,8 @@ ACSI_D[7]                    : H6        : bidir  : 3.3-V LVTTL       :         
 ACSI_D[6]                    : H7        : bidir  : 3.3-V LVTTL       :         : 1         : Y              
 RESERVED_INPUT_WITH_WEAK_PULLUP : H8        :        :                   :         : 1         :                
 VCCINT                       : H9        : power  :                   : 1.2V    :           :                
-SRD[15]                      : H10       : bidir  : 3.3-V LVTTL       :         : 8         : Y              
-SRD[7]                       : H11       : bidir  : 3.3-V LVTTL       :         : 8         : Y              
+SRD[15]                      : H10       : bidir  : 3.0-V LVCMOS      :         : 8         : Y              
+SRD[7]                       : H11       : bidir  : 3.0-V LVCMOS      :         : 8         : Y              
 GND                          : H12       : gnd    :                   :         :           :                
 GND                          : H13       : gnd    :                   :         :           :                
 CTS                          : H14       : input  : 3.3-V LVTTL       :         : 7         : Y              
@@ -534,7 +534,7 @@ VA[0]                        : W20       : output : 2.5 V             :         
 VA[2]                        : W21       : output : 2.5 V             :         : 5         : Y              
 VA[1]                        : W22       : output : 2.5 V             :         : 5         : Y              
 IDE_RDY                      : Y1        : input  : 3.3-V LVTTL       :         : 2         : Y              
-AMKB_RX                      : Y2        : input  : 3.3-V LVTTL       :         : 2         : Y              
+AMKB_RX                      : Y2        : input  : 3.3-V LVCMOS      :         : 2         : Y              
 FB_AD[0]                     : Y3        : bidir  : 3.3-V LVTTL       :         : 3         : Y              
 FB_SIZE1                     : Y4        : input  : 3.3-V LVTTL       :         : 3         : Y              
 GND                          : Y5        : gnd    :                   :         :           :                

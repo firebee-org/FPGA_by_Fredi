@@ -37,6 +37,7 @@ SUBDESIGN interrupt_handler
 	VSYNC : INPUT;
 	HSYNC : INPUT;
 	DMA_DRQ : INPUT;
+	nRSTO : INPUT;
 	nIRQ[7..2] : OUTPUT;
 	INT_HANDLER_TA : OUTPUT;
 	ACP_CONF[31..0] : OUTPUT;
@@ -56,6 +57,8 @@ VARIABLE
 	INT_IN[31..0]			:NODE;
 	INT_ENA[31..0]			:DFFE;
 	INT_ENA_CS				:NODE;
+	INT_L[9..0]				:DFF;
+	INT_LA[9..0][3..0]		:DFF;
 	ACP_CONF[31..0]			:DFFE;
 	ACP_CONF_CS				:NODE;
 	PSEUDO_BUS_ERROR		:NODE;
@@ -101,6 +104,7 @@ BEGIN
 	INT_CTR[7..0].ENA   = INT_CTR_CS & FB_B3 & !nFB_WR;
 -- INTERRUPT ENABLE REGISTER BIT31=INT7,30=INT6,29=INT5,28=INT4,27=INT3,26=INT2
 	INT_ENA[].CLK = MAIN_CLK;
+	INT_ENA[].CLRN = nRSTO;
 	INT_ENA_CS = !nFB_CS2 & FB_ADR[27..2]==H"4001";						-- $10004/4
 	INT_ENA[] = FB_AD[];
 	INT_ENA[31..24].ENA = INT_ENA_CS & FB_B0 & !nFB_WR;
@@ -120,15 +124,15 @@ BEGIN
 	!nIRQ2 = HSYNC 						& INT_ENA[26];
 	!nIRQ3 = INT_CTR0 					& INT_ENA[27];
 	!nIRQ4 = VSYNC 						& INT_ENA[28];
-	 nIRQ5 = INT_LATCH[]==H"00000000" 	& INT_ENA[29];
+	!nIRQ5 = INT_LATCH[]!=H"00000000" 	& INT_ENA[29];
 	!nIRQ6 = !nMFP_INT 					& INT_ENA[30];
 	!nIRQ7 = PSEUDO_BUS_ERROR			& INT_ENA[31];
 
 PSEUDO_BUS_ERROR = !nFB_CS1 & (FB_ADR[19..4]==H"F8C8"			-- SCC
 							#  FB_ADR[19..4]==H"F8E0"			-- VME
-							#  FB_ADR[19..4]==H"F920"			-- PADDLE
-							#  FB_ADR[19..4]==H"F921"			-- PADDLE
-							#  FB_ADR[19..4]==H"F922"			-- PADDLE
+--							#  FB_ADR[19..4]==H"F920"			-- PADDLE
+--							#  FB_ADR[19..4]==H"F921"			-- PADDLE
+--							#  FB_ADR[19..4]==H"F922"			-- PADDLE
 							#  FB_ADR[19..4]==H"FFA8"			-- MFP2
 							#  FB_ADR[19..4]==H"FFA9"			-- MFP2
 							#  FB_ADR[19..4]==H"FFAA"			-- MFP2
@@ -136,27 +140,38 @@ PSEUDO_BUS_ERROR = !nFB_CS1 & (FB_ADR[19..4]==H"F8C8"			-- SCC
 							#  FB_ADR[19..8]==H"F87"			-- TT SCSI
 							#  FB_ADR[19..4]==H"FFC2"			-- ST UHR
 							#  FB_ADR[19..4]==H"FFC3"			-- ST UHR
-							#  FB_ADR[19..4]==H"F890"			-- DMA SOUND
-							#  FB_ADR[19..4]==H"F891"			-- DMA SOUND
-							#  FB_ADR[19..4]==H"F892");			-- DMA SOUND
+--							#  FB_ADR[19..4]==H"F890"			-- DMA SOUND
+--							#  FB_ADR[19..4]==H"F891"			-- DMA SOUND
+--							#  FB_ADR[19..4]==H"F892"			-- DMA SOUND
+							 );
 -- IF VIDEO ADR CHANGE
 TIN0 = !nFB_CS1 & FB_ADR[19..1]==H"7C100" & !nFB_WR;			-- WRITE VIDEO BASE ADR HIGH 0xFFFF8201/2
 
 -- INTERRUPT LATCH
-	INT_LATCH[] = H"FFFFFFFF";
-	INT_LATCH0.CLK = PIC_INT & INT_ENA[0];
-	INT_LATCH1.CLK = E0_INT & INT_ENA[1];
-	INT_LATCH2.CLK = DVI_INT & INT_ENA[2];
-	INT_LATCH3.CLK = !nPCI_INTA & INT_ENA[3];
-	INT_LATCH4.CLK = !nPCI_INTB & INT_ENA[4];
-	INT_LATCH5.CLK = !nPCI_INTC & INT_ENA[5];
-	INT_LATCH6.CLK = !nPCI_INTD & INT_ENA[6];
-	INT_LATCH7.CLK = DSP_INT & INT_ENA[7];
-	INT_LATCH8.CLK = VSYNC & INT_ENA[8];
-	INT_LATCH9.CLK = HSYNC & INT_ENA[9];
+	INT_L[].CLK = MAIN_CLK;
+	INT_L[].CLRN = nRSTO;
+	INT_L0 = PIC_INT & INT_ENA[0];
+	INT_L1 = E0_INT & INT_ENA[1];
+	INT_L2 = DVI_INT & INT_ENA[2];
+	INT_L3 = !nPCI_INTA & INT_ENA[3];
+	INT_L4 = !nPCI_INTB & INT_ENA[4];
+	INT_L5 = !nPCI_INTC & INT_ENA[5];
+	INT_L6 = !nPCI_INTD & INT_ENA[6];
+	INT_L7 = DSP_INT & INT_ENA[7];
+	INT_L8 = VSYNC & INT_ENA[8];
+	INT_L9 = HSYNC & INT_ENA[9];
 	
--- INTERRUPT CLEAR
-	INT_LATCH[].CLRN = !INT_CLEAR[];
+	INT_LA[][].CLK = MAIN_CLK;
+	INT_LATCH[] = H"FFFFFFFF";
+	INT_LATCH[].CLRN = !INT_CLEAR[] & nRSTO;
+	FOR I IN 0 TO 9 GENERATE
+		INT_LA[I][].CLRN = INT_ENA[I] & nRSTO;
+		INT_LA[I][] = INT_LA[I][]+1 &  INT_L[I] & INT_LA[I][]<7 
+		            # INT_LA[I][]-1 & !INT_L[I] & INT_LA[I][]>8
+		            # 15            &  INT_L[I] & INT_LA[I][]>6
+		            # 0             & !INT_L[I] & INT_LA[I][]<9;
+		INT_LATCH[I].CLK = INT_LA[I][3];
+	END GENERATE;
 	
 -- INT_IN
 	INT_IN0 = PIC_INT;
@@ -206,125 +221,14 @@ TIN0 = !nFB_CS1 & FB_ADR[19..1]==H"7C100" & !nFB_WR;			-- WRITE VIDEO BASE ADR H
 	WERTE[7..0][7] = FB_AD[23..16] & RTC_ADR[]==7 & UHR_DS & !nFB_WR;
 	WERTE[7..0][8] = FB_AD[23..16] & RTC_ADR[]==8 & UHR_DS & !nFB_WR;
 	WERTE[7..0][9] = FB_AD[23..16] & RTC_ADR[]==9 & UHR_DS & !nFB_WR;
-	WERTE[7..0][10] = FB_AD[23..16];
-	WERTE[7..0][11] = FB_AD[23..16];
-	WERTE[7..0][12] = FB_AD[23..16];
-	WERTE[7..0][13] = FB_AD[23..16];
-	WERTE[7..0][14] = FB_AD[23..16];
-	WERTE[7..0][15] = FB_AD[23..16];
-	WERTE[7..0][16] = FB_AD[23..16];
-	WERTE[7..0][17] = FB_AD[23..16];
-	WERTE[7..0][18] = FB_AD[23..16];
-	WERTE[7..0][19] = FB_AD[23..16];
-	WERTE[7..0][20] = FB_AD[23..16];
-	WERTE[7..0][21] = FB_AD[23..16];
-	WERTE[7..0][22] = FB_AD[23..16];
-	WERTE[7..0][23] = FB_AD[23..16];
-	WERTE[7..0][24] = FB_AD[23..16];
-	WERTE[7..0][25] = FB_AD[23..16];
-	WERTE[7..0][26] = FB_AD[23..16];
-	WERTE[7..0][27] = FB_AD[23..16];
-	WERTE[7..0][28] = FB_AD[23..16];
-	WERTE[7..0][29] = FB_AD[23..16];
-	WERTE[7..0][30] = FB_AD[23..16];
-	WERTE[7..0][31] = FB_AD[23..16];
-	WERTE[7..0][32] = FB_AD[23..16];
-	WERTE[7..0][33] = FB_AD[23..16];
-	WERTE[7..0][34] = FB_AD[23..16];
-	WERTE[7..0][35] = FB_AD[23..16];
-	WERTE[7..0][36] = FB_AD[23..16];
-	WERTE[7..0][37] = FB_AD[23..16];
-	WERTE[7..0][38] = FB_AD[23..16];
-	WERTE[7..0][39] = FB_AD[23..16];
-	WERTE[7..0][40] = FB_AD[23..16];
-	WERTE[7..0][41] = FB_AD[23..16];
-	WERTE[7..0][42] = FB_AD[23..16];
-	WERTE[7..0][43] = FB_AD[23..16];
-	WERTE[7..0][44] = FB_AD[23..16];
-	WERTE[7..0][45] = FB_AD[23..16];
-	WERTE[7..0][46] = FB_AD[23..16];
-	WERTE[7..0][47] = FB_AD[23..16];
-	WERTE[7..0][48] = FB_AD[23..16];
-	WERTE[7..0][49] = FB_AD[23..16];
-	WERTE[7..0][50] = FB_AD[23..16];
-	WERTE[7..0][51] = FB_AD[23..16];
-	WERTE[7..0][52] = FB_AD[23..16];
-	WERTE[7..0][53] = FB_AD[23..16];
-	WERTE[7..0][54] = FB_AD[23..16];
-	WERTE[7..0][55] = FB_AD[23..16];
-	WERTE[7..0][56] = FB_AD[23..16];
-	WERTE[7..0][57] = FB_AD[23..16];
-	WERTE[7..0][58] = FB_AD[23..16];
-	WERTE[7..0][59] = FB_AD[23..16];
-	WERTE[7..0][60] = FB_AD[23..16];
-	WERTE[7..0][61] = FB_AD[23..16];
-	WERTE[7..0][62] = FB_AD[23..16];
-	WERTE[7..0][63] = FB_AD[23..16];
-	WERTE[][0].ENA = RTC_ADR[]==0 & UHR_DS & !nFB_WR;
-	WERTE[][1].ENA = RTC_ADR[]==1 & UHR_DS & !nFB_WR;
-	WERTE[][2].ENA = RTC_ADR[]==2 & UHR_DS & !nFB_WR;
-	WERTE[][3].ENA = RTC_ADR[]==3 & UHR_DS & !nFB_WR;
-	WERTE[][4].ENA = RTC_ADR[]==4 & UHR_DS & !nFB_WR;
-	WERTE[][5].ENA = RTC_ADR[]==5 & UHR_DS & !nFB_WR;
-	WERTE[][6].ENA = RTC_ADR[]==6 & UHR_DS & !nFB_WR;
-	WERTE[][7].ENA = RTC_ADR[]==7 & UHR_DS & !nFB_WR;
-	WERTE[][8].ENA = RTC_ADR[]==8 & UHR_DS & !nFB_WR;
-	WERTE[][9].ENA = RTC_ADR[]==9 & UHR_DS & !nFB_WR;
-	WERTE[][10].ENA = RTC_ADR[]==10 & UHR_DS & !nFB_WR;
-	WERTE[][11].ENA = RTC_ADR[]==11 & UHR_DS & !nFB_WR;
-	WERTE[][12].ENA = RTC_ADR[]==12 & UHR_DS & !nFB_WR;
-	WERTE[][13].ENA = RTC_ADR[]==13 & UHR_DS & !nFB_WR;
-	WERTE[][14].ENA = RTC_ADR[]==14 & UHR_DS & !nFB_WR;
-	WERTE[][15].ENA = RTC_ADR[]==15 & UHR_DS & !nFB_WR;
-	WERTE[][16].ENA = RTC_ADR[]==16 & UHR_DS & !nFB_WR;
-	WERTE[][17].ENA = RTC_ADR[]==17 & UHR_DS & !nFB_WR;
-	WERTE[][18].ENA = RTC_ADR[]==18 & UHR_DS & !nFB_WR;
-	WERTE[][19].ENA = RTC_ADR[]==19 & UHR_DS & !nFB_WR;
-	WERTE[][20].ENA = RTC_ADR[]==20 & UHR_DS & !nFB_WR;
-	WERTE[][21].ENA = RTC_ADR[]==21 & UHR_DS & !nFB_WR;
-	WERTE[][22].ENA = RTC_ADR[]==22 & UHR_DS & !nFB_WR;
-	WERTE[][23].ENA = RTC_ADR[]==23 & UHR_DS & !nFB_WR;
-	WERTE[][24].ENA = RTC_ADR[]==24 & UHR_DS & !nFB_WR;
-	WERTE[][25].ENA = RTC_ADR[]==25 & UHR_DS & !nFB_WR;
-	WERTE[][26].ENA = RTC_ADR[]==26 & UHR_DS & !nFB_WR;
-	WERTE[][27].ENA = RTC_ADR[]==27 & UHR_DS & !nFB_WR;
-	WERTE[][28].ENA = RTC_ADR[]==28 & UHR_DS & !nFB_WR;
-	WERTE[][29].ENA = RTC_ADR[]==29 & UHR_DS & !nFB_WR;
-	WERTE[][30].ENA = RTC_ADR[]==30 & UHR_DS & !nFB_WR;
-	WERTE[][31].ENA = RTC_ADR[]==31 & UHR_DS & !nFB_WR;
-	WERTE[][32].ENA = RTC_ADR[]==32 & UHR_DS & !nFB_WR;
-	WERTE[][33].ENA = RTC_ADR[]==33 & UHR_DS & !nFB_WR;
-	WERTE[][34].ENA = RTC_ADR[]==34 & UHR_DS & !nFB_WR;
-	WERTE[][35].ENA = RTC_ADR[]==35 & UHR_DS & !nFB_WR;
-	WERTE[][36].ENA = RTC_ADR[]==36 & UHR_DS & !nFB_WR;
-	WERTE[][37].ENA = RTC_ADR[]==37 & UHR_DS & !nFB_WR;
-	WERTE[][38].ENA = RTC_ADR[]==38 & UHR_DS & !nFB_WR;
-	WERTE[][39].ENA = RTC_ADR[]==39 & UHR_DS & !nFB_WR;
-	WERTE[][40].ENA = RTC_ADR[]==40 & UHR_DS & !nFB_WR;
-	WERTE[][41].ENA = RTC_ADR[]==41 & UHR_DS & !nFB_WR;
-	WERTE[][42].ENA = RTC_ADR[]==42 & UHR_DS & !nFB_WR;
-	WERTE[][43].ENA = RTC_ADR[]==43 & UHR_DS & !nFB_WR;
-	WERTE[][44].ENA = RTC_ADR[]==44 & UHR_DS & !nFB_WR;
-	WERTE[][45].ENA = RTC_ADR[]==45 & UHR_DS & !nFB_WR;
-	WERTE[][46].ENA = RTC_ADR[]==46 & UHR_DS & !nFB_WR;
-	WERTE[][47].ENA = RTC_ADR[]==47 & UHR_DS & !nFB_WR;
-	WERTE[][48].ENA = RTC_ADR[]==48 & UHR_DS & !nFB_WR;
-	WERTE[][49].ENA = RTC_ADR[]==49 & UHR_DS & !nFB_WR;
-	WERTE[][50].ENA = RTC_ADR[]==50 & UHR_DS & !nFB_WR;
-	WERTE[][51].ENA = RTC_ADR[]==51 & UHR_DS & !nFB_WR;
-	WERTE[][52].ENA = RTC_ADR[]==52 & UHR_DS & !nFB_WR;
-	WERTE[][53].ENA = RTC_ADR[]==53 & UHR_DS & !nFB_WR;
-	WERTE[][54].ENA = RTC_ADR[]==54 & UHR_DS & !nFB_WR;
-	WERTE[][55].ENA = RTC_ADR[]==55 & UHR_DS & !nFB_WR;
-	WERTE[][56].ENA = RTC_ADR[]==56 & UHR_DS & !nFB_WR;
-	WERTE[][57].ENA = RTC_ADR[]==57 & UHR_DS & !nFB_WR;
-	WERTE[][58].ENA = RTC_ADR[]==58 & UHR_DS & !nFB_WR;
-	WERTE[][59].ENA = RTC_ADR[]==59 & UHR_DS & !nFB_WR;
-	WERTE[][60].ENA = RTC_ADR[]==60 & UHR_DS & !nFB_WR;
-	WERTE[][61].ENA = RTC_ADR[]==61 & UHR_DS & !nFB_WR;
-	WERTE[][62].ENA = RTC_ADR[]==62 & UHR_DS & !nFB_WR;
-	WERTE[][63].ENA = RTC_ADR[]==63 & UHR_DS & !nFB_WR;
-	PIC_INT_SYNC[].CLK = MAIN_CLK;	PIC_INT_SYNC[0] = PIC_INT;
+	FOR I IN 10 TO 63 GENERATE
+		WERTE[7..0][I] = FB_AD[23..16];
+	END GENERATE;
+	FOR I IN 0 TO 63 GENERATE
+		WERTE[][I].ENA = RTC_ADR[]==I & UHR_DS & !nFB_WR;
+	END GENERATE;
+	PIC_INT_SYNC[].CLK = MAIN_CLK;	
+	PIC_INT_SYNC[0] = PIC_INT;
 	PIC_INT_SYNC[1] = PIC_INT_SYNC[0];
 	PIC_INT_SYNC[2] = !PIC_INT_SYNC[1] & PIC_INT_SYNC[0];
 	UPDATE_ON = !WERTE[7][11];		

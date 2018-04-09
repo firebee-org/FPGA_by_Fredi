@@ -22,5 +22,6 @@ RETURNS (
 	c0,
 	c1,
 	c2,
-	c3
+	c3,
+	locked
 );

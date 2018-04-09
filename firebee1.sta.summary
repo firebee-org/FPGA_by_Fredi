@@ -1,0 +1,857 @@
+------------------------------------------------------------
+TimeQuest Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow 1200mV 85C Model Setup 'inst22|altpll_component|auto_generated|pll1|clk[0]'
+Slack : -17.450
+TNS   : -16147.437
+
+Type  : Slow 1200mV 85C Model Setup 'inst13|altpll_component|auto_generated|pll1|clk[2]'
+Slack : -7.331
+TNS   : -4287.365
+
+Type  : Slow 1200mV 85C Model Setup 'inst12|altpll_component|auto_generated|pll1|clk[0]'
+Slack : -4.994
+TNS   : -47.649
+
+Type  : Slow 1200mV 85C Model Setup 'inst13|altpll_component|auto_generated|pll1|clk[1]'
+Slack : -4.588
+TNS   : -478.150
+
+Type  : Slow 1200mV 85C Model Setup 'MAIN_CLK'
+Slack : -4.230
+TNS   : -5479.268
+
+Type  : Slow 1200mV 85C Model Setup 'inst12|altpll_component|auto_generated|pll1|clk[3]'
+Slack : 2.377
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Setup 'inst12|altpll_component|auto_generated|pll1|clk[1]'
+Slack : 2.892
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Setup 'inst12|altpll_component|auto_generated|pll1|clk[4]'
+Slack : 3.750
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Setup 'inst12|altpll_component|auto_generated|pll1|clk[2]'
+Slack : 5.312
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Setup 'inst13|altpll_component|auto_generated|pll1|clk[0]'
+Slack : 497.531
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Setup 'inst13|altpll_component|auto_generated|pll1|clk[3]'
+Slack : 1997.881
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'inst13|altpll_component|auto_generated|pll1|clk[2]'
+Slack : -11.047
+TNS   : -9871.573
+
+Type  : Slow 1200mV 85C Model Hold 'MAIN_CLK'
+Slack : -10.882
+TNS   : -9731.628
+
+Type  : Slow 1200mV 85C Model Hold 'inst12|altpll_component|auto_generated|pll1|clk[0]'
+Slack : -5.940
+TNS   : -5.940
+
+Type  : Slow 1200mV 85C Model Hold 'inst13|altpll_component|auto_generated|pll1|clk[1]'
+Slack : 0.283
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'inst22|altpll_component|auto_generated|pll1|clk[0]'
+Slack : 0.342
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'inst13|altpll_component|auto_generated|pll1|clk[0]'
+Slack : 0.376
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'inst13|altpll_component|auto_generated|pll1|clk[3]'
+Slack : 0.389
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'inst12|altpll_component|auto_generated|pll1|clk[2]'
+Slack : 1.541
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'inst12|altpll_component|auto_generated|pll1|clk[3]'
+Slack : 2.366
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'inst12|altpll_component|auto_generated|pll1|clk[4]'
+Slack : 3.005
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'inst12|altpll_component|auto_generated|pll1|clk[1]'
+Slack : 4.128
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Recovery 'inst22|altpll_component|auto_generated|pll1|clk[0]'
+Slack : -15.674
+TNS   : -2798.000
+
+Type  : Slow 1200mV 85C Model Recovery 'inst12|altpll_component|auto_generated|pll1|clk[0]'
+Slack : -8.406
+TNS   : -16.812
+
+Type  : Slow 1200mV 85C Model Recovery 'inst13|altpll_component|auto_generated|pll1|clk[2]'
+Slack : -4.536
+TNS   : -782.022
+
+Type  : Slow 1200mV 85C Model Recovery 'inst13|altpll_component|auto_generated|pll1|clk[1]'
+Slack : -4.460
+TNS   : -652.825
+
+Type  : Slow 1200mV 85C Model Recovery 'MAIN_CLK'
+Slack : -3.788
+TNS   : -646.634
+
+Type  : Slow 1200mV 85C Model Recovery 'Video:Fredi_Aschwanden|VIDEO_MOD_MUX_CLUTCTR:VIDEO_MOD_MUX_CLUTCTR|VSYNC'
+Slack : -2.802
+TNS   : -2.802
+
+Type  : Slow 1200mV 85C Model Recovery 'Video:Fredi_Aschwanden|VIDEO_MOD_MUX_CLUTCTR:VIDEO_MOD_MUX_CLUTCTR|HSYNC'
+Slack : -1.533
+TNS   : -1.533
+
+Type  : Slow 1200mV 85C Model Recovery 'DVI_INT'
+Slack : -0.826
+TNS   : -0.826
+
+Type  : Slow 1200mV 85C Model Recovery 'E0_INT'
+Slack : -0.766
+TNS   : -0.766
+
+Type  : Slow 1200mV 85C Model Recovery 'nPCI_INTA'
+Slack : -0.281
+TNS   : -0.281
+
+Type  : Slow 1200mV 85C Model Recovery 'nPCI_INTD'
+Slack : -0.267
+TNS   : -0.267
+
+Type  : Slow 1200mV 85C Model Recovery 'nPCI_INTC'
+Slack : -0.249
+TNS   : -0.249
+
+Type  : Slow 1200mV 85C Model Recovery 'nPCI_INTB'
+Slack : -0.188
+TNS   : -0.188
+
+Type  : Slow 1200mV 85C Model Recovery 'PIC_INT'
+Slack : -0.038
+TNS   : -0.038
+
+Type  : Slow 1200mV 85C Model Removal 'inst13|altpll_component|auto_generated|pll1|clk[2]'
+Slack : -10.353
+TNS   : -1430.734
+
+Type  : Slow 1200mV 85C Model Removal 'MAIN_CLK'
+Slack : -10.188
+TNS   : -1400.869
+
+Type  : Slow 1200mV 85C Model Removal 'inst12|altpll_component|auto_generated|pll1|clk[0]'
+Slack : -2.755
+TNS   : -5.510
+
+Type  : Slow 1200mV 85C Model Removal 'PIC_INT'
+Slack : -0.526
+TNS   : -0.526
+
+Type  : Slow 1200mV 85C Model Removal 'nPCI_INTB'
+Slack : -0.361
+TNS   : -0.361
+
+Type  : Slow 1200mV 85C Model Removal 'nPCI_INTC'
+Slack : -0.295
+TNS   : -0.295
+
+Type  : Slow 1200mV 85C Model Removal 'nPCI_INTD'
+Slack : -0.274
+TNS   : -0.274
+
+Type  : Slow 1200mV 85C Model Removal 'nPCI_INTA'
+Slack : -0.256
+TNS   : -0.256
+
+Type  : Slow 1200mV 85C Model Removal 'E0_INT'
+Slack : 0.237
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Removal 'DVI_INT'
+Slack : 0.299
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Removal 'Video:Fredi_Aschwanden|VIDEO_MOD_MUX_CLUTCTR:VIDEO_MOD_MUX_CLUTCTR|HSYNC'
+Slack : 1.026
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Removal 'inst22|altpll_component|auto_generated|pll1|clk[0]'
+Slack : 1.036
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Removal 'Video:Fredi_Aschwanden|VIDEO_MOD_MUX_CLUTCTR:VIDEO_MOD_MUX_CLUTCTR|VSYNC'
+Slack : 2.350
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Removal 'inst13|altpll_component|auto_generated|pll1|clk[1]'
+Slack : 3.015
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'PIC_INT'
+Slack : -3.000
+TNS   : -4.134
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'nPCI_INTB'
+Slack : -3.000
+TNS   : -4.079
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'nPCI_INTD'
+Slack : -3.000
+TNS   : -4.070
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'nPCI_INTC'
+Slack : -3.000
+TNS   : -4.050
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'nPCI_INTA'
+Slack : -3.000
+TNS   : -4.038
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'DVI_INT'
+Slack : -3.000
+TNS   : -4.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'E0_INT'
+Slack : -3.000
+TNS   : -4.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'Video:Fredi_Aschwanden|VIDEO_MOD_MUX_CLUTCTR:VIDEO_MOD_MUX_CLUTCTR|HSYNC'
+Slack : -1.000
+TNS   : -1.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'Video:Fredi_Aschwanden|VIDEO_MOD_MUX_CLUTCTR:VIDEO_MOD_MUX_CLUTCTR|VSYNC'
+Slack : -1.000
+TNS   : -1.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'inst12|altpll_component|auto_generated|pll1|clk[0]'
+Slack : 3.527
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'inst12|altpll_component|auto_generated|pll1|clk[1]'
+Slack : 3.533
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'inst12|altpll_component|auto_generated|pll1|clk[2]'
+Slack : 3.533
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'inst12|altpll_component|auto_generated|pll1|clk[3]'
+Slack : 3.533
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'inst22|altpll_component|auto_generated|pll1|clk[0]'
+Slack : 4.811
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'inst12|altpll_component|auto_generated|pll1|clk[4]'
+Slack : 7.320
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'inst|altpll_component|auto_generated|pll1|clk[3]'
+Slack : 10.398
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'MAIN_CLK'
+Slack : 13.528
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'inst13|altpll_component|auto_generated|pll1|clk[2]'
+Slack : 18.585
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'inst13|altpll_component|auto_generated|pll1|clk[1]'
+Slack : 30.973
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'inst13|altpll_component|auto_generated|pll1|clk[0]'
+Slack : 249.617
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'inst13|altpll_component|auto_generated|pll1|clk[3]'
+Slack : 999.882
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Setup 'inst22|altpll_component|auto_generated|pll1|clk[0]'
+Slack : -15.403
+TNS   : -14377.209
+
+Type  : Slow 1200mV 0C Model Setup 'inst13|altpll_component|auto_generated|pll1|clk[2]'
+Slack : -6.421
+TNS   : -3676.693
+
+Type  : Slow 1200mV 0C Model Setup 'inst12|altpll_component|auto_generated|pll1|clk[0]'
+Slack : -4.520
+TNS   : -37.132
+
+Type  : Slow 1200mV 0C Model Setup 'inst13|altpll_component|auto_generated|pll1|clk[1]'
+Slack : -4.094
+TNS   : -426.105
+
+Type  : Slow 1200mV 0C Model Setup 'MAIN_CLK'
+Slack : -3.696
+TNS   : -4132.088
+
+Type  : Slow 1200mV 0C Model Setup 'inst12|altpll_component|auto_generated|pll1|clk[3]'
+Slack : 2.718
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Setup 'inst12|altpll_component|auto_generated|pll1|clk[1]'
+Slack : 2.995
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Setup 'inst12|altpll_component|auto_generated|pll1|clk[4]'
+Slack : 3.994
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Setup 'inst12|altpll_component|auto_generated|pll1|clk[2]'
+Slack : 5.426
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Setup 'inst13|altpll_component|auto_generated|pll1|clk[0]'
+Slack : 497.772
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Setup 'inst13|altpll_component|auto_generated|pll1|clk[3]'
+Slack : 1998.168
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'inst13|altpll_component|auto_generated|pll1|clk[2]'
+Slack : -9.832
+TNS   : -8727.393
+
+Type  : Slow 1200mV 0C Model Hold 'MAIN_CLK'
+Slack : -9.617
+TNS   : -8529.400
+
+Type  : Slow 1200mV 0C Model Hold 'inst12|altpll_component|auto_generated|pll1|clk[0]'
+Slack : -5.065
+TNS   : -5.065
+
+Type  : Slow 1200mV 0C Model Hold 'inst13|altpll_component|auto_generated|pll1|clk[1]'
+Slack : 0.254
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'inst22|altpll_component|auto_generated|pll1|clk[0]'
+Slack : 0.297
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'inst13|altpll_component|auto_generated|pll1|clk[0]'
+Slack : 0.335
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'inst13|altpll_component|auto_generated|pll1|clk[3]'
+Slack : 0.346
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'inst12|altpll_component|auto_generated|pll1|clk[2]'
+Slack : 1.517
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'inst12|altpll_component|auto_generated|pll1|clk[3]'
+Slack : 2.163
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'inst12|altpll_component|auto_generated|pll1|clk[4]'
+Slack : 2.766
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'inst12|altpll_component|auto_generated|pll1|clk[1]'
+Slack : 4.082
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Recovery 'inst22|altpll_component|auto_generated|pll1|clk[0]'
+Slack : -13.902
+TNS   : -2482.848
+
+Type  : Slow 1200mV 0C Model Recovery 'inst12|altpll_component|auto_generated|pll1|clk[0]'
+Slack : -7.532
+TNS   : -15.064
+
+Type  : Slow 1200mV 0C Model Recovery 'inst13|altpll_component|auto_generated|pll1|clk[1]'
+Slack : -3.927
+TNS   : -573.408
+
+Type  : Slow 1200mV 0C Model Recovery 'inst13|altpll_component|auto_generated|pll1|clk[2]'
+Slack : -3.851
+TNS   : -663.617
+
+Type  : Slow 1200mV 0C Model Recovery 'MAIN_CLK'
+Slack : -3.223
+TNS   : -549.949
+
+Type  : Slow 1200mV 0C Model Recovery 'Video:Fredi_Aschwanden|VIDEO_MOD_MUX_CLUTCTR:VIDEO_MOD_MUX_CLUTCTR|VSYNC'
+Slack : -2.555
+TNS   : -2.555
+
+Type  : Slow 1200mV 0C Model Recovery 'Video:Fredi_Aschwanden|VIDEO_MOD_MUX_CLUTCTR:VIDEO_MOD_MUX_CLUTCTR|HSYNC'
+Slack : -1.377
+TNS   : -1.377
+
+Type  : Slow 1200mV 0C Model Recovery 'DVI_INT'
+Slack : -0.706
+TNS   : -0.706
+
+Type  : Slow 1200mV 0C Model Recovery 'E0_INT'
+Slack : -0.653
+TNS   : -0.653
+
+Type  : Slow 1200mV 0C Model Recovery 'nPCI_INTA'
+Slack : -0.192
+TNS   : -0.192
+
+Type  : Slow 1200mV 0C Model Recovery 'nPCI_INTD'
+Slack : -0.190
+TNS   : -0.190
+
+Type  : Slow 1200mV 0C Model Recovery 'nPCI_INTC'
+Slack : -0.180
+TNS   : -0.180
+
+Type  : Slow 1200mV 0C Model Recovery 'nPCI_INTB'
+Slack : -0.104
+TNS   : -0.104
+
+Type  : Slow 1200mV 0C Model Recovery 'PIC_INT'
+Slack : 0.013
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Removal 'inst13|altpll_component|auto_generated|pll1|clk[2]'
+Slack : -9.193
+TNS   : -1262.369
+
+Type  : Slow 1200mV 0C Model Removal 'MAIN_CLK'
+Slack : -8.978
+TNS   : -1223.454
+
+Type  : Slow 1200mV 0C Model Removal 'inst12|altpll_component|auto_generated|pll1|clk[0]'
+Slack : -2.195
+TNS   : -4.390
+
+Type  : Slow 1200mV 0C Model Removal 'PIC_INT'
+Slack : -0.527
+TNS   : -0.527
+
+Type  : Slow 1200mV 0C Model Removal 'nPCI_INTB'
+Slack : -0.384
+TNS   : -0.384
+
+Type  : Slow 1200mV 0C Model Removal 'nPCI_INTC'
+Slack : -0.316
+TNS   : -0.316
+
+Type  : Slow 1200mV 0C Model Removal 'nPCI_INTD'
+Slack : -0.288
+TNS   : -0.288
+
+Type  : Slow 1200mV 0C Model Removal 'nPCI_INTA'
+Slack : -0.283
+TNS   : -0.283
+
+Type  : Slow 1200mV 0C Model Removal 'E0_INT'
+Slack : 0.170
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Removal 'DVI_INT'
+Slack : 0.223
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Removal 'Video:Fredi_Aschwanden|VIDEO_MOD_MUX_CLUTCTR:VIDEO_MOD_MUX_CLUTCTR|HSYNC'
+Slack : 0.914
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Removal 'inst22|altpll_component|auto_generated|pll1|clk[0]'
+Slack : 0.936
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Removal 'Video:Fredi_Aschwanden|VIDEO_MOD_MUX_CLUTCTR:VIDEO_MOD_MUX_CLUTCTR|VSYNC'
+Slack : 2.150
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Removal 'inst13|altpll_component|auto_generated|pll1|clk[1]'
+Slack : 2.663
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'PIC_INT'
+Slack : -3.000
+TNS   : -4.036
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'nPCI_INTB'
+Slack : -3.000
+TNS   : -4.036
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'nPCI_INTD'
+Slack : -3.000
+TNS   : -4.012
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'nPCI_INTA'
+Slack : -3.000
+TNS   : -4.002
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'DVI_INT'
+Slack : -3.000
+TNS   : -4.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'E0_INT'
+Slack : -3.000
+TNS   : -4.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'nPCI_INTC'
+Slack : -3.000
+TNS   : -4.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'Video:Fredi_Aschwanden|VIDEO_MOD_MUX_CLUTCTR:VIDEO_MOD_MUX_CLUTCTR|HSYNC'
+Slack : -1.000
+TNS   : -1.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'Video:Fredi_Aschwanden|VIDEO_MOD_MUX_CLUTCTR:VIDEO_MOD_MUX_CLUTCTR|VSYNC'
+Slack : -1.000
+TNS   : -1.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'inst12|altpll_component|auto_generated|pll1|clk[0]'
+Slack : 3.517
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'inst12|altpll_component|auto_generated|pll1|clk[2]'
+Slack : 3.528
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'inst12|altpll_component|auto_generated|pll1|clk[1]'
+Slack : 3.529
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'inst12|altpll_component|auto_generated|pll1|clk[3]'
+Slack : 3.529
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'inst22|altpll_component|auto_generated|pll1|clk[0]'
+Slack : 4.909
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'inst12|altpll_component|auto_generated|pll1|clk[4]'
+Slack : 7.316
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'inst|altpll_component|auto_generated|pll1|clk[3]'
+Slack : 10.392
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'MAIN_CLK'
+Slack : 13.634
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'inst13|altpll_component|auto_generated|pll1|clk[2]'
+Slack : 18.774
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'inst13|altpll_component|auto_generated|pll1|clk[1]'
+Slack : 30.967
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'inst13|altpll_component|auto_generated|pll1|clk[0]'
+Slack : 249.612
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'inst13|altpll_component|auto_generated|pll1|clk[3]'
+Slack : 999.877
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Setup 'inst22|altpll_component|auto_generated|pll1|clk[0]'
+Slack : -9.748
+TNS   : -9757.013
+
+Type  : Fast 1200mV 0C Model Setup 'inst13|altpll_component|auto_generated|pll1|clk[2]'
+Slack : -3.484
+TNS   : -1911.267
+
+Type  : Fast 1200mV 0C Model Setup 'inst12|altpll_component|auto_generated|pll1|clk[0]'
+Slack : -2.773
+TNS   : -9.357
+
+Type  : Fast 1200mV 0C Model Setup 'inst13|altpll_component|auto_generated|pll1|clk[1]'
+Slack : -2.483
+TNS   : -260.497
+
+Type  : Fast 1200mV 0C Model Setup 'MAIN_CLK'
+Slack : -1.767
+TNS   : -1399.694
+
+Type  : Fast 1200mV 0C Model Setup 'inst12|altpll_component|auto_generated|pll1|clk[1]'
+Slack : 3.283
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Setup 'inst12|altpll_component|auto_generated|pll1|clk[3]'
+Slack : 3.689
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Setup 'inst12|altpll_component|auto_generated|pll1|clk[4]'
+Slack : 4.868
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Setup 'inst12|altpll_component|auto_generated|pll1|clk[2]'
+Slack : 5.744
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Setup 'inst13|altpll_component|auto_generated|pll1|clk[0]'
+Slack : 498.517
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Setup 'inst13|altpll_component|auto_generated|pll1|clk[3]'
+Slack : 1998.908
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'inst13|altpll_component|auto_generated|pll1|clk[2]'
+Slack : -6.775
+TNS   : -6188.069
+
+Type  : Fast 1200mV 0C Model Hold 'MAIN_CLK'
+Slack : -6.521
+TNS   : -5940.597
+
+Type  : Fast 1200mV 0C Model Hold 'inst12|altpll_component|auto_generated|pll1|clk[0]'
+Slack : -3.440
+TNS   : -3.440
+
+Type  : Fast 1200mV 0C Model Hold 'inst13|altpll_component|auto_generated|pll1|clk[1]'
+Slack : 0.136
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'inst22|altpll_component|auto_generated|pll1|clk[0]'
+Slack : 0.178
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'inst13|altpll_component|auto_generated|pll1|clk[0]'
+Slack : 0.197
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'inst13|altpll_component|auto_generated|pll1|clk[3]'
+Slack : 0.204
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'inst12|altpll_component|auto_generated|pll1|clk[3]'
+Slack : 1.296
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'inst12|altpll_component|auto_generated|pll1|clk[2]'
+Slack : 1.392
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'inst12|altpll_component|auto_generated|pll1|clk[4]'
+Slack : 1.655
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'inst12|altpll_component|auto_generated|pll1|clk[1]'
+Slack : 3.971
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Recovery 'inst22|altpll_component|auto_generated|pll1|clk[0]'
+Slack : -9.449
+TNS   : -1688.035
+
+Type  : Fast 1200mV 0C Model Recovery 'inst12|altpll_component|auto_generated|pll1|clk[0]'
+Slack : -4.842
+TNS   : -9.684
+
+Type  : Fast 1200mV 0C Model Recovery 'inst13|altpll_component|auto_generated|pll1|clk[1]'
+Slack : -2.521
+TNS   : -370.829
+
+Type  : Fast 1200mV 0C Model Recovery 'inst13|altpll_component|auto_generated|pll1|clk[2]'
+Slack : -2.077
+TNS   : -353.703
+
+Type  : Fast 1200mV 0C Model Recovery 'Video:Fredi_Aschwanden|VIDEO_MOD_MUX_CLUTCTR:VIDEO_MOD_MUX_CLUTCTR|VSYNC'
+Slack : -1.593
+TNS   : -1.593
+
+Type  : Fast 1200mV 0C Model Recovery 'MAIN_CLK'
+Slack : -1.560
+TNS   : -261.778
+
+Type  : Fast 1200mV 0C Model Recovery 'Video:Fredi_Aschwanden|VIDEO_MOD_MUX_CLUTCTR:VIDEO_MOD_MUX_CLUTCTR|HSYNC'
+Slack : -0.866
+TNS   : -0.866
+
+Type  : Fast 1200mV 0C Model Recovery 'DVI_INT'
+Slack : -0.475
+TNS   : -0.475
+
+Type  : Fast 1200mV 0C Model Recovery 'E0_INT'
+Slack : -0.438
+TNS   : -0.438
+
+Type  : Fast 1200mV 0C Model Recovery 'PIC_INT'
+Slack : -0.086
+TNS   : -0.086
+
+Type  : Fast 1200mV 0C Model Recovery 'nPCI_INTA'
+Slack : 0.253
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Recovery 'nPCI_INTC'
+Slack : 0.262
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Recovery 'nPCI_INTD'
+Slack : 0.263
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Recovery 'nPCI_INTB'
+Slack : 0.294
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Removal 'inst13|altpll_component|auto_generated|pll1|clk[2]'
+Slack : -6.385
+TNS   : -890.317
+
+Type  : Fast 1200mV 0C Model Removal 'MAIN_CLK'
+Slack : -6.131
+TNS   : -844.343
+
+Type  : Fast 1200mV 0C Model Removal 'inst12|altpll_component|auto_generated|pll1|clk[0]'
+Slack : -1.544
+TNS   : -3.088
+
+Type  : Fast 1200mV 0C Model Removal 'nPCI_INTB'
+Slack : -0.648
+TNS   : -0.648
+
+Type  : Fast 1200mV 0C Model Removal 'nPCI_INTD'
+Slack : -0.607
+TNS   : -0.607
+
+Type  : Fast 1200mV 0C Model Removal 'nPCI_INTA'
+Slack : -0.603
+TNS   : -0.603
+
+Type  : Fast 1200mV 0C Model Removal 'nPCI_INTC'
+Slack : -0.601
+TNS   : -0.601
+
+Type  : Fast 1200mV 0C Model Removal 'PIC_INT'
+Slack : -0.261
+TNS   : -0.261
+
+Type  : Fast 1200mV 0C Model Removal 'E0_INT'
+Slack : 0.109
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Removal 'DVI_INT'
+Slack : 0.148
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Removal 'Video:Fredi_Aschwanden|VIDEO_MOD_MUX_CLUTCTR:VIDEO_MOD_MUX_CLUTCTR|HSYNC'
+Slack : 0.560
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Removal 'inst22|altpll_component|auto_generated|pll1|clk[0]'
+Slack : 0.568
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Removal 'Video:Fredi_Aschwanden|VIDEO_MOD_MUX_CLUTCTR:VIDEO_MOD_MUX_CLUTCTR|VSYNC'
+Slack : 1.306
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Removal 'inst13|altpll_component|auto_generated|pll1|clk[1]'
+Slack : 1.739
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'PIC_INT'
+Slack : -3.000
+TNS   : -5.254
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'nPCI_INTD'
+Slack : -3.000
+TNS   : -5.059
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'nPCI_INTB'
+Slack : -3.000
+TNS   : -5.025
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'nPCI_INTC'
+Slack : -3.000
+TNS   : -5.003
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'nPCI_INTA'
+Slack : -3.000
+TNS   : -4.993
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'E0_INT'
+Slack : -3.000
+TNS   : -4.216
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'DVI_INT'
+Slack : -3.000
+TNS   : -4.207
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'Video:Fredi_Aschwanden|VIDEO_MOD_MUX_CLUTCTR:VIDEO_MOD_MUX_CLUTCTR|HSYNC'
+Slack : -1.000
+TNS   : -1.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'Video:Fredi_Aschwanden|VIDEO_MOD_MUX_CLUTCTR:VIDEO_MOD_MUX_CLUTCTR|VSYNC'
+Slack : -1.000
+TNS   : -1.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'inst12|altpll_component|auto_generated|pll1|clk[0]'
+Slack : 3.538
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'inst12|altpll_component|auto_generated|pll1|clk[1]'
+Slack : 3.563
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'inst12|altpll_component|auto_generated|pll1|clk[2]'
+Slack : 3.567
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'inst12|altpll_component|auto_generated|pll1|clk[3]'
+Slack : 3.568
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'inst22|altpll_component|auto_generated|pll1|clk[0]'
+Slack : 4.773
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'inst12|altpll_component|auto_generated|pll1|clk[4]'
+Slack : 7.355
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'inst|altpll_component|auto_generated|pll1|clk[3]'
+Slack : 10.398
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'MAIN_CLK'
+Slack : 13.572
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'inst13|altpll_component|auto_generated|pll1|clk[2]'
+Slack : 18.964
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'inst13|altpll_component|auto_generated|pll1|clk[1]'
+Slack : 30.983
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'inst13|altpll_component|auto_generated|pll1|clk[0]'
+Slack : 249.649
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'inst13|altpll_component|auto_generated|pll1|clk[3]'
+Slack : 999.914
+TNS   : 0.000
+
+------------------------------------------------------------

@@ -620,7 +620,7 @@ BEGIN
 	VERZ[][8] = VERZ[][7];
 	VERZ[][9] = VERZ[][8];
 	VERZ[0][0] = DISP_ON;
-	VERZ[1][0] = HSYNC_I[]!=0;
+--	VERZ[1][0] = HSYNC_I[]!=0;
 	VERZ[1][0] = (!ACP_VCTR15 # !VDL_VCT6) & HSYNC_I[]!=0
 				#  ACP_VCTR15 &  VDL_VCT6  & HSYNC_I[]==0;		-- NUR MÖGLICH WENN BEIDE
 	VERZ[2][0] = (!ACP_VCTR15 # !VDL_VCT5) & VSYNC_I[]!=0

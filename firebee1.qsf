@@ -43,175 +43,9 @@ set_global_assignment -name ORIGINAL_QUARTUS_VERSION 8.1
 set_global_assignment -name PROJECT_CREATION_TIME_DATE "10:07:29  SEPTEMBER 03, 2009"
 set_global_assignment -name LAST_QUARTUS_VERSION "9.1 SP2"
 set_global_assignment -name MISC_FILE "C:/firebee/FPGA/firebee1.dpf"
-set_global_assignment -name SOURCE_FILE Video/altddio_bidir0.cmp
-set_global_assignment -name VHDL_FILE FalconIO_SDCard_IDE_CF/WF5380/wf5380_control.vhd
-set_global_assignment -name SOURCE_FILE Video/altddio_out0.cmp
-set_global_assignment -name VHDL_FILE FalconIO_SDCard_IDE_CF/WF5380/wf5380_pkg.vhd
-set_global_assignment -name SOURCE_FILE Video/altddio_out1.cmp
-set_global_assignment -name VHDL_FILE FalconIO_SDCard_IDE_CF/WF5380/wf5380_registers.vhd
-set_global_assignment -name SOURCE_FILE Video/altddio_out2.cmp
-set_global_assignment -name VHDL_FILE FalconIO_SDCard_IDE_CF/WF5380/wf5380_soc_top.vhd
-set_global_assignment -name VHDL_FILE FalconIO_SDCard_IDE_CF/WF5380/wf5380_top.vhd
-set_global_assignment -name VHDL_FILE FalconIO_SDCard_IDE_CF/WF_FDC1772_IP/wf1772ip_am_detector.vhd
-set_global_assignment -name SOURCE_FILE FalconIO_SDCard_IDE_CF/dcfifo0.cmp
-set_global_assignment -name VHDL_FILE FalconIO_SDCard_IDE_CF/dcfifo0.vhd
-set_global_assignment -name SOURCE_FILE Video/altdpram2.cmp
-set_global_assignment -name SOURCE_FILE FalconIO_SDCard_IDE_CF/dcfifo1.cmp
-set_global_assignment -name AHDL_FILE Video/DDR_CTR.tdf
-set_global_assignment -name SOURCE_FILE Video/lpm_bustri0.cmp
-set_global_assignment -name VHDL_FILE Video/lpm_bustri0.vhd
-set_global_assignment -name VHDL_FILE FalconIO_SDCard_IDE_CF/WF_FDC1772_IP/wf1772ip_control.vhd
-set_global_assignment -name VHDL_FILE FalconIO_SDCard_IDE_CF/WF_FDC1772_IP/wf1772ip_crc_logic.vhd
-set_global_assignment -name VHDL_FILE FalconIO_SDCard_IDE_CF/WF_FDC1772_IP/wf1772ip_digital_pll.vhd
-set_global_assignment -name VHDL_FILE FalconIO_SDCard_IDE_CF/WF_FDC1772_IP/wf1772ip_pkg.vhd
-set_global_assignment -name VHDL_FILE FalconIO_SDCard_IDE_CF/WF_FDC1772_IP/wf1772ip_registers.vhd
-set_global_assignment -name VHDL_FILE FalconIO_SDCard_IDE_CF/WF_FDC1772_IP/wf1772ip_top.vhd
-set_global_assignment -name VHDL_FILE FalconIO_SDCard_IDE_CF/WF_FDC1772_IP/wf1772ip_top_soc.vhd
-set_global_assignment -name VHDL_FILE FalconIO_SDCard_IDE_CF/WF_FDC1772_IP/wf1772ip_transceiver.vhd
-set_global_assignment -name SOURCE_FILE Video/lpm_bustri5.cmp
-set_global_assignment -name VHDL_FILE Video/lpm_bustri5.vhd
-set_global_assignment -name SOURCE_FILE Video/lpm_bustri6.cmp
-set_global_assignment -name VHDL_FILE FalconIO_SDCard_IDE_CF/WF_UART6850_IP/wf6850ip_ctrl_status.vhd
-set_global_assignment -name SOURCE_FILE Video/lpm_bustri7.cmp
-set_global_assignment -name VHDL_FILE Video/lpm_bustri7.vhd
-set_global_assignment -name SOURCE_FILE Video/lpm_compare1.cmp
-set_global_assignment -name VHDL_FILE FalconIO_SDCard_IDE_CF/WF_UART6850_IP/wf6850ip_receive.vhd
-set_global_assignment -name VHDL_FILE FalconIO_SDCard_IDE_CF/WF_UART6850_IP/wf6850ip_top.vhd
-set_global_assignment -name VHDL_FILE FalconIO_SDCard_IDE_CF/WF_UART6850_IP/wf6850ip_top_soc.vhd
-set_global_assignment -name VHDL_FILE FalconIO_SDCard_IDE_CF/WF_UART6850_IP/wf6850ip_transmit.vhd
-set_global_assignment -name VHDL_FILE FalconIO_SDCard_IDE_CF/WF_MFP68901_IP/wf68901ip_gpio.vhd
-set_global_assignment -name SOURCE_FILE Video/lpm_constant2.cmp
-set_global_assignment -name VHDL_FILE FalconIO_SDCard_IDE_CF/WF_MFP68901_IP/wf68901ip_interrupts.vhd
-set_global_assignment -name SOURCE_FILE Video/lpm_constant3.cmp
-set_global_assignment -name VHDL_FILE FalconIO_SDCard_IDE_CF/WF_MFP68901_IP/wf68901ip_pkg.vhd
-set_global_assignment -name SOURCE_FILE Video/lpm_constant4.cmp
-set_global_assignment -name VHDL_FILE FalconIO_SDCard_IDE_CF/WF_MFP68901_IP/wf68901ip_timers.vhd
-set_global_assignment -name VHDL_FILE FalconIO_SDCard_IDE_CF/WF_MFP68901_IP/wf68901ip_top.vhd
-set_global_assignment -name VHDL_FILE FalconIO_SDCard_IDE_CF/WF_MFP68901_IP/wf68901ip_top_soc.vhd
-set_global_assignment -name VHDL_FILE FalconIO_SDCard_IDE_CF/WF_MFP68901_IP/wf68901ip_usart_ctrl.vhd
-set_global_assignment -name VHDL_FILE FalconIO_SDCard_IDE_CF/WF_MFP68901_IP/wf68901ip_usart_rx.vhd
-set_global_assignment -name VHDL_FILE FalconIO_SDCard_IDE_CF/WF_MFP68901_IP/wf68901ip_usart_top.vhd
-set_global_assignment -name VHDL_FILE FalconIO_SDCard_IDE_CF/WF_MFP68901_IP/wf68901ip_usart_tx.vhd
-set_global_assignment -name VHDL_FILE FalconIO_SDCard_IDE_CF/WF_SND2149_IP/wf2149ip_pkg.vhd
-set_global_assignment -name VHDL_FILE FalconIO_SDCard_IDE_CF/WF_SND2149_IP/wf2149ip_top.vhd
-set_global_assignment -name SOURCE_FILE Video/lpm_ff4.cmp
-set_global_assignment -name VHDL_FILE FalconIO_SDCard_IDE_CF/WF_SND2149_IP/wf2149ip_top_soc.vhd
-set_global_assignment -name SOURCE_FILE Video/lpm_ff5.cmp
-set_global_assignment -name VHDL_FILE FalconIO_SDCard_IDE_CF/WF_SND2149_IP/wf2149ip_wave.vhd
-set_global_assignment -name SOURCE_FILE Video/lpm_ff6.cmp
-set_global_assignment -name VHDL_FILE lpm_latch0.vhd
-set_global_assignment -name SOURCE_FILE lpm_latch0.cmp
-set_global_assignment -name QIP_FILE altpll1.qip
-set_global_assignment -name SOURCE_FILE Video/lpm_fifoDZ.cmp
-set_global_assignment -name VHDL_FILE Video/lpm_fifoDZ.vhd
-set_global_assignment -name SOURCE_FILE Video/lpm_latch1.cmp
-set_global_assignment -name SOURCE_FILE Video/lpm_mux0.cmp
-set_global_assignment -name QIP_FILE altpll2.qip
-set_global_assignment -name SOURCE_FILE Video/lpm_mux1.cmp
-set_global_assignment -name SOURCE_FILE Video/lpm_mux2.cmp
-set_global_assignment -name QIP_FILE altpll3.qip
-set_global_assignment -name SOURCE_FILE Video/lpm_mux3.cmp
-set_global_assignment -name SOURCE_FILE Video/lpm_mux4.cmp
-set_global_assignment -name SOURCE_FILE Video/altdpram0.cmp
-set_global_assignment -name SOURCE_FILE Video/lpm_mux5.cmp
-set_global_assignment -name VHDL_FILE Video/altdpram0.vhd
-set_global_assignment -name SOURCE_FILE Video/lpm_mux6.cmp
-set_global_assignment -name SOURCE_FILE Video/altdpram1.cmp
-set_global_assignment -name SOURCE_FILE Video/lpm_muxDZ2.cmp
-set_global_assignment -name VHDL_FILE Video/lpm_muxDZ2.vhd
-set_global_assignment -name SOURCE_FILE Video/lpm_muxDZ.cmp
-set_global_assignment -name VHDL_FILE Video/lpm_muxDZ.vhd
-set_global_assignment -name SOURCE_FILE altpll0.cmp
-set_global_assignment -name SOURCE_FILE Video/lpm_bustri1.cmp
-set_global_assignment -name SOURCE_FILE Video/lpm_shiftreg1.cmp
-set_global_assignment -name SOURCE_FILE Video/lpm_ff0.cmp
-set_global_assignment -name SOURCE_FILE Video/lpm_shiftreg2.cmp
-set_global_assignment -name SOURCE_FILE Video/lpm_bustri2.cmp
-set_global_assignment -name SOURCE_FILE Video/lpm_shiftreg3.cmp
-set_global_assignment -name SOURCE_FILE altpll2.cmp
-set_global_assignment -name SOURCE_FILE Video/lpm_shiftreg4.cmp
-set_global_assignment -name SOURCE_FILE Video/lpm_bustri3.cmp
-set_global_assignment -name SOURCE_FILE Video/lpm_shiftreg5.cmp
-set_global_assignment -name VHDL_FILE Video/lpm_bustri3.vhd
-set_global_assignment -name SOURCE_FILE Video/lpm_shiftreg6.cmp
-set_global_assignment -name SOURCE_FILE Video/lpm_bustri4.cmp
-set_global_assignment -name VHDL_FILE altpll2.vhd
-set_global_assignment -name SOURCE_FILE Video/lpm_constant0.cmp
-set_global_assignment -name SOURCE_FILE altpll3.cmp
-set_global_assignment -name SOURCE_FILE Video/lpm_constant1.cmp
-set_global_assignment -name VHDL_FILE altpll3.vhd
-set_global_assignment -name SOURCE_FILE lpm_counter0.cmp
-set_global_assignment -name VHDL_FILE Video/lpm_ff0.vhd
-set_global_assignment -name SOURCE_FILE Video/lpm_ff1.cmp
-set_global_assignment -name SOURCE_FILE Video/lpm_shiftreg0.cmp
-set_global_assignment -name VHDL_FILE Video/lpm_ff1.vhd
-set_global_assignment -name SOURCE_FILE Video/lpm_ff2.cmp
-set_global_assignment -name SOURCE_FILE Video/lpm_ff3.cmp
-set_global_assignment -name VHDL_FILE Video/lpm_ff3.vhd
-set_global_assignment -name AHDL_FILE Video/VIDEO_MOD_MUX_CLUTCTR.tdf
-set_global_assignment -name VHDL_FILE Video/lpm_ff2.vhd
-set_global_assignment -name SOURCE_FILE Video/lpm_fifo_dc0.cmp
-set_global_assignment -name VHDL_FILE Video/lpm_fifo_dc0.vhd
-set_global_assignment -name BDF_FILE Video/Video.bdf
-set_global_assignment -name VHDL_FILE altpll1.vhd
-set_global_assignment -name SOURCE_FILE altpll1.cmp
-set_global_assignment -name BDF_FILE firebee1.bdf
-set_global_assignment -name QIP_FILE altpll0.qip
-set_global_assignment -name QIP_FILE lpm_counter0.qip
-set_global_assignment -name VHDL_FILE "C:\\firebee\\FPGA\\FalconIO_SDCard_IDE_CF\\FalconIO_SDCard_IDE_CF.vhd"
-set_global_assignment -name VHDL_FILE "C:\\firebee\\FPGA\\DSP\\DSP.vhd"
-set_global_assignment -name QIP_FILE Video/lpm_shiftreg0.qip
-set_global_assignment -name QIP_FILE Video/altdpram0.qip
-set_global_assignment -name QIP_FILE Video/lpm_bustri1.qip
-set_global_assignment -name QIP_FILE Video/altdpram1.qip
-set_global_assignment -name QIP_FILE Video/lpm_bustri2.qip
-set_global_assignment -name QIP_FILE Video/lpm_bustri4.qip
-set_global_assignment -name QIP_FILE Video/lpm_constant0.qip
-set_global_assignment -name QIP_FILE Video/lpm_constant1.qip
-set_global_assignment -name QIP_FILE Video/lpm_mux0.qip
-set_global_assignment -name QIP_FILE Video/lpm_mux1.qip
-set_global_assignment -name QIP_FILE Video/lpm_mux2.qip
-set_global_assignment -name QIP_FILE Video/lpm_constant2.qip
-set_global_assignment -name QIP_FILE Video/altdpram2.qip
-set_global_assignment -name QIP_FILE Video/lpm_bustri6.qip
-set_global_assignment -name QIP_FILE Video/lpm_mux3.qip
-set_global_assignment -name QIP_FILE Video/lpm_mux4.qip
-set_global_assignment -name QIP_FILE Video/lpm_constant3.qip
-set_global_assignment -name QIP_FILE Video/lpm_shiftreg1.qip
-set_global_assignment -name QIP_FILE Video/lpm_latch1.qip
-set_global_assignment -name QIP_FILE Video/lpm_constant4.qip
-set_global_assignment -name QIP_FILE Video/lpm_shiftreg2.qip
-set_global_assignment -name QIP_FILE Video/lpm_compare1.qip
-set_global_assignment -name AHDL_FILE "C:\\firebee\\FPGA\\Interrupt_Handler\\interrupt_handler.tdf"
-set_global_assignment -name QIP_FILE lpm_bustri_LONG.qip
-set_global_assignment -name QIP_FILE lpm_bustri_BYT.qip
-set_global_assignment -name QIP_FILE lpm_bustri_WORD.qip
-set_global_assignment -name QIP_FILE Video/lpm_ff4.qip
-set_global_assignment -name QIP_FILE Video/lpm_ff5.qip
-set_global_assignment -name QIP_FILE Video/lpm_ff6.qip
-set_global_assignment -name VECTOR_WAVEFORM_FILE firebee1.vwf
-set_global_assignment -name QIP_FILE Video/lpm_shiftreg3.qip
-set_global_assignment -name QIP_FILE Video/altddio_bidir0.qip
-set_global_assignment -name QIP_FILE Video/altddio_out0.qip
-set_global_assignment -name QIP_FILE Video/lpm_mux5.qip
-set_global_assignment -name VHDL_FILE "C:\\firebee\\FPGA\\Video\\BLITTER\\BLITTER.vhd"
-set_global_assignment -name QIP_FILE Video/lpm_shiftreg5.qip
-set_global_assignment -name QIP_FILE Video/lpm_shiftreg6.qip
-set_global_assignment -name QIP_FILE Video/lpm_shiftreg4.qip
-set_global_assignment -name QIP_FILE Video/altddio_out1.qip
-set_global_assignment -name QIP_FILE Video/altddio_out2.qip
-set_global_assignment -name QIP_FILE altddio_out3.qip
-set_global_assignment -name QIP_FILE Video/lpm_mux6.qip
-set_global_assignment -name VHDL_FILE FalconIO_SDCard_IDE_CF/FalconIO_SDCard_IDE_CF_pgk.vhd
-set_global_assignment -name QIP_FILE FalconIO_SDCard_IDE_CF/dcfifo0.qip
-set_global_assignment -name QIP_FILE FalconIO_SDCard_IDE_CF/dcfifo1.qip
-set_global_assignment -name QIP_FILE Video/lpm_muxDZ.qip
-set_global_assignment -name QIP_FILE Video/lpm_muxVDM.qip
-set_global_assignment -name SOURCE_FILE firebee1.fit.summary_alt
 
 # Pin & Location Assignments
 # ==========================
-set_location_assignment PIN_AB12 -to CLK33M
 set_location_assignment PIN_G2 -to MAIN_CLK
 set_location_assignment PIN_Y3 -to FB_AD[0]
 set_location_assignment PIN_Y6 -to FB_AD[1]
@@ -485,7 +319,6 @@ set_location_assignment PIN_A20 -to nRD_DATA
 set_location_assignment PIN_C17 -to nDCHG
 set_location_assignment PIN_J4 -to nACSI_INT
 set_location_assignment PIN_K7 -to nACSI_DRQ
-set_location_assignment PIN_E12 -to MIDI_IN
 set_location_assignment PIN_G7 -to LP_BUSY
 set_location_assignment PIN_Y1 -to IDE_RDY
 set_location_assignment PIN_G22 -to IDE_INT
@@ -662,7 +495,7 @@ set_instance_assignment -name MAX_DELAY "5 ns" -from FB_AD -to BA
 set_instance_assignment -name CURRENT_STRENGTH_NEW 4MA -to LED_FPGA_OK
 set_instance_assignment -name CURRENT_STRENGTH_NEW 12MA -to VCKE
 set_instance_assignment -name CURRENT_STRENGTH_NEW 12MA -to nVCS
-set_instance_assignment -name CURRENT_STRENGTH_NEW 8MA -to FB_AD
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to FB_AD
 set_instance_assignment -name CURRENT_STRENGTH_NEW 12MA -to BA
 set_instance_assignment -name CURRENT_STRENGTH_NEW 12MA -to DDR_CLK
 set_instance_assignment -name CURRENT_STRENGTH_NEW 12MA -to VA
@@ -680,15 +513,14 @@ set_instance_assignment -name CURRENT_STRENGTH_NEW 16MA -to VG
 set_instance_assignment -name CURRENT_STRENGTH_NEW 16MA -to VR
 set_instance_assignment -name CURRENT_STRENGTH_NEW 16MA -to nBLANK_PAD
 set_instance_assignment -name CURRENT_STRENGTH_NEW 16MA -to VSYNC_PAD
-set_instance_assignment -name CURRENT_STRENGTH_NEW 8MA -to nPD_VGA
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to nPD_VGA
 set_instance_assignment -name CURRENT_STRENGTH_NEW 8MA -to nSYNC
-set_instance_assignment -name CURRENT_STRENGTH_NEW 8MA -to SRD
-set_instance_assignment -name CURRENT_STRENGTH_NEW 8MA -to IO
-set_instance_assignment -name CURRENT_STRENGTH_NEW 8MA -to nSRWE
-set_instance_assignment -name CURRENT_STRENGTH_NEW 8MA -to nSROE
-set_instance_assignment -name CURRENT_STRENGTH_NEW 8MA -to nSRCS
-set_instance_assignment -name CURRENT_STRENGTH_NEW 8MA -to nSRBLE
-set_instance_assignment -name CURRENT_STRENGTH_NEW 8MA -to nSRBHE
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MINIMUM CURRENT" -to SRD
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MINIMUM CURRENT" -to IO
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MINIMUM CURRENT" -to nSRWE
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MINIMUM CURRENT" -to nSRCS
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MINIMUM CURRENT" -to nSRBLE
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MINIMUM CURRENT" -to nSRBHE
 set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to CLK24M576
 set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to CLKUSB
 set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to CLK25M
@@ -733,8 +565,268 @@ set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
 # end ENTITY(firebee1)
 # --------------------
 set_global_assignment -name MISC_FILE "C:/FireBee/FPGA/firebee1.dpf"
-set_global_assignment -name QIP_FILE altpll_reconfig1.qip
-set_global_assignment -name QIP_FILE altpll4.qip
 set_location_assignment PIN_E5 -to LPDIR
 set_location_assignment PIN_B11 -to nRSTO_MCF
+set_global_assignment -name SOURCE_FILE Video/BLITTER/lpm_clshift0.cmp
+set_global_assignment -name AHDL_FILE Video/BLITTER/lpm_clshift0.tdf
+set_global_assignment -name SOURCE_FILE Video/BLITTER/altsyncram0.cmp
+set_global_assignment -name AHDL_FILE Video/BLITTER/altsyncram0.tdf
+set_global_assignment -name SOURCE_FILE Video/altddio_bidir0.cmp
+set_global_assignment -name VHDL_FILE FalconIO_SDCard_IDE_CF/WF5380/wf5380_control.vhd
+set_global_assignment -name SOURCE_FILE Video/altddio_out0.cmp
+set_global_assignment -name VHDL_FILE FalconIO_SDCard_IDE_CF/WF5380/wf5380_pkg.vhd
+set_global_assignment -name SOURCE_FILE Video/altddio_out1.cmp
+set_global_assignment -name VHDL_FILE FalconIO_SDCard_IDE_CF/WF5380/wf5380_registers.vhd
+set_global_assignment -name SOURCE_FILE Video/altddio_out2.cmp
+set_global_assignment -name VHDL_FILE FalconIO_SDCard_IDE_CF/WF5380/wf5380_soc_top.vhd
+set_global_assignment -name VHDL_FILE FalconIO_SDCard_IDE_CF/WF5380/wf5380_top.vhd
+set_global_assignment -name VHDL_FILE FalconIO_SDCard_IDE_CF/WF_FDC1772_IP/wf1772ip_am_detector.vhd
+set_global_assignment -name SOURCE_FILE FalconIO_SDCard_IDE_CF/dcfifo0.cmp
+set_global_assignment -name VHDL_FILE FalconIO_SDCard_IDE_CF/dcfifo0.vhd
+set_global_assignment -name SOURCE_FILE Video/altdpram2.cmp
+set_global_assignment -name SOURCE_FILE FalconIO_SDCard_IDE_CF/dcfifo1.cmp
+set_global_assignment -name AHDL_FILE Video/DDR_CTR.tdf
+set_global_assignment -name SOURCE_FILE Video/lpm_bustri0.cmp
+set_global_assignment -name VHDL_FILE Video/lpm_bustri0.vhd
+set_global_assignment -name VHDL_FILE FalconIO_SDCard_IDE_CF/WF_FDC1772_IP/wf1772ip_control.vhd
+set_global_assignment -name VHDL_FILE FalconIO_SDCard_IDE_CF/WF_FDC1772_IP/wf1772ip_crc_logic.vhd
+set_global_assignment -name VHDL_FILE FalconIO_SDCard_IDE_CF/WF_FDC1772_IP/wf1772ip_digital_pll.vhd
+set_global_assignment -name VHDL_FILE FalconIO_SDCard_IDE_CF/WF_FDC1772_IP/wf1772ip_pkg.vhd
+set_global_assignment -name VHDL_FILE FalconIO_SDCard_IDE_CF/WF_FDC1772_IP/wf1772ip_registers.vhd
+set_global_assignment -name VHDL_FILE FalconIO_SDCard_IDE_CF/WF_FDC1772_IP/wf1772ip_top.vhd
+set_global_assignment -name VHDL_FILE FalconIO_SDCard_IDE_CF/WF_FDC1772_IP/wf1772ip_top_soc.vhd
+set_global_assignment -name VHDL_FILE FalconIO_SDCard_IDE_CF/WF_FDC1772_IP/wf1772ip_transceiver.vhd
+set_global_assignment -name SOURCE_FILE Video/lpm_bustri5.cmp
+set_global_assignment -name VHDL_FILE Video/lpm_bustri5.vhd
+set_global_assignment -name SOURCE_FILE Video/lpm_bustri6.cmp
+set_global_assignment -name VHDL_FILE FalconIO_SDCard_IDE_CF/WF_UART6850_IP/wf6850ip_ctrl_status.vhd
+set_global_assignment -name SOURCE_FILE Video/lpm_bustri7.cmp
+set_global_assignment -name VHDL_FILE Video/lpm_bustri7.vhd
+set_global_assignment -name SOURCE_FILE Video/lpm_compare1.cmp
+set_global_assignment -name VHDL_FILE FalconIO_SDCard_IDE_CF/WF_UART6850_IP/wf6850ip_receive.vhd
+set_global_assignment -name VHDL_FILE FalconIO_SDCard_IDE_CF/WF_UART6850_IP/wf6850ip_top.vhd
+set_global_assignment -name VHDL_FILE FalconIO_SDCard_IDE_CF/WF_UART6850_IP/wf6850ip_top_soc.vhd
+set_global_assignment -name VHDL_FILE FalconIO_SDCard_IDE_CF/WF_UART6850_IP/wf6850ip_transmit.vhd
+set_global_assignment -name VHDL_FILE FalconIO_SDCard_IDE_CF/WF_MFP68901_IP/wf68901ip_gpio.vhd
+set_global_assignment -name SOURCE_FILE Video/lpm_constant2.cmp
+set_global_assignment -name VHDL_FILE FalconIO_SDCard_IDE_CF/WF_MFP68901_IP/wf68901ip_interrupts.vhd
+set_global_assignment -name SOURCE_FILE Video/lpm_constant3.cmp
+set_global_assignment -name VHDL_FILE FalconIO_SDCard_IDE_CF/WF_MFP68901_IP/wf68901ip_pkg.vhd
+set_global_assignment -name SOURCE_FILE Video/lpm_constant4.cmp
+set_global_assignment -name VHDL_FILE FalconIO_SDCard_IDE_CF/WF_MFP68901_IP/wf68901ip_timers.vhd
+set_global_assignment -name VHDL_FILE FalconIO_SDCard_IDE_CF/WF_MFP68901_IP/wf68901ip_top.vhd
+set_global_assignment -name VHDL_FILE FalconIO_SDCard_IDE_CF/WF_MFP68901_IP/wf68901ip_top_soc.vhd
+set_global_assignment -name VHDL_FILE FalconIO_SDCard_IDE_CF/WF_MFP68901_IP/wf68901ip_usart_ctrl.vhd
+set_global_assignment -name VHDL_FILE FalconIO_SDCard_IDE_CF/WF_MFP68901_IP/wf68901ip_usart_rx.vhd
+set_global_assignment -name VHDL_FILE FalconIO_SDCard_IDE_CF/WF_MFP68901_IP/wf68901ip_usart_top.vhd
+set_global_assignment -name VHDL_FILE FalconIO_SDCard_IDE_CF/WF_MFP68901_IP/wf68901ip_usart_tx.vhd
+set_global_assignment -name VHDL_FILE FalconIO_SDCard_IDE_CF/WF_SND2149_IP/wf2149ip_pkg.vhd
+set_global_assignment -name VHDL_FILE FalconIO_SDCard_IDE_CF/WF_SND2149_IP/wf2149ip_top.vhd
+set_global_assignment -name SOURCE_FILE Video/lpm_ff4.cmp
+set_global_assignment -name VHDL_FILE FalconIO_SDCard_IDE_CF/WF_SND2149_IP/wf2149ip_top_soc.vhd
+set_global_assignment -name SOURCE_FILE Video/lpm_ff5.cmp
+set_global_assignment -name VHDL_FILE FalconIO_SDCard_IDE_CF/WF_SND2149_IP/wf2149ip_wave.vhd
+set_global_assignment -name SOURCE_FILE Video/lpm_ff6.cmp
+set_global_assignment -name VHDL_FILE lpm_latch0.vhd
+set_global_assignment -name SOURCE_FILE lpm_latch0.cmp
+set_global_assignment -name QIP_FILE altpll1.qip
+set_global_assignment -name SOURCE_FILE Video/lpm_fifoDZ.cmp
+set_global_assignment -name VHDL_FILE Video/lpm_fifoDZ.vhd
+set_global_assignment -name SOURCE_FILE Video/lpm_latch1.cmp
+set_global_assignment -name SOURCE_FILE Video/lpm_mux0.cmp
+set_global_assignment -name QIP_FILE altpll2.qip
+set_global_assignment -name SOURCE_FILE Video/lpm_mux1.cmp
+set_global_assignment -name SOURCE_FILE Video/lpm_mux2.cmp
+set_global_assignment -name QIP_FILE altpll3.qip
+set_global_assignment -name SOURCE_FILE Video/lpm_mux3.cmp
+set_global_assignment -name SOURCE_FILE Video/lpm_mux4.cmp
+set_global_assignment -name SOURCE_FILE Video/altdpram0.cmp
+set_global_assignment -name SOURCE_FILE Video/lpm_mux5.cmp
+set_global_assignment -name VHDL_FILE Video/altdpram0.vhd
+set_global_assignment -name SOURCE_FILE Video/lpm_mux6.cmp
+set_global_assignment -name SOURCE_FILE Video/altdpram1.cmp
+set_global_assignment -name SOURCE_FILE Video/lpm_muxDZ2.cmp
+set_global_assignment -name VHDL_FILE Video/lpm_muxDZ2.vhd
+set_global_assignment -name SOURCE_FILE Video/lpm_muxDZ.cmp
+set_global_assignment -name VHDL_FILE Video/lpm_muxDZ.vhd
+set_global_assignment -name SOURCE_FILE altpll0.cmp
+set_global_assignment -name SOURCE_FILE Video/lpm_bustri1.cmp
+set_global_assignment -name SOURCE_FILE Video/lpm_shiftreg1.cmp
+set_global_assignment -name SOURCE_FILE Video/lpm_ff0.cmp
+set_global_assignment -name SOURCE_FILE Video/lpm_shiftreg2.cmp
+set_global_assignment -name SOURCE_FILE Video/lpm_bustri2.cmp
+set_global_assignment -name SOURCE_FILE Video/lpm_shiftreg3.cmp
+set_global_assignment -name SOURCE_FILE altpll2.cmp
+set_global_assignment -name SOURCE_FILE Video/lpm_shiftreg4.cmp
+set_global_assignment -name SOURCE_FILE Video/lpm_bustri3.cmp
+set_global_assignment -name SOURCE_FILE Video/lpm_shiftreg5.cmp
+set_global_assignment -name VHDL_FILE Video/lpm_bustri3.vhd
+set_global_assignment -name SOURCE_FILE Video/lpm_shiftreg6.cmp
+set_global_assignment -name SOURCE_FILE Video/lpm_bustri4.cmp
+set_global_assignment -name VHDL_FILE altpll2.vhd
+set_global_assignment -name SOURCE_FILE Video/lpm_constant0.cmp
+set_global_assignment -name SOURCE_FILE altpll3.cmp
+set_global_assignment -name SOURCE_FILE Video/lpm_constant1.cmp
+set_global_assignment -name VHDL_FILE altpll3.vhd
+set_global_assignment -name SOURCE_FILE lpm_counter0.cmp
+set_global_assignment -name VHDL_FILE Video/lpm_ff0.vhd
+set_global_assignment -name SOURCE_FILE Video/lpm_ff1.cmp
+set_global_assignment -name SOURCE_FILE Video/lpm_shiftreg0.cmp
+set_global_assignment -name VHDL_FILE Video/lpm_ff1.vhd
+set_global_assignment -name SOURCE_FILE Video/lpm_ff2.cmp
+set_global_assignment -name SOURCE_FILE Video/lpm_ff3.cmp
+set_global_assignment -name VHDL_FILE Video/lpm_ff3.vhd
+set_global_assignment -name AHDL_FILE Video/VIDEO_MOD_MUX_CLUTCTR.tdf
+set_global_assignment -name VHDL_FILE Video/lpm_ff2.vhd
+set_global_assignment -name SOURCE_FILE Video/lpm_fifo_dc0.cmp
+set_global_assignment -name VHDL_FILE Video/lpm_fifo_dc0.vhd
+set_global_assignment -name BDF_FILE Video/Video.bdf
+set_global_assignment -name VHDL_FILE altpll1.vhd
+set_global_assignment -name SOURCE_FILE altpll1.cmp
+set_global_assignment -name BDF_FILE firebee1.bdf
+set_global_assignment -name QIP_FILE altpll0.qip
+set_global_assignment -name QIP_FILE lpm_counter0.qip
+set_global_assignment -name VHDL_FILE "C:\\firebee\\FPGA\\FalconIO_SDCard_IDE_CF\\FalconIO_SDCard_IDE_CF.vhd"
+set_global_assignment -name VHDL_FILE "C:\\firebee\\FPGA\\DSP\\DSP.vhd"
+set_global_assignment -name QIP_FILE Video/lpm_shiftreg0.qip
+set_global_assignment -name QIP_FILE Video/altdpram0.qip
+set_global_assignment -name QIP_FILE Video/lpm_bustri1.qip
+set_global_assignment -name QIP_FILE Video/altdpram1.qip
+set_global_assignment -name QIP_FILE Video/lpm_bustri2.qip
+set_global_assignment -name QIP_FILE Video/lpm_bustri4.qip
+set_global_assignment -name QIP_FILE Video/lpm_constant0.qip
+set_global_assignment -name QIP_FILE Video/lpm_constant1.qip
+set_global_assignment -name QIP_FILE Video/lpm_mux0.qip
+set_global_assignment -name QIP_FILE Video/lpm_mux1.qip
+set_global_assignment -name QIP_FILE Video/lpm_mux2.qip
+set_global_assignment -name QIP_FILE Video/lpm_constant2.qip
+set_global_assignment -name QIP_FILE Video/altdpram2.qip
+set_global_assignment -name QIP_FILE Video/lpm_bustri6.qip
+set_global_assignment -name QIP_FILE Video/lpm_mux3.qip
+set_global_assignment -name QIP_FILE Video/lpm_mux4.qip
+set_global_assignment -name QIP_FILE Video/lpm_constant3.qip
+set_global_assignment -name QIP_FILE Video/lpm_shiftreg1.qip
+set_global_assignment -name QIP_FILE Video/lpm_latch1.qip
+set_global_assignment -name QIP_FILE Video/lpm_constant4.qip
+set_global_assignment -name QIP_FILE Video/lpm_shiftreg2.qip
+set_global_assignment -name QIP_FILE Video/lpm_compare1.qip
+set_global_assignment -name AHDL_FILE "C:\\firebee\\FPGA\\Interrupt_Handler\\interrupt_handler.tdf"
+set_global_assignment -name QIP_FILE lpm_bustri_LONG.qip
+set_global_assignment -name QIP_FILE lpm_bustri_BYT.qip
+set_global_assignment -name QIP_FILE lpm_bustri_WORD.qip
+set_global_assignment -name QIP_FILE Video/lpm_ff4.qip
+set_global_assignment -name QIP_FILE Video/lpm_ff5.qip
+set_global_assignment -name QIP_FILE Video/lpm_ff6.qip
+set_global_assignment -name VECTOR_WAVEFORM_FILE firebee1.vwf
+set_global_assignment -name QIP_FILE Video/lpm_shiftreg3.qip
+set_global_assignment -name QIP_FILE Video/altddio_bidir0.qip
+set_global_assignment -name QIP_FILE Video/altddio_out0.qip
+set_global_assignment -name QIP_FILE Video/lpm_mux5.qip
+set_global_assignment -name QIP_FILE Video/lpm_shiftreg5.qip
+set_global_assignment -name QIP_FILE Video/lpm_shiftreg6.qip
+set_global_assignment -name QIP_FILE Video/lpm_shiftreg4.qip
+set_global_assignment -name QIP_FILE Video/altddio_out1.qip
+set_global_assignment -name QIP_FILE Video/altddio_out2.qip
+set_global_assignment -name QIP_FILE altddio_out3.qip
+set_global_assignment -name QIP_FILE Video/lpm_mux6.qip
+set_global_assignment -name VHDL_FILE FalconIO_SDCard_IDE_CF/FalconIO_SDCard_IDE_CF_pgk.vhd
+set_global_assignment -name QIP_FILE FalconIO_SDCard_IDE_CF/dcfifo0.qip
+set_global_assignment -name QIP_FILE FalconIO_SDCard_IDE_CF/dcfifo1.qip
+set_global_assignment -name QIP_FILE Video/lpm_muxDZ.qip
+set_global_assignment -name QIP_FILE Video/lpm_muxVDM.qip
+set_global_assignment -name SOURCE_FILE firebee1.fit.summary_alt
+set_global_assignment -name QIP_FILE altpll_reconfig1.qip
+set_global_assignment -name QIP_FILE altpll4.qip
+set_global_assignment -name QIP_FILE lpm_mux0.qip
+set_global_assignment -name QIP_FILE Video/BLITTER/lpm_clshift0.qip
+set_global_assignment -name SOURCE_FILE Video/BLITTER/blitter.tdf.ALT
+set_global_assignment -name QIP_FILE Video/BLITTER/altsyncram0.qip
+set_instance_assignment -name PASSIVE_RESISTOR "PULL-UP" -to E0_INT
+set_instance_assignment -name PASSIVE_RESISTOR "PULL-UP" -to DVI_INT
+set_instance_assignment -name PASSIVE_RESISTOR "PULL-UP" -to nPCI_INTA
+set_instance_assignment -name PASSIVE_RESISTOR "PULL-UP" -to nPCI_INTB
+set_instance_assignment -name PASSIVE_RESISTOR "PULL-UP" -to nPCI_INTC
+set_instance_assignment -name PASSIVE_RESISTOR "PULL-UP" -to nPCI_INTD
+set_location_assignment PIN_AB12 -to CLK33MDIR
+set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
+set_global_assignment -name QIP_FILE lpm_shiftreg0.qip
+set_global_assignment -name QIP_FILE lpm_counter1.qip
+set_global_assignment -name QIP_FILE altiobuf_bidir0.qip
+set_location_assignment PIN_E12 -to MIDI_IN_PIN
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MINIMUM CURRENT" -to MIDI_IN_PIN
+set_instance_assignment -name PASSIVE_RESISTOR "PULL-UP" -to MIDI_IN_PIN
+set_instance_assignment -name WEAK_PULL_UP_RESISTOR ON -to MIDI_IN_PIN
+set_instance_assignment -name PCI_IO ON -to nPCI_INTA
+set_instance_assignment -name PCI_IO ON -to nPCI_INTB
+set_instance_assignment -name PCI_IO ON -to nPCI_INTC
+set_instance_assignment -name PCI_IO ON -to nPCI_INTD
+set_instance_assignment -name WEAK_PULL_UP_RESISTOR ON -to nACSI_DRQ
+set_instance_assignment -name WEAK_PULL_UP_RESISTOR ON -to nACSI_INT
+set_instance_assignment -name WEAK_PULL_UP_RESISTOR ON -to nPCI_INTA
+set_instance_assignment -name WEAK_PULL_UP_RESISTOR ON -to nPCI_INTB
+set_instance_assignment -name WEAK_PULL_UP_RESISTOR ON -to nPCI_INTC
+set_instance_assignment -name WEAK_PULL_UP_RESISTOR ON -to nPCI_INTD
+set_instance_assignment -name WEAK_PULL_UP_RESISTOR ON -to SD_WP
+set_instance_assignment -name WEAK_PULL_UP_RESISTOR ON -to SD_CARD_DEDECT
+set_instance_assignment -name PASSIVE_RESISTOR "PULL-UP" -to nDACK1
+set_instance_assignment -name PASSIVE_RESISTOR "PULL-UP" -to TOUT0
+set_instance_assignment -name PASSIVE_RESISTOR "PULL-UP" -to MAIN_CLK
+set_instance_assignment -name PASSIVE_RESISTOR "PULL-UP" -to CLK33MDIR
+set_instance_assignment -name PASSIVE_RESISTOR "PULL-UP" -to nRSTO_MCF
+set_instance_assignment -name PASSIVE_RESISTOR "PULL-UP" -to nDACK0
+set_instance_assignment -name WEAK_PULL_UP_RESISTOR ON -to nIRQ[2]
+set_instance_assignment -name PASSIVE_RESISTOR "PULL-UP" -to nIRQ[3]
+set_instance_assignment -name WEAK_PULL_UP_RESISTOR ON -to TIN0
+set_instance_assignment -name PASSIVE_RESISTOR "PULL-UP" -to TIN0
+set_instance_assignment -name WEAK_PULL_UP_RESISTOR ON -to nIRQ[6]
+set_instance_assignment -name WEAK_PULL_UP_RESISTOR ON -to nIRQ[5]
+set_instance_assignment -name WEAK_PULL_UP_RESISTOR ON -to nIRQ[4]
+set_instance_assignment -name PASSIVE_RESISTOR "PULL-UP" -to nIRQ[4]
+set_instance_assignment -name PASSIVE_RESISTOR "PULL-UP" -to nIRQ[5]
+set_instance_assignment -name PASSIVE_RESISTOR "PULL-UP" -to nIRQ[6]
+set_instance_assignment -name WEAK_PULL_UP_RESISTOR ON -to nIRQ[3]
+set_instance_assignment -name PASSIVE_RESISTOR "PULL-UP" -to nIRQ[2]
+set_global_assignment -name POWER_USE_TA_VALUE 35
+set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "NO HEAT SINK WITH STILL AIR"
+set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to DSA_D
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to nMOT_ON
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to nSTEP_DIR
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to nSTEP
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to nWR
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to nWR_GATE
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to nSDSEL
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to SCSI_PAR
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to SCSI_DIR
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to nSCSI_SEL
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to nSCSI_RST
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to nSCSI_BUSY
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to nSCSI_ATN
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to nSCSI_ACK
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to ACSI_A1
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to nACSI_CS
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to ACSI_DIR
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to nACSI_ACK
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to nACSI_RESET
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to LPDIR
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to LP_STR
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to LP_D
+set_instance_assignment -name IO_STANDARD "3.0-V LVCMOS" -to LP_D
+set_instance_assignment -name IO_STANDARD "3.0-V LVCMOS" -to LPDIR
+set_instance_assignment -name IO_STANDARD "3.0-V LVCMOS" -to LP_STR
+set_instance_assignment -name IO_STANDARD "3.0-V LVCMOS" -to SRD
+set_instance_assignment -name IO_STANDARD "3.0-V LVCMOS" -to IO[0]
+set_instance_assignment -name IO_STANDARD "3.0-V LVCMOS" -to IO[8]
+set_instance_assignment -name IO_STANDARD "3.0-V LVCMOS" -to IO[7]
+set_instance_assignment -name IO_STANDARD "3.0-V LVCMOS" -to IO[6]
+set_instance_assignment -name IO_STANDARD "3.0-V LVCMOS" -to IO[5]
+set_instance_assignment -name IO_STANDARD "3.0-V LVCMOS" -to IO[4]
+set_instance_assignment -name IO_STANDARD "3.0-V LVCMOS" -to IO[3]
+set_instance_assignment -name IO_STANDARD "3.0-V LVCMOS" -to IO[2]
+set_instance_assignment -name IO_STANDARD "3.0-V LVCMOS" -to IO[1]
+set_instance_assignment -name IO_STANDARD "3.0-V LVCMOS" -to nSRBHE
+set_instance_assignment -name IO_STANDARD "3.0-V LVCMOS" -to nSRWE
+set_instance_assignment -name IO_STANDARD "3.0-V LVCMOS" -to nSRCS
+set_instance_assignment -name IO_STANDARD "3.0-V LVCMOS" -to nSRBLE
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to AMKB_RX
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
