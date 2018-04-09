@@ -33,7 +33,7 @@
 --applicable agreement for further details.
 
 -- Clearbox generated function header
-FUNCTION FPGA_DATE_lpm_constant_d19 ()
+FUNCTION FPGA_DATE_lpm_constant_i19 ()
 RETURNS ( result[31..0]);
 
 
@@ -46,11 +46,11 @@ SUBDESIGN FPGA_DATE
 
 VARIABLE
 
-	FPGA_DATE_lpm_constant_d19_component : FPGA_DATE_lpm_constant_d19;
+	FPGA_DATE_lpm_constant_i19_component : FPGA_DATE_lpm_constant_i19;
 
 BEGIN
 
-	result[31..0] = FPGA_DATE_lpm_constant_d19_component.result[31..0];
+	result[31..0] = FPGA_DATE_lpm_constant_i19_component.result[31..0];
 END;
 
 
@@ -63,9 +63,9 @@ END;
 -- Retrieval info: PRIVATE: JTAG_ID STRING "NONE"
 -- Retrieval info: PRIVATE: Radix NUMERIC "16"
 -- Retrieval info: PRIVATE: SYNTH_WRAPPER_GEN_POSTFIX STRING "0"
--- Retrieval info: PRIVATE: Value NUMERIC "319037463"
+-- Retrieval info: PRIVATE: Value NUMERIC "402923543"
 -- Retrieval info: PRIVATE: nBit NUMERIC "32"
--- Retrieval info: CONSTANT: LPM_CVALUE NUMERIC "319037463"
+-- Retrieval info: CONSTANT: LPM_CVALUE NUMERIC "402923543"
 -- Retrieval info: CONSTANT: LPM_HINT STRING "ENABLE_RUNTIME_MOD=NO"
 -- Retrieval info: CONSTANT: LPM_TYPE STRING "LPM_CONSTANT"
 -- Retrieval info: CONSTANT: LPM_WIDTH NUMERIC "32"
