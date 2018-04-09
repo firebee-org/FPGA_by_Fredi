@@ -184,10 +184,14 @@ signal TDO						: STD_LOGIC;
 signal SNDCS					: STD_LOGIC;
 signal SNDCS_I					: STD_LOGIC;
 signal SNDIR_I					: STD_LOGIC;
-signal LP_DIR_X					: STD_LOGIC;
 signal DA_OUT_X					: STD_LOGIC_VECTOR(7 downto 0);
 signal LP_D_X					: STD_LOGIC_VECTOR(7 downto 0);
-signal nLP_STR					: STD_LOGIC;
+signal LP_STR_X					: STD_LOGIC;
+signal LP_STR_NS1				: STD_LOGIC;
+signal LP_STR_NS0				: STD_LOGIC;
+signal LP_DIR_X					: STD_LOGIC;
+signal LP_DIR_NS1				: STD_LOGIC;
+signal LP_DIR_NS0				: STD_LOGIC;
 -- DMA SOUND
 signal dma_snd_cs				: STD_LOGIC;
 signal sndmactl					: STD_LOGIC_VECTOR(7 downto 0);
@@ -298,8 +302,7 @@ FB_B1 <= '1' when FB_ADR(0) = '1' or BYT = '0' else '0';
 FALCON_IO_TA <= '1' when ACIA_CS_I = '1' or DTACK_OUT_MFPn = '0' or DMA_MODUS_CS ='1' or dma_snd_cs = '1' or paddle_cs = '1'
 				 or DMA_ADR_CS = '1' or DMA_DIRM_CS = '1' or DMA_BYT_CNT_CS = '1' or FCF_CS = '1' or IDE_TA = '1' else '0';	--SNDCS = '1' or 
 SUB_BUS <= '1' when nFB_WR = '1' and ROM_CS = '1' ELSE
-           '1' when IDE_CF_CS = '1' ELSE
-           '1' when   nFB_CS3 = '0' ELSE '0';
+           '1' when IDE_CF_CS = '1' ELSE '0';					-- DARF NICHT AKTIV SEIN BEI ZUGRIFF AUF DRIVE 0 UND 1 DA KOMMEN DIE DATEN DIREKT VOM FPGA
 nRP_UDS <= '0' when SUB_BUS = '1' and FB_B0 = '1' else '1'; 
 nRP_LDS <= '0' when SUB_BUS = '1' and FB_B1 = '1' else '1'; 
 
@@ -325,6 +328,22 @@ SD_CDM_D1 <= 'Z';
 ----------------------------------------------------------------------------
 -- IDE
 ----------------------------------------------------------------------------
+IDE_RES <= not ACP_CONF(25) and nRSTO; 	-- !!!!ACHTUNG: RESET wenn 0!!!!!!!!!!!!!!! -- IDE_RES manuel oder weil nRSTO 
+IDE_CF_CS  	<= '1' when (nFB_CS1 = '0' OR nFB_CS3 = '0') and FB_ADR(23 downto 7) = x"1E000"  else '0';		-- FFF0'0000-FFF0'007F
+IDE_DRIVE0 	<= '1' when (nFB_CS1 = '0' OR nFB_CS3 = '0') and FB_ADR(23 downto 0) = x"F00099" else '0';		-- FFF0'0099 (19+80!)
+IDE_DRIVE1 	<= '1' when (nFB_CS1 = '0' OR nFB_CS3 = '0') and FB_ADR(23 downto 0) = x"F000D9" else '0';		-- FFF0'00D9 (19+40+80!)
+IDE_DCS    	<= '1' when  FB_ALE = '1' and FB_ADR(31 downto 2) = x"3FFC0000" else 							-- FFF0'000x 0-3
+               '1' when (nFB_CS1 = '0' OR nFB_CS3 = '0') and FB_ADR(23 downto 2) = x"3C0000" else			-- FFF0'000x 0-3
+			   '1' when  FB_ALE = '1' and FB_ADR(31 downto 2) = x"3FFC0010" else 							-- FFF0'004x 0-3
+               '1' when (nFB_CS1 = '0' OR nFB_CS3 = '0') and FB_ADR(23 downto 2) = x"3C0010" else '0';		-- FFF0'004x 0-3
+nCF_CS0    <=     FB_ADR(5) or (FB_ADR(6) xor (ACP_CONF(31) xnor HD_DD)); 									-- xxxx'xx00-1F
+nCF_CS1    <= not FB_ADR(5) or (FB_ADR(6) xor (ACP_CONF(31) xnor HD_DD)); 									-- xxxx'xx20-3F
+nIDE_CS0   <=     FB_ADR(5) or (FB_ADR(6) xnor (ACP_CONF(30) xnor HD_DD)); 									-- xxxx'xx40-5F
+nIDE_CS1   <= not FB_ADR(5) or (FB_ADR(6) xnor (ACP_CONF(30) xnor HD_DD)); 									-- xxxx'xx60-7F
+nDREQ0 <= '1';
+FB_AD(23 downto 20) <= ACP_CONF(19 downto 16) when IDE_DRIVE0 = '1' and nFB_OE = '0' else "ZZZZ";
+FB_AD(23 downto 20) <= ACP_CONF(23 downto 20) when IDE_DRIVE1 = '1' and nFB_OE = '0' else "ZZZZ";
+
 CMD_REG: process(nRSTO, MAIN_CLK, CMD_STATE, NEXT_CMD_STATE)
 	begin
 		if nRSTO = '0' then
@@ -336,7 +355,7 @@ CMD_REG: process(nRSTO, MAIN_CLK, CMD_STATE, NEXT_CMD_STATE)
 			end if;
 	end process CMD_REG;
 
-	CMD_DECODER: process(CMD_STATE, NEXT_CMD_STATE, nIDE_RD, nIDE_WR, IDE_RDY)
+	CMD_DECODER: process(CMD_STATE, NEXT_CMD_STATE, nIDE_RD, nIDE_WR, IDE_RDY,IDE_DCS, IDE_CF_CS, FB_ADR, ACP_CONF, nFB_WR, FB_SIZE0, FB_SIZE1)
 	begin
 		case CMD_STATE is
 			when IDLE =>
@@ -453,23 +472,6 @@ CMD_REG: process(nRSTO, MAIN_CLK, CMD_STATE, NEXT_CMD_STATE)
 				end if;
 		end case;
 	end process CMD_DECODER;
-	
-IDE_RES <= not ACP_CONF(25) and nRSTO; 	-- !!!!ACHTUNG: RESET wenn 0!!!!!!!!!!!!!!! -- IDE_RES manuel oder weil nRSTO 
-IDE_CF_CS  	<= '1' when nFB_CS1 = '0' and FB_ADR(19 downto 7) = x"0" else '0';		-- FFF0'0000-FFF0'007F
-IDE_DRIVE0 	<= '1' when nFB_CS1 = '0' and FB_ADR(19 downto 0) = x"99" else '0';		-- FFF0'0099 (19+80!)
-IDE_DRIVE1 	<= '1' when nFB_CS1 = '0' and FB_ADR(19 downto 0) = x"D9" else '0';		-- FFF0'00D9 (19+40+80!)
-IDE_DCS    	<= '1' when  FB_ALE = '1' and FB_ADR(31 downto 2) = x"3FFC0000" else 	-- FFF0'000x 0-3
-               '1' when nFB_CS1 = '0' and FB_ADR(19 downto 2) = x"0" else			-- FFF0'000x 0-3
-			   '1' when  FB_ALE = '1' and FB_ADR(31 downto 2) = x"3FFC0010" else 	-- FFF0'004x 0-3
-               '1' when nFB_CS1 = '0' and FB_ADR(19 downto 2) = x"10" else '0';		-- FFF0'004x 0-3
-nCF_CS0    <=     FB_ADR(5) or (FB_ADR(6) xor (ACP_CONF(31) xnor HD_DD)); 			-- xxxx'xx00-1F
-nCF_CS1    <= not FB_ADR(5) or (FB_ADR(6) xor (ACP_CONF(31) xnor HD_DD)); 			-- xxxx'xx20-3F
-nIDE_CS0   <=     FB_ADR(5) or (FB_ADR(6) xnor (ACP_CONF(30) xnor HD_DD)); 			-- xxxx'xx40-5F
-nIDE_CS1   <= not FB_ADR(5) or (FB_ADR(6) xnor (ACP_CONF(30) xnor HD_DD)); 			-- xxxx'xx60-7F
-nDREQ0 <= '1';
-FB_AD(23 downto 20) <= ACP_CONF(19 downto 16) when IDE_DRIVE0 = '1' and nFB_OE = '0' else "ZZZZ";
-FB_AD(23 downto 20) <= ACP_CONF(23 downto 20) when IDE_DRIVE1 = '1' and nFB_OE = '0' else "ZZZZ";
-
 -----------------------------------------------------------------------------------------------------------------------------------------
 -- ACSI, SCSI UND FLOPPY WD1772 
 -------------------------------------------------------------------------------------------------------------------------------------------
@@ -915,7 +917,7 @@ KEYB_RxD <= '0' when AMKB_REG(3) = '0' or PIC_AMKB_RX = '0' else '1';				-- TAST
 FB_AD(31 downto 24) <= DATA_OUT_ACIA_I  when ACIA_CS_I = '1' and FB_ADR(2) = '0' and nFB_OE = '0' else  
 					   DATA_OUT_ACIA_II when ACIA_CS_I = '1' and FB_ADR(2) = '1' and nFB_OE = '0' else "ZZZZZZZZ";
 -- AMKB_TX: SPIKES AUSFILTERN  und sychronisieren ------------------------------------------
-	process(CLK2M, AMKB_RX, AMKB_REG)
+	process(CLK2M, AMKB_RX, AMKB_TX, AMKB_REG, CLK500k)
 	begin
 		if rising_edge(CLK500k) then
 			AMKB_TX <= AMKB_TX_sync;
@@ -995,7 +997,7 @@ MIDI_OLR <= MIDI_OUT;
 			GPIP_IN(3)			=> BLITTER_INT OR DSP_INT,
 			GPIP_IN(2)			=> not CTS,
 			GPIP_IN(1)			=> not DCD,
-			GPIP_IN(0)			=> LP_BUSY,
+			GPIP_IN(0)			=> LP_BUSY XOR ACP_CONF(1),
 			-- GPIP_OUT			=>, -- Not used; all GPIPs are direction input.
 			-- GPIP_EN			=>, -- Not used; all GPIPs are direction input.
 			-- Interrupt control:
@@ -1032,7 +1034,8 @@ FB_AD(1 downto 0) <= "00" when MFP_INTACK = '1' and nFB_OE = '0' else "ZZ";
 DINTn <= '0' when IDE_INT = '1' AND ACP_CONF(28) = '1' else
          '0' when FDINT = '1' else
          '0' when SCSI_INT = '1' AND ACP_CONF(27) = '1' else '1';
- ----------------------------------------------------------------------------
+
+-----------------------------------------------------------------------------
 -- Sound
 ----------------------------------------------------------------------------
  	I_SOUND: WF2149IP_TOP_SOC
@@ -1054,8 +1057,8 @@ DINTn <= '0' when IDE_INT = '1' AND ACP_CONF(28) = '1' else
 
 			IO_A_IN				=> x"00", -- All port pins are dedicated outputs.
 			IO_A_OUT(7)			=> nnIDE_RES,
-            IO_A_OUT(6)			=> LP_DIR_X,
-			IO_A_OUT(5)			=> nLP_STR,
+            IO_A_OUT(6)			=> LP_DIR_NS0,
+			IO_A_OUT(5)			=> LP_STR_NS0, 
 			IO_A_OUT(4)			=> DTR,
 			IO_A_OUT(3)			=> RTS,
 --			IO_A_OUT(2)			=> FDD_D1SEL,
@@ -1075,17 +1078,38 @@ SNDCS <= '1' when nFB_CS1 = '0' and FB_ADR(19 downto 2) = x"3E200" else '0';		--
 SNDCS_I <= '1' when SNDCS = '1' and FB_ADR (1 downto 1) = "0" else '0';
 SNDIR_I <= '1' when SNDCS = '1' and nFB_WR = '0' else '0';
 FB_AD(31 downto 24) <= DA_OUT_X when SNDCS_I = '1' and nFB_OE = '0' else "ZZZZZZZZ";
-LP_D <= LP_D_X when LP_DIR_X = '0' else "ZZZZZZZZ";
-LP_DIR <= LP_DIR_X;
-LP_STR <= not nLP_STR;
-
+LP_D <= LP_D_X when (LP_DIR_X = '0' OR ACP_CONF(2) = '0') else "ZZZZZZZZ";
+LP_STR <= LP_STR_X XOR ACP_CONF(0);
+LP_DIR <= LP_DIR_X XOR ACP_CONF(3);
+-- spikes weg ------------------------------------------
+	process(CLK2M,LP_STR_NS1,LP_STR_NS0,LP_STR_X)
+	begin
+		if rising_edge(CLK2M) then
+				LP_STR_X   <= (LP_STR_NS1 AND LP_STR_NS0) OR (LP_STR_X AND LP_STR_NS1);
+				LP_STR_NS1 <=  LP_STR_NS0; 
+			else
+				LP_STR_X   <=  LP_STR_X;
+				LP_STR_NS1 <=  LP_STR_NS1;
+			end if;
+	END PROCESS;
+	
+	process(CLK2M,LP_DIR_NS1,LP_DIR_NS0,LP_DIR_X)
+	begin
+		if rising_edge(CLK2M) then
+				LP_DIR_X   <= (LP_DIR_NS1 AND LP_DIR_NS0) OR (LP_DIR_X AND LP_DIR_NS1);
+				LP_DIR_NS1 <=  LP_DIR_NS0; 
+			else
+				LP_DIR_X   <=  LP_DIR_X;
+				LP_DIR_NS1 <=  LP_DIR_NS1;
+			end if;
+	END PROCESS;
 ----------------------------------------------------------------------------
 -- DMA Sound register
 ----------------------------------------------------------------------------
 
 dma_snd_cs <= '1' when nFB_CS1 = '0' and FB_ADR(19 downto 6) = x"3E24" else '0';	-- F8900-F893F
 
-	process(nRSTO,MAIN_CLK,FB_ADR(5 downto 1), dma_snd_cs)
+	process(nRSTO,MAIN_CLK,FB_ADR(5 downto 1), dma_snd_cs, nFB_WR, FB_B1, sndmactl)
 	begin
 		if nRSTO = '0' THEN
 			sndmactl <= x"00";
@@ -1097,7 +1121,7 @@ dma_snd_cs <= '1' when nFB_CS1 = '0' and FB_ADR(19 downto 6) = x"3E24" else '0';
 	END PROCESS;
 FB_AD(23 downto 16) <= sndmactl when dma_snd_cs = '1' and FB_ADR(5 downto 1) = x"0" and nFB_OE = '0' else "ZZZZZZZZ";
 
-	process(nRSTO,MAIN_CLK,FB_ADR(5 downto 1), dma_snd_cs)
+	process(nRSTO,MAIN_CLK,FB_ADR(5 downto 1), dma_snd_cs, sndbashi)
 	begin
 		if nRSTO = '0' THEN
 			sndbashi <= x"00";
@@ -1220,7 +1244,6 @@ FB_AD(23 downto 16) <= sndmode when dma_snd_cs = '1' and FB_ADR(5 downto 1) = x"
 ----------------------------------------------------------------------------
 -- Paddle
 ----------------------------------------------------------------------------
-
 paddle_cs <= '1' when nFB_CS1 = '0' and FB_ADR(19 downto 6) = x"3E48" else '0';	-- F9200-F923F
 
 FB_AD(31 downto 16) <= x"bfff" when paddle_cs = '1' and FB_ADR(5 downto 1) = x"0" and nFB_OE = '0' else "ZZZZZZZZZZZZZZZZ";
@@ -1232,4 +1255,5 @@ FB_AD(31 downto 16) <= x"ffff" when paddle_cs = '1' and FB_ADR(5 downto 1) = x"B
 FB_AD(31 downto 16) <= x"0000" when paddle_cs = '1' and FB_ADR(5 downto 1) = x"10" and nFB_OE = '0' else "ZZZZZZZZZZZZZZZZ";
 FB_AD(31 downto 16) <= x"0000" when paddle_cs = '1' and FB_ADR(5 downto 1) = x"11" and nFB_OE = '0' else "ZZZZZZZZZZZZZZZZ";
 
+--****************************************************************
 END FalconIO_SDCard_IDE_CF_architecture;

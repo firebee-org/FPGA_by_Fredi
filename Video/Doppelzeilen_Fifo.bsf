@@ -21,7 +21,7 @@ applicable agreement for further details.
 (header "symbol" (version "1.1"))
 (symbol
 	(rect 0 0 160 144)
-	(text "lpm_fifoDZ" (rect 50 1 120 17)(font "Arial" (font_size 10)))
+	(text "Doppelzeilen_Fifo" (rect 29 1 149 17)(font "Arial" (font_size 10)))
 	(text "inst" (rect 8 128 25 140)(font "Arial" ))
 	(port
 		(pt 0 32)
@@ -66,7 +66,6 @@ applicable agreement for further details.
 		(line (pt 160 32)(pt 144 32)(line_width 3))
 	)
 	(drawing
-		(text "(ack)" (rect 51 67 72 79)(font "Arial" ))
 		(text "128 bits x 512 words" (rect 58 116 144 128)(font "Arial" ))
 		(line (pt 16 16)(pt 144 16)(line_width 1))
 		(line (pt 144 16)(pt 144 128)(line_width 1))

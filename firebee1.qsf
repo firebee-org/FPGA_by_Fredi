@@ -347,7 +347,7 @@ set_global_assignment -name TPD_REQUIREMENT "1 ns"
 set_global_assignment -name TSU_REQUIREMENT "1 ns"
 set_global_assignment -name TCO_REQUIREMENT "1 ns"
 set_global_assignment -name TH_REQUIREMENT "1 ns"
-set_global_assignment -name FMAX_REQUIREMENT "30 ns"
+set_global_assignment -name FMAX_REQUIREMENT "33 MHz"
 set_global_assignment -name USE_TIMEQUEST_TIMING_ANALYZER OFF
 
 # Analysis & Synthesis Assignments
@@ -445,21 +445,6 @@ set_global_assignment -name FMAX_REQUIREMENT "133 MHz" -section_id fast
 
 	# Assignment Group Assignments
 	# ============================
-set_global_assignment -name ASSIGNMENT_GROUP_MEMBER DDRCLK -section_id fast
-set_global_assignment -name ASSIGNMENT_GROUP_MEMBER DDRCLK[0] -section_id fast
-set_global_assignment -name ASSIGNMENT_GROUP_MEMBER DDRCLK[1] -section_id fast
-set_global_assignment -name ASSIGNMENT_GROUP_MEMBER DDRCLK[2] -section_id fast
-set_global_assignment -name ASSIGNMENT_GROUP_MEMBER DDRCLK[3] -section_id fast
-set_global_assignment -name ASSIGNMENT_GROUP_MEMBER "Video:Fredi_Aschwanden|DDRCLK" -section_id fast
-set_global_assignment -name ASSIGNMENT_GROUP_MEMBER "Video:Fredi_Aschwanden|DDRCLK[0]" -section_id fast
-set_global_assignment -name ASSIGNMENT_GROUP_MEMBER "Video:Fredi_Aschwanden|DDRCLK[1]" -section_id fast
-set_global_assignment -name ASSIGNMENT_GROUP_MEMBER "Video:Fredi_Aschwanden|DDRCLK[2]" -section_id fast
-set_global_assignment -name ASSIGNMENT_GROUP_MEMBER "Video:Fredi_Aschwanden|DDRCLK[3]" -section_id fast
-set_global_assignment -name ASSIGNMENT_GROUP_MEMBER "Video:Fredi_Aschwanden|DDR_CTR_BLITTER:DDR_CTR_BLITTER|DDRCLK" -section_id fast
-set_global_assignment -name ASSIGNMENT_GROUP_MEMBER "Video:Fredi_Aschwanden|DDR_CTR_BLITTER:DDR_CTR_BLITTER|DDRCLK[0]" -section_id fast
-set_global_assignment -name ASSIGNMENT_GROUP_MEMBER "Video:Fredi_Aschwanden|DDR_CTR_BLITTER:DDR_CTR_BLITTER|DDRCLK[1]" -section_id fast
-set_global_assignment -name ASSIGNMENT_GROUP_MEMBER "Video:Fredi_Aschwanden|DDR_CTR_BLITTER:DDR_CTR_BLITTER|DDRCLK[2]" -section_id fast
-set_global_assignment -name ASSIGNMENT_GROUP_MEMBER "Video:Fredi_Aschwanden|DDR_CTR_BLITTER:DDR_CTR_BLITTER|DDRCLK[3]" -section_id fast
 
 # end ASSIGNMENT_GROUP(fast)
 # --------------------------
@@ -515,12 +500,6 @@ set_instance_assignment -name CURRENT_STRENGTH_NEW 16MA -to nBLANK_PAD
 set_instance_assignment -name CURRENT_STRENGTH_NEW 16MA -to VSYNC_PAD
 set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to nPD_VGA
 set_instance_assignment -name CURRENT_STRENGTH_NEW 8MA -to nSYNC
-set_instance_assignment -name CURRENT_STRENGTH_NEW "MINIMUM CURRENT" -to SRD
-set_instance_assignment -name CURRENT_STRENGTH_NEW "MINIMUM CURRENT" -to IO
-set_instance_assignment -name CURRENT_STRENGTH_NEW "MINIMUM CURRENT" -to nSRWE
-set_instance_assignment -name CURRENT_STRENGTH_NEW "MINIMUM CURRENT" -to nSRCS
-set_instance_assignment -name CURRENT_STRENGTH_NEW "MINIMUM CURRENT" -to nSRBLE
-set_instance_assignment -name CURRENT_STRENGTH_NEW "MINIMUM CURRENT" -to nSRBHE
 set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to CLK24M576
 set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to CLKUSB
 set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to CLK25M
@@ -631,28 +610,33 @@ set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to nACSI_C
 set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to ACSI_DIR
 set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to nACSI_ACK
 set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to nACSI_RESET
-set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to LPDIR
-set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to LP_STR
-set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to LP_D
+set_instance_assignment -name CURRENT_STRENGTH_NEW 16MA -to LPDIR
+set_instance_assignment -name CURRENT_STRENGTH_NEW 16MA -to LP_STR
+set_instance_assignment -name CURRENT_STRENGTH_NEW 16MA -to LP_D
 set_instance_assignment -name IO_STANDARD "3.0-V LVCMOS" -to LP_D
 set_instance_assignment -name IO_STANDARD "3.0-V LVCMOS" -to LPDIR
 set_instance_assignment -name IO_STANDARD "3.0-V LVCMOS" -to LP_STR
-set_instance_assignment -name IO_STANDARD "3.0-V LVCMOS" -to SRD
-set_instance_assignment -name IO_STANDARD "3.0-V LVCMOS" -to IO[0]
-set_instance_assignment -name IO_STANDARD "3.0-V LVCMOS" -to IO[8]
-set_instance_assignment -name IO_STANDARD "3.0-V LVCMOS" -to IO[7]
-set_instance_assignment -name IO_STANDARD "3.0-V LVCMOS" -to IO[6]
-set_instance_assignment -name IO_STANDARD "3.0-V LVCMOS" -to IO[5]
-set_instance_assignment -name IO_STANDARD "3.0-V LVCMOS" -to IO[4]
-set_instance_assignment -name IO_STANDARD "3.0-V LVCMOS" -to IO[3]
-set_instance_assignment -name IO_STANDARD "3.0-V LVCMOS" -to IO[2]
-set_instance_assignment -name IO_STANDARD "3.0-V LVCMOS" -to IO[1]
-set_instance_assignment -name IO_STANDARD "3.0-V LVCMOS" -to nSRBHE
-set_instance_assignment -name IO_STANDARD "3.0-V LVCMOS" -to nSRWE
-set_instance_assignment -name IO_STANDARD "3.0-V LVCMOS" -to nSRCS
-set_instance_assignment -name IO_STANDARD "3.0-V LVCMOS" -to nSRBLE
 set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to AMKB_RX
 set_location_assignment PIN_V2 -to nDREQ0
+set_instance_assignment -name IO_STANDARD "3.0-V LVCMOS" -to SRD
+set_instance_assignment -name IO_STANDARD "3.0-V LVCMOS" -to nSRBHE
+set_instance_assignment -name IO_STANDARD "3.0-V LVCMOS" -to nSRBLE
+set_instance_assignment -name IO_STANDARD "3.0-V LVCMOS" -to nSRWE
+set_instance_assignment -name IO_STANDARD "3.0-V LVCMOS" -to nSRCS
+set_instance_assignment -name IO_STANDARD "3.0-V LVCMOS" -to IO[0]
+set_instance_assignment -name IO_STANDARD "3.0-V LVCMOS" -to IO[1]
+set_instance_assignment -name IO_STANDARD "3.0-V LVCMOS" -to IO[2]
+set_instance_assignment -name IO_STANDARD "3.0-V LVCMOS" -to IO[3]
+set_instance_assignment -name IO_STANDARD "3.0-V LVCMOS" -to IO[4]
+set_instance_assignment -name IO_STANDARD "3.0-V LVCMOS" -to IO[5]
+set_instance_assignment -name IO_STANDARD "3.0-V LVCMOS" -to IO[6]
+set_instance_assignment -name IO_STANDARD "3.0-V LVCMOS" -to IO[7]
+set_instance_assignment -name IO_STANDARD "3.0-V LVCMOS" -to IO[8]
+set_instance_assignment -name SLEW_RATE 0 -to LP_D
+set_instance_assignment -name SLEW_RATE 0 -to LP_STR
+set_instance_assignment -name SLEW_RATE 0 -to LPDIR
+set_global_assignment -name SOURCE_FILE Video/BLITTER/lpm_ror128.cmp
+set_global_assignment -name AHDL_FILE Video/BLITTER/lpm_ror128.tdf
 set_global_assignment -name AHDL_FILE Video/BLITTER/lpm_clshift144.tdf
 set_global_assignment -name SOURCE_FILE Video/BLITTER/altsyncram0.cmp
 set_global_assignment -name AHDL_FILE Video/BLITTER/altsyncram0.tdf
@@ -715,8 +699,6 @@ set_global_assignment -name SOURCE_FILE Video/lpm_ff6.cmp
 set_global_assignment -name VHDL_FILE lpm_latch0.vhd
 set_global_assignment -name SOURCE_FILE lpm_latch0.cmp
 set_global_assignment -name QIP_FILE altpll1.qip
-set_global_assignment -name SOURCE_FILE Video/lpm_fifoDZ.cmp
-set_global_assignment -name VHDL_FILE Video/lpm_fifoDZ.vhd
 set_global_assignment -name SOURCE_FILE Video/lpm_latch1.cmp
 set_global_assignment -name SOURCE_FILE Video/lpm_mux0.cmp
 set_global_assignment -name QIP_FILE altpll2.qip
@@ -834,4 +816,13 @@ set_global_assignment -name INCLUDE_FILE Video/BLITTER/lpm_clshift383.inc
 set_global_assignment -name QIP_FILE Video/BLITTER/lpm_clshift384.qip
 set_global_assignment -name QIP_FILE Video/BLITTER/lpm_clshift144.qip
 set_global_assignment -name QIP_FILE FPGA_DATE.qip
+set_global_assignment -name QIP_FILE Video/Doppelzeilen_Fifo.qip
+set_global_assignment -name QIP_FILE Video/shiftreg_dpz.qip
+set_global_assignment -name QIP_FILE Video/BLITTER/lpm_ror128.qip
+set_global_assignment -name CUT_OFF_PATHS_BETWEEN_CLOCK_DOMAINS ON
+set_global_assignment -name CUT_OFF_READ_DURING_WRITE_PATHS ON
+set_global_assignment -name CUT_OFF_IO_PIN_FEEDBACK ON
+set_global_assignment -name ANALYZE_LATCHES_AS_SYNCHRONOUS_ELEMENTS ON
+set_global_assignment -name FMAX_REQUIREMENT "33 MHz" -section_id Main
+set_instance_assignment -name CLOCK_SETTINGS Main -to MAIN_CLK
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

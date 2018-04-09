@@ -875,7 +875,7 @@ applicable agreement for further details.
 )
 (pin
 	(output)
-	(rect 1832 832 2008 848)
+	(rect 2192 832 2368 848)
 	(text "OUTPUT" (rect 1 0 39 10)(font "Arial" (font_size 6)))
 	(text "LP_STR" (rect 90 0 130 12)(font "Arial" ))
 	(pt 0 8)
@@ -888,7 +888,7 @@ applicable agreement for further details.
 		(line (pt 82 8)(pt 78 12)(line_width 1))
 		(line (pt 78 12)(pt 82 8)(line_width 1))
 	)
-	(annotation_block (location)(rect 2008 848 2096 880))
+	(annotation_block (location)(rect 2280 848 2368 880))
 )
 (pin
 	(output)
@@ -1109,7 +1109,7 @@ applicable agreement for further details.
 		(line (pt 82 8)(pt 78 12)(line_width 1))
 		(line (pt 78 12)(pt 82 8)(line_width 1))
 	)
-	(annotation_block (location)(rect 2288 1416 2376 1448))
+	(annotation_block (location)(rect 2200 1416 2288 1448))
 )
 (pin
 	(output)
@@ -1640,7 +1640,7 @@ applicable agreement for further details.
 )
 (pin
 	(output)
-	(rect 1824 3280 2000 3296)
+	(rect 2112 3280 2288 3296)
 	(text "OUTPUT" (rect 1 0 39 10)(font "Arial" (font_size 6)))
 	(text "nSRCS" (rect 90 0 126 12)(font "Arial" ))
 	(pt 0 8)
@@ -1653,11 +1653,11 @@ applicable agreement for further details.
 		(line (pt 82 8)(pt 78 12)(line_width 1))
 		(line (pt 78 12)(pt 82 8)(line_width 1))
 	)
-	(annotation_block (location)(rect 2000 3296 2088 3328))
+	(annotation_block (location)(rect 2200 3296 2288 3328))
 )
 (pin
 	(output)
-	(rect 1824 3304 2000 3320)
+	(rect 1992 3304 2168 3320)
 	(text "OUTPUT" (rect 1 0 39 10)(font "Arial" (font_size 6)))
 	(text "nSRBLE" (rect 90 0 131 12)(font "Arial" ))
 	(pt 0 8)
@@ -1670,11 +1670,11 @@ applicable agreement for further details.
 		(line (pt 82 8)(pt 78 12)(line_width 1))
 		(line (pt 78 12)(pt 82 8)(line_width 1))
 	)
-	(annotation_block (location)(rect 2000 3320 2088 3352))
+	(annotation_block (location)(rect 2096 3320 2184 3352))
 )
 (pin
 	(output)
-	(rect 1824 3328 2000 3344)
+	(rect 1904 3328 2080 3344)
 	(text "OUTPUT" (rect 1 0 39 10)(font "Arial" (font_size 6)))
 	(text "nSRBHE" (rect 90 0 133 12)(font "Arial" ))
 	(pt 0 8)
@@ -1691,7 +1691,7 @@ applicable agreement for further details.
 )
 (pin
 	(output)
-	(rect 1824 3352 2000 3368)
+	(rect 1816 3352 1992 3368)
 	(text "OUTPUT" (rect 1 0 39 10)(font "Arial" (font_size 6)))
 	(text "nSRWE" (rect 90 0 128 12)(font "Arial" ))
 	(pt 0 8)
@@ -1704,7 +1704,7 @@ applicable agreement for further details.
 		(line (pt 82 8)(pt 78 12)(line_width 1))
 		(line (pt 78 12)(pt 82 8)(line_width 1))
 	)
-	(annotation_block (location)(rect 2000 3368 2088 3400))
+	(annotation_block (location)(rect 1904 3368 1992 3400))
 )
 (pin
 	(output)
@@ -1742,7 +1742,7 @@ applicable agreement for further details.
 )
 (pin
 	(output)
-	(rect 1824 3376 2000 3392)
+	(rect 1768 3376 1944 3392)
 	(text "OUTPUT" (rect 1 0 39 10)(font "Arial" (font_size 6)))
 	(text "nSROE" (rect 90 0 126 12)(font "Arial" ))
 	(pt 0 8)
@@ -1755,7 +1755,7 @@ applicable agreement for further details.
 		(line (pt 82 8)(pt 78 12)(line_width 1))
 		(line (pt 78 12)(pt 82 8)(line_width 1))
 	)
-	(annotation_block (location)(rect 2000 3392 2056 3408))
+	(annotation_block (location)(rect 1856 3392 1912 3408))
 )
 (pin
 	(output)
@@ -1980,7 +1980,7 @@ applicable agreement for further details.
 )
 (pin
 	(output)
-	(rect 1832 856 2008 872)
+	(rect 2072 856 2248 872)
 	(text "OUTPUT" (rect 1 0 39 10)(font "Arial" (font_size 6)))
 	(text "LPDIR" (rect 90 0 123 12)(font "Arial" ))
 	(pt 0 8)
@@ -1993,7 +1993,7 @@ applicable agreement for further details.
 		(line (pt 82 8)(pt 78 12)(line_width 1))
 		(line (pt 78 12)(pt 82 8)(line_width 1))
 	)
-	(annotation_block (location)(rect 2008 872 2096 904))
+	(annotation_block (location)(rect 2160 872 2248 904))
 )
 (pin
 	(output)
@@ -2226,7 +2226,7 @@ applicable agreement for further details.
 )
 (pin
 	(bidir)
-	(rect 1960 808 2136 824)
+	(rect 2304 808 2480 824)
 	(text "BIDIR" (rect 1 0 25 10)(font "Arial" (font_size 6)))
 	(text "LP_D[7..0]" (rect 90 0 143 12)(font "Arial" ))
 	(pt 0 8)
@@ -2240,7 +2240,7 @@ applicable agreement for further details.
 		(line (pt 52 8)(pt 56 12)(line_width 1))
 	)
 	(text "VCC" (rect 4 7 24 17)(font "Arial" (font_size 6)))
-	(annotation_block (location)(rect 2136 824 2224 952))
+	(annotation_block (location)(rect 2392 824 2480 952))
 )
 (pin
 	(bidir)
@@ -2263,7 +2263,7 @@ applicable agreement for further details.
 )
 (pin
 	(bidir)
-	(rect 2104 3232 2280 3248)
+	(rect 2320 3232 2496 3248)
 	(text "BIDIR" (rect 1 0 25 10)(font "Arial" (font_size 6)))
 	(text "IO[17..0]" (rect 90 0 133 12)(font "Arial" ))
 	(pt 0 8)
@@ -2277,11 +2277,11 @@ applicable agreement for further details.
 		(line (pt 52 8)(pt 56 12)(line_width 1))
 	)
 	(text "VCC" (rect 4 7 24 17)(font "Arial" (font_size 6)))
-	(annotation_block (location)(rect 2280 3248 2368 3632))
+	(annotation_block (location)(rect 2408 3248 2496 3632))
 )
 (pin
 	(bidir)
-	(rect 1944 3256 2120 3272)
+	(rect 2216 3256 2392 3272)
 	(text "BIDIR" (rect 1 0 25 10)(font "Arial" (font_size 6)))
 	(text "SRD[15..0]" (rect 90 0 145 12)(font "Arial" ))
 	(pt 0 8)
@@ -2295,7 +2295,7 @@ applicable agreement for further details.
 		(line (pt 52 8)(pt 56 12)(line_width 1))
 	)
 	(text "VCC" (rect 4 7 24 17)(font "Arial" (font_size 6)))
-	(annotation_block (location)(rect 2120 3272 2208 3512))
+	(annotation_block (location)(rect 2304 3272 2392 3512))
 )
 (pin
 	(bidir)
@@ -3506,7 +3506,7 @@ applicable agreement for further details.
 		(line (pt 88 24)(pt 72 24)(line_width 3))
 	)
 	(drawing
-		(text "402923543" (rect 27 18 80 30)(font "Arial" ))
+		(text "570826775" (rect 27 18 80 30)(font "Arial" ))
 		(text "32" (rect 77 25 88 37)(font "Arial" ))
 		(line (pt 16 16)(pt 72 16)(line_width 1))
 		(line (pt 72 16)(pt 72 32)(line_width 1))
@@ -4303,10 +4303,6 @@ applicable agreement for further details.
 		(bidir)
 		)
 	(mapper
-		(pt 408 440)
-		(bidir)
-		)
-	(mapper
 		(pt 408 344)
 		(bidir)
 		)
@@ -4372,6 +4368,10 @@ applicable agreement for further details.
 		)
 	(mapper
 		(pt 0 200)
+		(bidir)
+		)
+	(mapper
+		(pt 408 440)
 		(bidir)
 		)
 )
@@ -4686,31 +4686,6 @@ applicable agreement for further details.
 	(pt 1160 3048)
 )
 (connector
-	(text "nSRCS" (rect 1682 3272 1718 3284)(font "Arial" ))
-	(pt 1824 3288)
-	(pt 1672 3288)
-)
-(connector
-	(text "nSRBLE" (rect 1682 3296 1723 3308)(font "Arial" ))
-	(pt 1824 3312)
-	(pt 1672 3312)
-)
-(connector
-	(text "nSRBHE" (rect 1682 3320 1725 3332)(font "Arial" ))
-	(pt 1824 3336)
-	(pt 1672 3336)
-)
-(connector
-	(text "nSRWE" (rect 1682 3344 1720 3356)(font "Arial" ))
-	(pt 1824 3360)
-	(pt 1672 3360)
-)
-(connector
-	(text "nSROE" (rect 1682 3368 1718 3380)(font "Arial" ))
-	(pt 1824 3384)
-	(pt 1672 3384)
-)
-(connector
 	(text "DSP_INT" (rect 1130 2832 1176 2844)(font "Arial" ))
 	(pt 1264 2848)
 	(pt 1120 2848)
@@ -4808,18 +4783,6 @@ applicable agreement for further details.
 	(text "VR[7..0]" (rect 1922 64 1963 76)(font "Arial" ))
 	(pt 1672 80)
 	(pt 2080 80)
-	(bus)
-)
-(connector
-	(text "IO[17..0]" (rect 1962 3224 2005 3236)(font "Arial" ))
-	(pt 1672 3240)
-	(pt 2104 3240)
-	(bus)
-)
-(connector
-	(text "SRD[15..0]" (rect 1802 3248 1857 3260)(font "Arial" ))
-	(pt 1672 3264)
-	(pt 1944 3264)
 	(bus)
 )
 (connector
@@ -5445,16 +5408,6 @@ applicable agreement for further details.
 	(pt 1264 2008)
 )
 (connector
-	(text "LP_STR" (rect 1682 824 1722 836)(font "Arial" ))
-	(pt 1672 840)
-	(pt 1832 840)
-)
-(connector
-	(text "LP_DIR" (rect 1682 848 1720 860)(font "Arial" ))
-	(pt 1672 864)
-	(pt 1832 864)
-)
-(connector
 	(text "nACSI_ACK" (rect 1682 928 1742 940)(font "Arial" ))
 	(pt 1672 944)
 	(pt 1832 944)
@@ -5800,18 +5753,6 @@ applicable agreement for further details.
 	(pt 1264 920)
 )
 (connector
-	(text "LP_D[7..0]" (rect 1810 800 1863 812)(font "Arial" ))
-	(pt 1672 816)
-	(pt 1960 816)
-	(bus)
-)
-(connector
-	(text "ACSI_D[7..0]" (rect 1754 880 1820 892)(font "Arial" ))
-	(pt 1672 896)
-	(pt 1904 896)
-	(bus)
-)
-(connector
 	(text "SCSI_D[7..0]" (rect 1786 1056 1852 1068)(font "Arial" ))
 	(pt 1672 1072)
 	(pt 1936 1072)
@@ -5876,10 +5817,6 @@ applicable agreement for further details.
 (connector
 	(pt 824 440)
 	(pt 952 440)
-)
-(connector
-	(pt 1120 328)
-	(pt 920 328)
 )
 (connector
 	(pt 920 328)
@@ -5984,10 +5921,6 @@ applicable agreement for further details.
 	(pt 368 -16)
 )
 (connector
-	(pt 1120 328)
-	(pt 1120 48)
-)
-(connector
 	(pt 400 -16)
 	(pt 464 -16)
 )
@@ -5998,10 +5931,6 @@ applicable agreement for further details.
 (connector
 	(pt 400 -16)
 	(pt 400 160)
-)
-(connector
-	(pt 736 48)
-	(pt 1120 48)
 )
 (connector
 	(text "CLK25M" (rect 802 -32 843 -20)(font "Arial" ))
@@ -6079,6 +6008,77 @@ applicable agreement for further details.
 	(pt 928 2896)
 	(pt 1264 2896)
 	(bus)
+)
+(connector
+	(pt 920 328)
+	(pt 1080 328)
+)
+(connector
+	(pt 1080 328)
+	(pt 1080 48)
+)
+(connector
+	(pt 736 48)
+	(pt 1080 48)
+)
+(connector
+	(text "ACSI_D[7..0]" (rect 1754 880 1820 892)(font "Arial" ))
+	(pt 1672 896)
+	(pt 1904 896)
+	(bus)
+)
+(connector
+	(text "IO[17..0]" (rect 2178 3224 2221 3236)(font "Arial" ))
+	(pt 1672 3240)
+	(pt 2320 3240)
+	(bus)
+)
+(connector
+	(text "nSRWE" (rect 1682 3344 1720 3356)(font "Arial" ))
+	(pt 1672 3360)
+	(pt 1816 3360)
+)
+(connector
+	(text "nSRBHE" (rect 1682 3320 1725 3332)(font "Arial" ))
+	(pt 1672 3336)
+	(pt 1904 3336)
+)
+(connector
+	(text "nSRBLE" (rect 1682 3296 1723 3308)(font "Arial" ))
+	(pt 1672 3312)
+	(pt 1992 3312)
+)
+(connector
+	(text "nSRCS" (rect 1682 3272 1718 3284)(font "Arial" ))
+	(pt 1672 3288)
+	(pt 2112 3288)
+)
+(connector
+	(text "SRD[15..0]" (rect 2074 3248 2129 3260)(font "Arial" ))
+	(pt 1672 3264)
+	(pt 2216 3264)
+	(bus)
+)
+(connector
+	(text "LP_D[7..0]" (rect 2154 800 2207 812)(font "Arial" ))
+	(pt 1672 816)
+	(pt 2304 816)
+	(bus)
+)
+(connector
+	(text "LP_STR" (rect 2042 824 2082 836)(font "Arial" ))
+	(pt 1672 840)
+	(pt 2192 840)
+)
+(connector
+	(text "LP_DIR" (rect 1922 848 1960 860)(font "Arial" ))
+	(pt 1672 864)
+	(pt 2072 864)
+)
+(connector
+	(text "nSROE" (rect 1682 3368 1718 3380)(font "Arial" ))
+	(pt 1672 3384)
+	(pt 1768 3384)
 )
 (junction (pt 2504 760))
 (junction (pt 1856 -64))

@@ -13,14 +13,12 @@
 --applicable agreement for further details.
 
 
-component lpm_fifoDZ
-	PORT
-	(
-		aclr		: IN STD_LOGIC ;
-		clock		: IN STD_LOGIC ;
-		data		: IN STD_LOGIC_VECTOR (127 DOWNTO 0);
-		rdreq		: IN STD_LOGIC ;
-		wrreq		: IN STD_LOGIC ;
-		q		: OUT STD_LOGIC_VECTOR (127 DOWNTO 0)
-	);
-end component;
+FUNCTION lpm_ror128 
+(
+	data[127..0],
+	distance[6..0]
+)
+
+RETURNS (
+	result[127..0]
+);
