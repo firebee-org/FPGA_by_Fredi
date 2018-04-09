@@ -1,4 +1,4 @@
---Copyright (C) 1991-2008 Altera Corporation
+--Copyright (C) 1991-2010 Altera Corporation
 --Your use of Altera Corporation's design tools, logic functions 
 --and other software and tools, and its AMPP partner logic 
 --functions, and any output files from any of the foregoing 
@@ -25,6 +25,5 @@ FUNCTION lpm_fifo_dc0
 
 RETURNS (
 	q[127..0],
-	rdempty,
-	wrusedw[8..0]
+	wrusedw[10..0]
 );

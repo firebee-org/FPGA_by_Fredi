@@ -13,20 +13,11 @@
 --applicable agreement for further details.
 
 
-FUNCTION altsyncram0 
+FUNCTION FPGA_DATE 
 (
-	address_a[3..0],
-	address_b[3..0],
-	byteena_a[1..0],
-	clock_a,
-	clock_b,
-	data_a[15..0],
-	data_b[15..0],
-	wren_a,
-	wren_b
+
 )
 
 RETURNS (
-	q_a[15..0],
-	q_b[15..0]
+	result[31..0]
 );

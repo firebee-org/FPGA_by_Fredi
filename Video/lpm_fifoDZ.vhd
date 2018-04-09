@@ -88,11 +88,11 @@ BEGIN
 	GENERIC MAP (
 		add_ram_output_register => "OFF",
 		intended_device_family => "Cyclone III",
-		lpm_numwords => 128,
+		lpm_numwords => 512,
 		lpm_showahead => "ON",
 		lpm_type => "scfifo",
 		lpm_width => 128,
-		lpm_widthu => 7,
+		lpm_widthu => 9,
 		overflow_checking => "OFF",
 		underflow_checking => "OFF",
 		use_eab => "ON"
@@ -119,7 +119,7 @@ END SYN;
 -- Retrieval info: PRIVATE: AlmostFullThr NUMERIC "-1"
 -- Retrieval info: PRIVATE: CLOCKS_ARE_SYNCHRONIZED NUMERIC "1"
 -- Retrieval info: PRIVATE: Clock NUMERIC "0"
--- Retrieval info: PRIVATE: Depth NUMERIC "128"
+-- Retrieval info: PRIVATE: Depth NUMERIC "512"
 -- Retrieval info: PRIVATE: Empty NUMERIC "0"
 -- Retrieval info: PRIVATE: Full NUMERIC "0"
 -- Retrieval info: PRIVATE: INTENDED_DEVICE_FAMILY STRING "Cyclone III"
@@ -147,11 +147,11 @@ END SYN;
 -- Retrieval info: PRIVATE: wsUsedW NUMERIC "0"
 -- Retrieval info: CONSTANT: ADD_RAM_OUTPUT_REGISTER STRING "OFF"
 -- Retrieval info: CONSTANT: INTENDED_DEVICE_FAMILY STRING "Cyclone III"
--- Retrieval info: CONSTANT: LPM_NUMWORDS NUMERIC "128"
+-- Retrieval info: CONSTANT: LPM_NUMWORDS NUMERIC "512"
 -- Retrieval info: CONSTANT: LPM_SHOWAHEAD STRING "ON"
 -- Retrieval info: CONSTANT: LPM_TYPE STRING "scfifo"
 -- Retrieval info: CONSTANT: LPM_WIDTH NUMERIC "128"
--- Retrieval info: CONSTANT: LPM_WIDTHU NUMERIC "7"
+-- Retrieval info: CONSTANT: LPM_WIDTHU NUMERIC "9"
 -- Retrieval info: CONSTANT: OVERFLOW_CHECKING STRING "OFF"
 -- Retrieval info: CONSTANT: UNDERFLOW_CHECKING STRING "OFF"
 -- Retrieval info: CONSTANT: USE_EAB STRING "ON"

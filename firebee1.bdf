@@ -293,7 +293,7 @@ applicable agreement for further details.
 		(line (pt 117 12)(pt 121 8)(line_width 1))
 	)
 	(text "VCC" (rect 136 7 156 17)(font "Arial" (font_size 6)))
-	(annotation_block (location)(rect 560 1504 648 1536))
+	(annotation_block (location)(rect 520 1472 608 1504))
 )
 (pin
 	(input)
@@ -2064,6 +2064,23 @@ applicable agreement for further details.
 	(annotation_block (location)(rect 992 272 1056 288))
 )
 (pin
+	(output)
+	(rect 1848 2128 2024 2144)
+	(text "OUTPUT" (rect 1 0 39 10)(font "Arial" (font_size 6)))
+	(text "nDREQ0" (rect 90 0 133 12)(font "Arial" ))
+	(pt 0 8)
+	(drawing
+		(line (pt 0 8)(pt 52 8)(line_width 1))
+		(line (pt 52 4)(pt 78 4)(line_width 1))
+		(line (pt 52 12)(pt 78 12)(line_width 1))
+		(line (pt 52 12)(pt 52 4)(line_width 1))
+		(line (pt 78 4)(pt 82 8)(line_width 1))
+		(line (pt 82 8)(pt 78 12)(line_width 1))
+		(line (pt 78 12)(pt 82 8)(line_width 1))
+	)
+	(annotation_block (location)(rect 2024 2112 2072 2128))
+)
+(pin
 	(bidir)
 	(rect 1840 1088 2016 1104)
 	(text "BIDIR" (rect 1 0 25 10)(font "Arial" (font_size 6)))
@@ -2242,7 +2259,7 @@ applicable agreement for further details.
 	)
 	(flipy)
 	(text "VCC" (rect 152 7 172 17)(font "Arial" (font_size 6)))
-	(annotation_block (location)(rect 352 1376 416 1824))
+	(annotation_block (location)(rect 112 928 176 1376))
 )
 (pin
 	(bidir)
@@ -3477,118 +3494,26 @@ applicable agreement for further details.
 		(line (pt 40 48)(pt 40 168)(line_width 1))
 	)
 )
-(block
-	(rect 1264 2944 1672 3560)
-	(text "DSP" (rect 5 5 28 19)(font "Arial" (font_size 8)))	(text "Mathias_Alles" (rect 5 602 72 614)(font "Arial" ))	(block_io "CLK33M" (input))
-	(block_io "MAIN_CLK" (input))
-	(block_io "nFB_OE" (input))
-	(block_io "nFB_WR" (input))
-	(block_io "nFB_CS1" (input))
-	(block_io "nFB_CS2" (input))
-	(block_io "FB_SIZE0" (input))
-	(block_io "FB_SIZE1" (input))
-	(block_io "nFB_BURST" (input))
-	(block_io "FB_ADR[31..0]" (input))
-	(block_io "nRSTO" (input))
-	(block_io "nFB_CS3" (input))
-	(block_io "nSRCS" (output))
-	(block_io "nSRBLE" (output))
-	(block_io "nSRBHE" (output))
-	(block_io "nSRWE" (output))
-	(block_io "nSROE" (output))
-	(block_io "DSP_INT" (output))
-	(block_io "DSP_TA" (output))
-	(block_io "FB_AD[31..0]" (bidir))
-	(block_io "IO[17..0]" (bidir))
-	(block_io "SRD[15..0]" (bidir))
-	(mapper
-		(pt 408 416)
-		(bidir)
-		)
-	(mapper
-		(pt 408 392)
-		(bidir)
-		)
-	(mapper
-		(pt 408 368)
-		(bidir)
-		)
-	(mapper
-		(pt 408 320)
-		(bidir)
-		)
-	(mapper
-		(pt 408 440)
-		(bidir)
-		)
-	(mapper
-		(pt 408 344)
-		(bidir)
-		)
-	(mapper
-		(pt 408 296)
-		(bidir)
-		)
-	(mapper
-		(pt 408 40)
-		(bidir)
-		)
-	(mapper
-		(pt 0 56)
-		(bidir)
-		)
-	(mapper
-		(pt 0 80)
-		(bidir)
-		)
-	(mapper
-		(pt 0 104)
-		(bidir)
-		)
-	(mapper
-		(pt 0 128)
-		(bidir)
-		)
-	(mapper
-		(pt 0 152)
-		(bidir)
-		)
-	(mapper
-		(pt 0 176)
-		(bidir)
-		)
-	(mapper
-		(pt 0 248)
-		(bidir)
-		)
-	(mapper
-		(pt 0 224)
-		(bidir)
-		)
-	(mapper
-		(pt 0 272)
-		(bidir)
-		)
-	(mapper
-		(pt 0 296)
-		(bidir)
-		)
-	(mapper
-		(pt 408 72)
-		(bidir)
-		)
-	(mapper
-		(pt 408 576)
-		(bidir)
-		)
-	(mapper
-		(pt 0 320)
-		(bidir)
-		)
-	(mapper
-		(pt 0 200)
-		(bidir)
-		)
+(symbol
+	(rect 840 2872 928 2920)
+	(text "FPGA_DATE" (rect 6 1 96 17)(font "Arial" (font_size 10)))
+	(text "inst26" (rect 8 32 37 44)(font "Arial" ))
+	(port
+		(pt 88 24)
+		(output)
+		(text "result[31..0]" (rect 0 0 67 14)(font "Arial" (font_size 8)))
+		(text "result[31..0]" (rect 85 -31 152 -17)(font "Arial" (font_size 8))(invisible))
+		(line (pt 88 24)(pt 72 24)(line_width 3))
+	)
+	(drawing
+		(text "319037463" (rect 27 18 80 30)(font "Arial" ))
+		(text "32" (rect 77 25 88 37)(font "Arial" ))
+		(line (pt 16 16)(pt 72 16)(line_width 1))
+		(line (pt 72 16)(pt 72 32)(line_width 1))
+		(line (pt 72 32)(pt 16 32)(line_width 1))
+		(line (pt 16 32)(pt 16 16)(line_width 1))
+		(line (pt 72 28)(pt 80 20)(line_width 1))
+	)
 )
 (block
 	(rect 1264 -48 1672 728)
@@ -3631,6 +3556,7 @@ applicable agreement for further details.
 	(block_io "BA[1..0]" (output))
 	(block_io "VIDEO_RECONFIG" (output))
 	(block_io "VR_WR" (output))
+	(block_io "BLITTER_INT" (output))
 	(block_io "VDQS[3..0]" (bidir))
 	(block_io "FB_AD[31..0]" (bidir))
 	(block_io "VD[31..0]" (bidir))
@@ -3802,137 +3728,8 @@ applicable agreement for further details.
 		(pt 0 512)
 		(bidir)
 		)
-)
-(block
-	(rect 1264 2344 1672 2904)
-	(text "interrupt_handler" (rect 5 5 101 19)(font "Arial" (font_size 8)))	(text "nobody" (rect 5 546 41 558)(font "Arial" ))	(block_io "MAIN_CLK" (input))
-	(block_io "nFB_WR" (input))
-	(block_io "nFB_CS1" (input))
-	(block_io "nFB_CS2" (input))
-	(block_io "FB_SIZE0" (input))
-	(block_io "FB_SIZE1" (input))
-	(block_io "FB_ADR[31..0]" (input))
-	(block_io "PIC_INT" (input))
-	(block_io "E0_INT" (input))
-	(block_io "DVI_INT" (input))
-	(block_io "nPCI_INTA" (input))
-	(block_io "nPCI_INTB" (input))
-	(block_io "nPCI_INTC" (input))
-	(block_io "nPCI_INTD" (input))
-	(block_io "nMFP_INT" (input))
-	(block_io "nFB_OE" (input))
-	(block_io "DSP_INT" (input))
-	(block_io "VSYNC" (input))
-	(block_io "HSYNC" (input))
-	(block_io "DMA_DRQ" (input))
-	(block_io "nRSTO" (input))
-	(block_io "nIRQ[7..2]" (output))
-	(block_io "INT_HANDLER_TA" (output))
-	(block_io "ACP_CONF[31..0]" (output))
-	(block_io "TIN0" (output))
-	(block_io "FB_AD[31..0]" (bidir))
 	(mapper
-		(pt 408 56)
-		(bidir)
-		)
-	(mapper
-		(pt 408 80)
-		(bidir)
-		)
-	(mapper
-		(pt 0 256)
-		(bidir)
-		)
-	(mapper
-		(pt 0 280)
-		(bidir)
-		)
-	(mapper
-		(pt 0 304)
-		(bidir)
-		)
-	(mapper
-		(pt 0 376)
-		(bidir)
-		)
-	(mapper
-		(pt 0 400)
-		(bidir)
-		)
-	(mapper
-		(pt 0 328)
-		(bidir)
-		)
-	(mapper
-		(pt 0 352)
-		(bidir)
-		)
-	(mapper
-		(pt 0 432)
-		(bidir)
-		)
-	(mapper
-		(pt 0 456)
-		(bidir)
-		)
-	(mapper
-		(pt 0 480)
-		(bidir)
-		)
-	(mapper
-		(pt 0 504)
-		(bidir)
-		)
-	(mapper
-		(pt 408 504)
-		(bidir)
-		)
-	(mapper
-		(pt 0 528)
-		(bidir)
-		)
-	(mapper
-		(pt 408 240)
-		(bidir)
-		)
-	(mapper
-		(pt 408 296)
-		(bidir)
-		)
-	(mapper
-		(pt 0 224)
-		(bidir)
-		)
-	(mapper
-		(pt 0 104)
-		(bidir)
-		)
-	(mapper
-		(pt 0 128)
-		(bidir)
-		)
-	(mapper
-		(pt 0 176)
-		(bidir)
-		)
-	(mapper
-		(pt 0 200)
-		(bidir)
-		)
-	(mapper
-		(pt 0 56)
-		(bidir)
-		)
-	(mapper
-		(pt 0 152)
-		(bidir)
-		)
-	(mapper
-		(pt 0 80)
-		(bidir)
-		)
-	(mapper
-		(pt 0 32)
+		(pt 408 704)
 		(bidir)
 		)
 )
@@ -3983,12 +3780,15 @@ applicable agreement for further details.
 	(block_io "nFB_OE" (input))
 	(block_io "VSYNC" (input))
 	(block_io "HSYNC" (input))
-	(block_io "DSP_INT" (input))
 	(block_io "nBLANK" (input))
 	(block_io "FDC_CLK" (input))
 	(block_io "FB_ALE" (input))
-	(block_io "ACP_CONF[31..24]" (input))
 	(block_io "HD_DD" (input))
+	(block_io "nFB_CS3" (input))
+	(block_io "VIDEO_TA" (input))
+	(block_io "ACP_CONF[31..0]" (input))
+	(block_io "BLITTER_INT" (input))
+	(block_io "DSP_INT" (input))
 	(block_io "nIDE_CS1" (output))
 	(block_io "nIDE_CS0" (output))
 	(block_io "LP_STR" (output))
@@ -4362,10 +4162,6 @@ applicable agreement for further details.
 		(bidir)
 		)
 	(mapper
-		(pt 0 1216)
-		(bidir)
-		)
-	(mapper
 		(pt 408 48)
 		(bidir)
 		)
@@ -4447,6 +4243,274 @@ applicable agreement for further details.
 		)
 	(mapper
 		(pt 408 1544)
+		(bidir)
+		)
+	(mapper
+		(pt 0 1408)
+		(bidir)
+		)
+	(mapper
+		(pt 0 1488)
+		(bidir)
+		)
+	(mapper
+		(pt 0 1440)
+		(bidir)
+		)
+	(mapper
+		(pt 0 1464)
+		(bidir)
+		)
+)
+(block
+	(rect 1264 2944 1672 3560)
+	(text "DSP" (rect 5 5 28 19)(font "Arial" (font_size 8)))	(text "Mathias_Alles" (rect 5 602 72 614)(font "Arial" ))	(block_io "CLK33M" (input))
+	(block_io "MAIN_CLK" (input))
+	(block_io "nFB_OE" (input))
+	(block_io "nFB_WR" (input))
+	(block_io "nFB_CS1" (input))
+	(block_io "nFB_CS2" (input))
+	(block_io "FB_SIZE0" (input))
+	(block_io "FB_SIZE1" (input))
+	(block_io "nFB_BURST" (input))
+	(block_io "FB_ADR[31..0]" (input))
+	(block_io "nRSTO" (input))
+	(block_io "nFB_CS3" (input))
+	(block_io "nSRCS" (output))
+	(block_io "nSRBLE" (output))
+	(block_io "nSRBHE" (output))
+	(block_io "nSRWE" (output))
+	(block_io "nSROE" (output))
+	(block_io "DSP_INT" (output))
+	(block_io "DSP_TA" (output))
+	(block_io "FB_AD[31..0]" (bidir))
+	(block_io "IO[17..0]" (bidir))
+	(block_io "SRD[15..0]" (bidir))
+	(mapper
+		(pt 408 416)
+		(bidir)
+		)
+	(mapper
+		(pt 408 392)
+		(bidir)
+		)
+	(mapper
+		(pt 408 368)
+		(bidir)
+		)
+	(mapper
+		(pt 408 320)
+		(bidir)
+		)
+	(mapper
+		(pt 408 440)
+		(bidir)
+		)
+	(mapper
+		(pt 408 344)
+		(bidir)
+		)
+	(mapper
+		(pt 408 296)
+		(bidir)
+		)
+	(mapper
+		(pt 408 40)
+		(bidir)
+		)
+	(mapper
+		(pt 0 56)
+		(bidir)
+		)
+	(mapper
+		(pt 0 80)
+		(bidir)
+		)
+	(mapper
+		(pt 0 104)
+		(bidir)
+		)
+	(mapper
+		(pt 0 128)
+		(bidir)
+		)
+	(mapper
+		(pt 0 152)
+		(bidir)
+		)
+	(mapper
+		(pt 0 176)
+		(bidir)
+		)
+	(mapper
+		(pt 0 248)
+		(bidir)
+		)
+	(mapper
+		(pt 0 224)
+		(bidir)
+		)
+	(mapper
+		(pt 0 272)
+		(bidir)
+		)
+	(mapper
+		(pt 0 296)
+		(bidir)
+		)
+	(mapper
+		(pt 408 72)
+		(bidir)
+		)
+	(mapper
+		(pt 408 576)
+		(bidir)
+		)
+	(mapper
+		(pt 0 320)
+		(bidir)
+		)
+	(mapper
+		(pt 0 200)
+		(bidir)
+		)
+)
+(block
+	(rect 1264 2344 1672 2920)
+	(text "interrupt_handler" (rect 5 5 101 19)(font "Arial" (font_size 8)))	(text "nobody" (rect 5 562 41 574)(font "Arial" ))	(block_io "MAIN_CLK" (input))
+	(block_io "nFB_WR" (input))
+	(block_io "nFB_CS1" (input))
+	(block_io "nFB_CS2" (input))
+	(block_io "FB_SIZE0" (input))
+	(block_io "FB_SIZE1" (input))
+	(block_io "FB_ADR[31..0]" (input))
+	(block_io "PIC_INT" (input))
+	(block_io "E0_INT" (input))
+	(block_io "DVI_INT" (input))
+	(block_io "nPCI_INTA" (input))
+	(block_io "nPCI_INTB" (input))
+	(block_io "nPCI_INTC" (input))
+	(block_io "nPCI_INTD" (input))
+	(block_io "nMFP_INT" (input))
+	(block_io "nFB_OE" (input))
+	(block_io "DSP_INT" (input))
+	(block_io "VSYNC" (input))
+	(block_io "HSYNC" (input))
+	(block_io "DMA_DRQ" (input))
+	(block_io "nRSTO" (input))
+	(block_io "VIDEO_TA" (input))
+	(block_io "FPGA_DATE[31..0]" (input))
+	(block_io "nIRQ[7..2]" (output))
+	(block_io "INT_HANDLER_TA" (output))
+	(block_io "ACP_CONF[31..0]" (output))
+	(block_io "TIN0" (output))
+	(block_io "FB_AD[31..0]" (bidir))
+	(mapper
+		(pt 408 56)
+		(bidir)
+		)
+	(mapper
+		(pt 408 80)
+		(bidir)
+		)
+	(mapper
+		(pt 0 256)
+		(bidir)
+		)
+	(mapper
+		(pt 0 280)
+		(bidir)
+		)
+	(mapper
+		(pt 0 304)
+		(bidir)
+		)
+	(mapper
+		(pt 0 376)
+		(bidir)
+		)
+	(mapper
+		(pt 0 400)
+		(bidir)
+		)
+	(mapper
+		(pt 0 328)
+		(bidir)
+		)
+	(mapper
+		(pt 0 352)
+		(bidir)
+		)
+	(mapper
+		(pt 0 432)
+		(bidir)
+		)
+	(mapper
+		(pt 0 456)
+		(bidir)
+		)
+	(mapper
+		(pt 0 480)
+		(bidir)
+		)
+	(mapper
+		(pt 0 504)
+		(bidir)
+		)
+	(mapper
+		(pt 408 504)
+		(bidir)
+		)
+	(mapper
+		(pt 0 528)
+		(bidir)
+		)
+	(mapper
+		(pt 408 240)
+		(bidir)
+		)
+	(mapper
+		(pt 408 296)
+		(bidir)
+		)
+	(mapper
+		(pt 0 224)
+		(bidir)
+		)
+	(mapper
+		(pt 0 104)
+		(bidir)
+		)
+	(mapper
+		(pt 0 128)
+		(bidir)
+		)
+	(mapper
+		(pt 0 176)
+		(bidir)
+		)
+	(mapper
+		(pt 0 200)
+		(bidir)
+		)
+	(mapper
+		(pt 0 56)
+		(bidir)
+		)
+	(mapper
+		(pt 0 152)
+		(bidir)
+		)
+	(mapper
+		(pt 0 80)
+		(bidir)
+		)
+	(mapper
+		(pt 0 32)
+		(bidir)
+		)
+	(mapper
+		(pt 0 552)
 		(bidir)
 		)
 )
@@ -5366,11 +5430,6 @@ applicable agreement for further details.
 	(pt 1144 1984)
 )
 (connector
-	(text "DSP_INT" (rect 1154 1944 1200 1956)(font "Arial" ))
-	(pt 1264 1960)
-	(pt 1144 1960)
-)
-(connector
 	(text "DMA_DRQ" (rect 1682 2096 1736 2108)(font "Arial" ))
 	(pt 1784 2112)
 	(pt 1672 2112)
@@ -5384,12 +5443,6 @@ applicable agreement for further details.
 	(text "FB_ALE" (rect 1186 1992 1226 2004)(font "Arial" ))
 	(pt 1144 2008)
 	(pt 1264 2008)
-)
-(connector
-	(text "ACP_CONF[31..24]" (rect 1146 2064 1243 2076)(font "Arial" ))
-	(pt 1136 2080)
-	(pt 1264 2080)
-	(bus)
 )
 (connector
 	(text "LP_STR" (rect 1682 824 1722 836)(font "Arial" ))
@@ -5909,11 +5962,6 @@ applicable agreement for further details.
 	(pt 1864 2224)
 )
 (connector
-	(text "nDREQ0" (rect 1674 2120 1717 2132)(font "Arial" ))
-	(pt 1672 2136)
-	(pt 1800 2136)
-)
-(connector
 	(text "MIDI_OLR" (rect 1682 2272 1733 2284)(font "Arial" ))
 	(pt 1672 2288)
 	(pt 1920 2288)
@@ -5989,6 +6037,48 @@ applicable agreement for further details.
 	(text "CLK24M576" (rect 722 272 781 284)(font "Arial" ))
 	(pt 816 280)
 	(pt 712 280)
+)
+(connector
+	(text "nFB_CS3" (rect 1162 2136 1209 2148)(font "Arial" ))
+	(pt 1152 2152)
+	(pt 1264 2152)
+)
+(connector
+	(text "nDREQ0" (rect 1722 2120 1765 2132)(font "Arial" ))
+	(pt 1672 2136)
+	(pt 1848 2136)
+)
+(connector
+	(text "Video_TA" (rect 1178 2216 1224 2228)(font "Arial" ))
+	(pt 1168 2232)
+	(pt 1264 2232)
+)
+(connector
+	(text "ACP_CONF[31..0]" (rect 1146 2064 1238 2076)(font "Arial" ))
+	(pt 1136 2080)
+	(pt 1264 2080)
+	(bus)
+)
+(connector
+	(text "BLITTER_INT" (rect 1698 640 1765 652)(font "Arial" ))
+	(pt 1672 656)
+	(pt 1792 656)
+)
+(connector
+	(text "BLITTER_INT" (rect 1154 2168 1221 2180)(font "Arial" ))
+	(pt 1264 2184)
+	(pt 1144 2184)
+)
+(connector
+	(text "DSP_INT" (rect 1154 2192 1200 2204)(font "Arial" ))
+	(pt 1264 2208)
+	(pt 1144 2208)
+)
+(connector
+	(text "FPGA_DATE[31..0]" (rect 938 2880 1033 2892)(font "Arial" ))
+	(pt 928 2896)
+	(pt 1264 2896)
+	(bus)
 )
 (junction (pt 2504 760))
 (junction (pt 1856 -64))

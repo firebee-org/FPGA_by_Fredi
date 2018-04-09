@@ -190,8 +190,8 @@ begin
 		end if;	
 	end process DIG_PORTS;
 	-- Set port direction to input or to output:
-	IO_A_EN	<= '1' when CTRL_REG(6) = '1' else '0';  
-	IO_B_EN <= '1' when CTRL_REG(7) = '1' else '0';  
+	IO_A_EN	<= '1' when CTRL_REG(6) = '1' else '0';
+	IO_B_EN <= '1' when CTRL_REG(7) = '1' else '0';
 	IO_A_OUT <= PORT_A;
 	IO_B_OUT <= PORT_B;
 

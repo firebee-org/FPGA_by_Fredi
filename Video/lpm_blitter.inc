@@ -13,20 +13,13 @@
 --applicable agreement for further details.
 
 
-FUNCTION altsyncram0 
+FUNCTION lpm_blitter 
 (
-	address_a[3..0],
-	address_b[3..0],
-	byteena_a[1..0],
-	clock_a,
-	clock_b,
-	data_a[15..0],
-	data_b[15..0],
-	wren_a,
-	wren_b
+	clock,
+	data[63..0],
+	enable
 )
 
 RETURNS (
-	q_a[15..0],
-	q_b[15..0]
+	q[63..0]
 );

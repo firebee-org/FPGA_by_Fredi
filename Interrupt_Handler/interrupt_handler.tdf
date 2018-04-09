@@ -24,6 +24,7 @@ SUBDESIGN interrupt_handler
 	FB_SIZE0 : INPUT;
 	FB_SIZE1 : INPUT;
 	FB_ADR[31..0] : INPUT;
+	FPGA_DATE[31..0] : INPUT;
 	PIC_INT : INPUT;
 	E0_INT : INPUT;
 	DVI_INT : INPUT;
@@ -61,6 +62,7 @@ VARIABLE
 	INT_LA[9..0][3..0]		:DFF;
 	ACP_CONF[31..0]			:DFFE;
 	ACP_CONF_CS				:NODE;
+	FPGA_DATE_CS			:NODE;
 	PSEUDO_BUS_ERROR		:NODE;
 	UHR_AS					:NODE;
 	UHR_DS					:NODE;
@@ -201,6 +203,9 @@ TIN0 = !nFB_CS1 & FB_ADR[19..1]==H"7C100" & !nFB_WR;			-- WRITE VIDEO BASE ADR H
 	ACP_CONF[15..8].ENA  = ACP_CONF_CS & FB_B2 & !nFB_WR;
 	ACP_CONF[7..0].ENA   = ACP_CONF_CS & FB_B3 & !nFB_WR;
 --***************************************************************************************
+-- FPGA DATE HEX (ddmmyyyy)
+	FPGA_DATE_CS = !nFB_CS2 & FB_ADR[27..2]==H"10040";		-- $4'0000/4
+--***************************************************************************************
 	
 --------------------------------------------------------------	
 -- C1287   0=SEK 2=MIN 4=STD 6=WOCHENTAG 7=TAG 8=MONAT 9=JAHR
@@ -288,7 +293,8 @@ TIN0 = !nFB_CS1 & FB_ADR[19..1]==H"7C100" & !nFB_WR;			-- WRITE VIDEO BASE ADR H
 				  #	INT_LATCH_CS & INT_LATCH[31..24]
 				  # INT_CLEAR_CS & INT_IN[31..24]
 				  # ACP_CONF_CS  & ACP_CONF[31..24]
-				  ,(INT_CTR_CS # INT_ENA_CS # INT_LATCH_CS # INT_CLEAR_CS # ACP_CONF_CS) & !nFB_OE);
+				  # FPGA_DATE_CS  & FPGA_DATE[31..24]
+				  ,(INT_CTR_CS # INT_ENA_CS # INT_LATCH_CS # INT_CLEAR_CS # ACP_CONF_CS # FPGA_DATE_CS) & !nFB_OE);
 	FB_AD[23..16] = lpm_bustri_BYT(
 				   WERTE[][0] & RTC_ADR[]==0 & UHR_DS 
 				 # WERTE[][1] & RTC_ADR[]==1 & UHR_DS
@@ -360,21 +366,24 @@ TIN0 = !nFB_CS1 & FB_ADR[19..1]==H"7C100" & !nFB_WR;			-- WRITE VIDEO BASE ADR H
 				 # INT_LATCH_CS & INT_LATCH[23..16]
 				 # INT_CLEAR_CS & INT_IN[23..16]
 				 # ACP_CONF_CS  & ACP_CONF[23..16]
-				  ,(UHR_DS # UHR_AS # INT_CTR_CS # INT_ENA_CS # INT_LATCH_CS # INT_CLEAR_CS # ACP_CONF_CS) & !nFB_OE);
+				 # FPGA_DATE_CS  & FPGA_DATE[23..16]
+				  ,(UHR_DS # UHR_AS # INT_CTR_CS # INT_ENA_CS # INT_LATCH_CS # INT_CLEAR_CS # ACP_CONF_CS # FPGA_DATE_CS) & !nFB_OE);
 	FB_AD[15..8] = lpm_bustri_BYT(
 					INT_CTR_CS   & INT_CTR[15..8] 
 				  #	INT_ENA_CS   & INT_ENA[15..8]
 				  #	INT_LATCH_CS & INT_LATCH[15..8]
 				  # INT_CLEAR_CS & INT_IN[15..8]
 				  # ACP_CONF_CS  & ACP_CONF[15..8]
-				  ,(INT_CTR_CS # INT_ENA_CS # INT_LATCH_CS # INT_CLEAR_CS # ACP_CONF_CS) & !nFB_OE);
+				  # FPGA_DATE_CS  & FPGA_DATE[15..8]
+				  ,(INT_CTR_CS # INT_ENA_CS # INT_LATCH_CS # INT_CLEAR_CS # ACP_CONF_CS # FPGA_DATE_CS) & !nFB_OE);
 	FB_AD[7..0] = lpm_bustri_BYT(
 					INT_CTR_CS   & INT_CTR[7..0] 
 				  #	INT_ENA_CS   & INT_ENA[7..0]
 				  #	INT_LATCH_CS & INT_LATCH[7..0]
 				  # INT_CLEAR_CS & INT_IN[7..0]
 				  # ACP_CONF_CS  & ACP_CONF[7..0]
-				  ,(INT_CTR_CS # INT_ENA_CS # INT_LATCH_CS # INT_CLEAR_CS # ACP_CONF_CS) & !nFB_OE);
+				  # FPGA_DATE_CS  & FPGA_DATE[7..0]
+				  ,(INT_CTR_CS # INT_ENA_CS # INT_LATCH_CS # INT_CLEAR_CS # ACP_CONF_CS # FPGA_DATE_CS) & !nFB_OE);
 
 	INT_HANDLER_TA = INT_CTR_CS # INT_ENA_CS # INT_LATCH_CS # INT_CLEAR_CS;
 END;

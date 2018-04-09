@@ -1,5 +1,0 @@
-v1
-DSP_BALANCING_IMPLEMENTATION,DSP_BLOCKS,Video:Fredi_Aschwanden|VIDEO_MOD_MUX_CLUTCTR:VIDEO_MOD_MUX_CLUTCTR|lpm_mult:op_12|mult_aat:auto_generated|mac_out2,
-DSP_BALANCING_IMPLEMENTATION,DSP_BLOCKS,Video:Fredi_Aschwanden|VIDEO_MOD_MUX_CLUTCTR:VIDEO_MOD_MUX_CLUTCTR|lpm_mult:op_6|mult_aat:auto_generated|mac_out2,
-DSP_BALANCING_IMPLEMENTATION,DSP_BLOCKS,Video:Fredi_Aschwanden|VIDEO_MOD_MUX_CLUTCTR:VIDEO_MOD_MUX_CLUTCTR|lpm_mult:op_14|mult_cat:auto_generated|mac_out2,
-PORT_SWAPPING,PORT_SWAPPING_FINISHED,Video:Fredi_Aschwanden|VIDEO_MOD_MUX_CLUTCTR:VIDEO_MOD_MUX_CLUTCTR|lpm_mult:op_14|mult_cat:auto_generated|mac_mult1,

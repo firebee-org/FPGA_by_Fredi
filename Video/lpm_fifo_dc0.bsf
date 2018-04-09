@@ -4,7 +4,7 @@ editor if you plan to continue editing the block that represents it in
 the Block Editor! File corruption is VERY likely to occur.
 */
 /*
-Copyright (C) 1991-2008 Altera Corporation
+Copyright (C) 1991-2010 Altera Corporation
 Your use of Altera Corporation's design tools, logic functions 
 and other software and tools, and its AMPP partner logic 
 functions, and any output files from any of the foregoing 
@@ -68,8 +68,8 @@ applicable agreement for further details.
 	(port
 		(pt 160 72)
 		(output)
-		(text "wrusedw[8..0]" (rect 0 0 84 14)(font "Arial" (font_size 8)))
-		(text "wrusedw[8..0]" (rect 69 66 132 79)(font "Arial" (font_size 8)))
+		(text "wrusedw[10..0]" (rect 0 0 92 14)(font "Arial" (font_size 8)))
+		(text "wrusedw[10..0]" (rect 63 66 132 79)(font "Arial" (font_size 8)))
 		(line (pt 160 72)(pt 144 72)(line_width 3))
 	)
 	(port
@@ -79,15 +79,8 @@ applicable agreement for further details.
 		(text "q[127..0]" (rect 99 90 141 103)(font "Arial" (font_size 8)))
 		(line (pt 160 96)(pt 144 96)(line_width 3))
 	)
-	(port
-		(pt 160 120)
-		(output)
-		(text "rdempty" (rect 0 0 46 14)(font "Arial" (font_size 8)))
-		(text "rdempty" (rect 102 114 140 127)(font "Arial" (font_size 8)))
-		(line (pt 160 120)(pt 144 120)(line_width 1))
-	)
 	(drawing
-		(text "128 bits x 512 words" (rect 58 140 144 152)(font "Arial" ))
+		(text "128 bits x 2048 words" (rect 53 140 144 152)(font "Arial" ))
 		(line (pt 16 16)(pt 144 16)(line_width 1))
 		(line (pt 144 16)(pt 144 152)(line_width 1))
 		(line (pt 144 152)(pt 16 152)(line_width 1))

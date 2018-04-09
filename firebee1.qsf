@@ -567,8 +567,93 @@ set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
 set_global_assignment -name MISC_FILE "C:/FireBee/FPGA/firebee1.dpf"
 set_location_assignment PIN_E5 -to LPDIR
 set_location_assignment PIN_B11 -to nRSTO_MCF
-set_global_assignment -name SOURCE_FILE Video/BLITTER/lpm_clshift0.cmp
-set_global_assignment -name AHDL_FILE Video/BLITTER/lpm_clshift0.tdf
+set_instance_assignment -name PASSIVE_RESISTOR "PULL-UP" -to E0_INT
+set_instance_assignment -name PASSIVE_RESISTOR "PULL-UP" -to DVI_INT
+set_instance_assignment -name PASSIVE_RESISTOR "PULL-UP" -to nPCI_INTA
+set_instance_assignment -name PASSIVE_RESISTOR "PULL-UP" -to nPCI_INTB
+set_instance_assignment -name PASSIVE_RESISTOR "PULL-UP" -to nPCI_INTC
+set_instance_assignment -name PASSIVE_RESISTOR "PULL-UP" -to nPCI_INTD
+set_location_assignment PIN_AB12 -to CLK33MDIR
+set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
+set_location_assignment PIN_E12 -to MIDI_IN_PIN
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MINIMUM CURRENT" -to MIDI_IN_PIN
+set_instance_assignment -name PASSIVE_RESISTOR "PULL-UP" -to MIDI_IN_PIN
+set_instance_assignment -name WEAK_PULL_UP_RESISTOR ON -to MIDI_IN_PIN
+set_instance_assignment -name PCI_IO ON -to nPCI_INTA
+set_instance_assignment -name PCI_IO ON -to nPCI_INTB
+set_instance_assignment -name PCI_IO ON -to nPCI_INTC
+set_instance_assignment -name PCI_IO ON -to nPCI_INTD
+set_instance_assignment -name WEAK_PULL_UP_RESISTOR ON -to nACSI_DRQ
+set_instance_assignment -name WEAK_PULL_UP_RESISTOR ON -to nACSI_INT
+set_instance_assignment -name WEAK_PULL_UP_RESISTOR ON -to nPCI_INTA
+set_instance_assignment -name WEAK_PULL_UP_RESISTOR ON -to nPCI_INTB
+set_instance_assignment -name WEAK_PULL_UP_RESISTOR ON -to nPCI_INTC
+set_instance_assignment -name WEAK_PULL_UP_RESISTOR ON -to nPCI_INTD
+set_instance_assignment -name WEAK_PULL_UP_RESISTOR ON -to SD_WP
+set_instance_assignment -name WEAK_PULL_UP_RESISTOR ON -to SD_CARD_DEDECT
+set_instance_assignment -name PASSIVE_RESISTOR "PULL-UP" -to nDACK1
+set_instance_assignment -name PASSIVE_RESISTOR "PULL-UP" -to TOUT0
+set_instance_assignment -name PASSIVE_RESISTOR "PULL-UP" -to MAIN_CLK
+set_instance_assignment -name PASSIVE_RESISTOR "PULL-UP" -to CLK33MDIR
+set_instance_assignment -name PASSIVE_RESISTOR "PULL-UP" -to nRSTO_MCF
+set_instance_assignment -name PASSIVE_RESISTOR "PULL-UP" -to nDACK0
+set_instance_assignment -name WEAK_PULL_UP_RESISTOR ON -to nIRQ[2]
+set_instance_assignment -name PASSIVE_RESISTOR "PULL-UP" -to nIRQ[3]
+set_instance_assignment -name WEAK_PULL_UP_RESISTOR ON -to TIN0
+set_instance_assignment -name PASSIVE_RESISTOR "PULL-UP" -to TIN0
+set_instance_assignment -name WEAK_PULL_UP_RESISTOR ON -to nIRQ[6]
+set_instance_assignment -name WEAK_PULL_UP_RESISTOR ON -to nIRQ[5]
+set_instance_assignment -name WEAK_PULL_UP_RESISTOR ON -to nIRQ[4]
+set_instance_assignment -name PASSIVE_RESISTOR "PULL-UP" -to nIRQ[4]
+set_instance_assignment -name PASSIVE_RESISTOR "PULL-UP" -to nIRQ[5]
+set_instance_assignment -name PASSIVE_RESISTOR "PULL-UP" -to nIRQ[6]
+set_instance_assignment -name WEAK_PULL_UP_RESISTOR ON -to nIRQ[3]
+set_instance_assignment -name PASSIVE_RESISTOR "PULL-UP" -to nIRQ[2]
+set_global_assignment -name POWER_USE_TA_VALUE 35
+set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "NO HEAT SINK WITH STILL AIR"
+set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to DSA_D
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to nMOT_ON
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to nSTEP_DIR
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to nSTEP
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to nWR
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to nWR_GATE
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to nSDSEL
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to SCSI_PAR
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to SCSI_DIR
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to nSCSI_SEL
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to nSCSI_RST
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to nSCSI_BUSY
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to nSCSI_ATN
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to nSCSI_ACK
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to ACSI_A1
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to nACSI_CS
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to ACSI_DIR
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to nACSI_ACK
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to nACSI_RESET
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to LPDIR
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to LP_STR
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to LP_D
+set_instance_assignment -name IO_STANDARD "3.0-V LVCMOS" -to LP_D
+set_instance_assignment -name IO_STANDARD "3.0-V LVCMOS" -to LPDIR
+set_instance_assignment -name IO_STANDARD "3.0-V LVCMOS" -to LP_STR
+set_instance_assignment -name IO_STANDARD "3.0-V LVCMOS" -to SRD
+set_instance_assignment -name IO_STANDARD "3.0-V LVCMOS" -to IO[0]
+set_instance_assignment -name IO_STANDARD "3.0-V LVCMOS" -to IO[8]
+set_instance_assignment -name IO_STANDARD "3.0-V LVCMOS" -to IO[7]
+set_instance_assignment -name IO_STANDARD "3.0-V LVCMOS" -to IO[6]
+set_instance_assignment -name IO_STANDARD "3.0-V LVCMOS" -to IO[5]
+set_instance_assignment -name IO_STANDARD "3.0-V LVCMOS" -to IO[4]
+set_instance_assignment -name IO_STANDARD "3.0-V LVCMOS" -to IO[3]
+set_instance_assignment -name IO_STANDARD "3.0-V LVCMOS" -to IO[2]
+set_instance_assignment -name IO_STANDARD "3.0-V LVCMOS" -to IO[1]
+set_instance_assignment -name IO_STANDARD "3.0-V LVCMOS" -to nSRBHE
+set_instance_assignment -name IO_STANDARD "3.0-V LVCMOS" -to nSRWE
+set_instance_assignment -name IO_STANDARD "3.0-V LVCMOS" -to nSRCS
+set_instance_assignment -name IO_STANDARD "3.0-V LVCMOS" -to nSRBLE
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to AMKB_RX
+set_location_assignment PIN_V2 -to nDREQ0
+set_global_assignment -name AHDL_FILE Video/BLITTER/lpm_clshift144.tdf
 set_global_assignment -name SOURCE_FILE Video/BLITTER/altsyncram0.cmp
 set_global_assignment -name AHDL_FILE Video/BLITTER/altsyncram0.tdf
 set_global_assignment -name SOURCE_FILE Video/altddio_bidir0.cmp
@@ -738,95 +823,15 @@ set_global_assignment -name SOURCE_FILE firebee1.fit.summary_alt
 set_global_assignment -name QIP_FILE altpll_reconfig1.qip
 set_global_assignment -name QIP_FILE altpll4.qip
 set_global_assignment -name QIP_FILE lpm_mux0.qip
-set_global_assignment -name QIP_FILE Video/BLITTER/lpm_clshift0.qip
-set_global_assignment -name SOURCE_FILE Video/BLITTER/blitter.tdf.ALT
 set_global_assignment -name QIP_FILE Video/BLITTER/altsyncram0.qip
-set_instance_assignment -name PASSIVE_RESISTOR "PULL-UP" -to E0_INT
-set_instance_assignment -name PASSIVE_RESISTOR "PULL-UP" -to DVI_INT
-set_instance_assignment -name PASSIVE_RESISTOR "PULL-UP" -to nPCI_INTA
-set_instance_assignment -name PASSIVE_RESISTOR "PULL-UP" -to nPCI_INTB
-set_instance_assignment -name PASSIVE_RESISTOR "PULL-UP" -to nPCI_INTC
-set_instance_assignment -name PASSIVE_RESISTOR "PULL-UP" -to nPCI_INTD
-set_location_assignment PIN_AB12 -to CLK33MDIR
-set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
 set_global_assignment -name QIP_FILE lpm_shiftreg0.qip
 set_global_assignment -name QIP_FILE lpm_counter1.qip
 set_global_assignment -name QIP_FILE altiobuf_bidir0.qip
-set_location_assignment PIN_E12 -to MIDI_IN_PIN
-set_instance_assignment -name CURRENT_STRENGTH_NEW "MINIMUM CURRENT" -to MIDI_IN_PIN
-set_instance_assignment -name PASSIVE_RESISTOR "PULL-UP" -to MIDI_IN_PIN
-set_instance_assignment -name WEAK_PULL_UP_RESISTOR ON -to MIDI_IN_PIN
-set_instance_assignment -name PCI_IO ON -to nPCI_INTA
-set_instance_assignment -name PCI_IO ON -to nPCI_INTB
-set_instance_assignment -name PCI_IO ON -to nPCI_INTC
-set_instance_assignment -name PCI_IO ON -to nPCI_INTD
-set_instance_assignment -name WEAK_PULL_UP_RESISTOR ON -to nACSI_DRQ
-set_instance_assignment -name WEAK_PULL_UP_RESISTOR ON -to nACSI_INT
-set_instance_assignment -name WEAK_PULL_UP_RESISTOR ON -to nPCI_INTA
-set_instance_assignment -name WEAK_PULL_UP_RESISTOR ON -to nPCI_INTB
-set_instance_assignment -name WEAK_PULL_UP_RESISTOR ON -to nPCI_INTC
-set_instance_assignment -name WEAK_PULL_UP_RESISTOR ON -to nPCI_INTD
-set_instance_assignment -name WEAK_PULL_UP_RESISTOR ON -to SD_WP
-set_instance_assignment -name WEAK_PULL_UP_RESISTOR ON -to SD_CARD_DEDECT
-set_instance_assignment -name PASSIVE_RESISTOR "PULL-UP" -to nDACK1
-set_instance_assignment -name PASSIVE_RESISTOR "PULL-UP" -to TOUT0
-set_instance_assignment -name PASSIVE_RESISTOR "PULL-UP" -to MAIN_CLK
-set_instance_assignment -name PASSIVE_RESISTOR "PULL-UP" -to CLK33MDIR
-set_instance_assignment -name PASSIVE_RESISTOR "PULL-UP" -to nRSTO_MCF
-set_instance_assignment -name PASSIVE_RESISTOR "PULL-UP" -to nDACK0
-set_instance_assignment -name WEAK_PULL_UP_RESISTOR ON -to nIRQ[2]
-set_instance_assignment -name PASSIVE_RESISTOR "PULL-UP" -to nIRQ[3]
-set_instance_assignment -name WEAK_PULL_UP_RESISTOR ON -to TIN0
-set_instance_assignment -name PASSIVE_RESISTOR "PULL-UP" -to TIN0
-set_instance_assignment -name WEAK_PULL_UP_RESISTOR ON -to nIRQ[6]
-set_instance_assignment -name WEAK_PULL_UP_RESISTOR ON -to nIRQ[5]
-set_instance_assignment -name WEAK_PULL_UP_RESISTOR ON -to nIRQ[4]
-set_instance_assignment -name PASSIVE_RESISTOR "PULL-UP" -to nIRQ[4]
-set_instance_assignment -name PASSIVE_RESISTOR "PULL-UP" -to nIRQ[5]
-set_instance_assignment -name PASSIVE_RESISTOR "PULL-UP" -to nIRQ[6]
-set_instance_assignment -name WEAK_PULL_UP_RESISTOR ON -to nIRQ[3]
-set_instance_assignment -name PASSIVE_RESISTOR "PULL-UP" -to nIRQ[2]
-set_global_assignment -name POWER_USE_TA_VALUE 35
-set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "NO HEAT SINK WITH STILL AIR"
-set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
-set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to DSA_D
-set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to nMOT_ON
-set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to nSTEP_DIR
-set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to nSTEP
-set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to nWR
-set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to nWR_GATE
-set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to nSDSEL
-set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to SCSI_PAR
-set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to SCSI_DIR
-set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to nSCSI_SEL
-set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to nSCSI_RST
-set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to nSCSI_BUSY
-set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to nSCSI_ATN
-set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to nSCSI_ACK
-set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to ACSI_A1
-set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to nACSI_CS
-set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to ACSI_DIR
-set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to nACSI_ACK
-set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to nACSI_RESET
-set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to LPDIR
-set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to LP_STR
-set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to LP_D
-set_instance_assignment -name IO_STANDARD "3.0-V LVCMOS" -to LP_D
-set_instance_assignment -name IO_STANDARD "3.0-V LVCMOS" -to LPDIR
-set_instance_assignment -name IO_STANDARD "3.0-V LVCMOS" -to LP_STR
-set_instance_assignment -name IO_STANDARD "3.0-V LVCMOS" -to SRD
-set_instance_assignment -name IO_STANDARD "3.0-V LVCMOS" -to IO[0]
-set_instance_assignment -name IO_STANDARD "3.0-V LVCMOS" -to IO[8]
-set_instance_assignment -name IO_STANDARD "3.0-V LVCMOS" -to IO[7]
-set_instance_assignment -name IO_STANDARD "3.0-V LVCMOS" -to IO[6]
-set_instance_assignment -name IO_STANDARD "3.0-V LVCMOS" -to IO[5]
-set_instance_assignment -name IO_STANDARD "3.0-V LVCMOS" -to IO[4]
-set_instance_assignment -name IO_STANDARD "3.0-V LVCMOS" -to IO[3]
-set_instance_assignment -name IO_STANDARD "3.0-V LVCMOS" -to IO[2]
-set_instance_assignment -name IO_STANDARD "3.0-V LVCMOS" -to IO[1]
-set_instance_assignment -name IO_STANDARD "3.0-V LVCMOS" -to nSRBHE
-set_instance_assignment -name IO_STANDARD "3.0-V LVCMOS" -to nSRWE
-set_instance_assignment -name IO_STANDARD "3.0-V LVCMOS" -to nSRCS
-set_instance_assignment -name IO_STANDARD "3.0-V LVCMOS" -to nSRBLE
-set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to AMKB_RX
+set_global_assignment -name QIP_FILE lpm_mux1.qip
+set_global_assignment -name QIP_FILE Video/lpm_blitter.qip
+set_global_assignment -name AHDL_FILE Video/BLITTER/lpm_clshift384.tdf
+set_global_assignment -name INCLUDE_FILE Video/BLITTER/lpm_clshift383.inc
+set_global_assignment -name QIP_FILE Video/BLITTER/lpm_clshift384.qip
+set_global_assignment -name QIP_FILE Video/BLITTER/lpm_clshift144.qip
+set_global_assignment -name QIP_FILE FPGA_DATE.qip
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

@@ -6,8 +6,8 @@ INCLUDE "lpm_bustri_BYT.inc";
 
 -- FIFO WATER MARK
 CONSTANT FIFO_LWM = 0;
-CONSTANT FIFO_MWM = 200;
-CONSTANT FIFO_HWM = 500;
+CONSTANT FIFO_MWM = 1000;
+CONSTANT FIFO_HWM = 2000;
 
 -- {{ALTERA_PARAMETERS_BEGIN}} DO NOT REMOVE THIS LINE!
 -- {{ALTERA_PARAMETERS_END}} DO NOT REMOVE THIS LINE!
@@ -34,7 +34,7 @@ SUBDESIGN DDR_CTR
 	BLITTER_WR : INPUT;
 	DDRCLK0 : INPUT;
 	CLK33M : INPUT;
-	FIFO_MW[8..0] : INPUT;
+	FIFO_MW[10..0] : INPUT;
 	VA[12..0] : OUTPUT;
 	nVWE : OUTPUT;
 	nVRAS : OUTPUT;
@@ -205,26 +205,13 @@ BEGIN
 	DDR_REFRESH_ON = VIDEO_RAM_CTR2;
 	DDR_CONFIG = VIDEO_RAM_CTR3;	
 	FIFO_ACTIVE = VIDEO_RAM_CTR8;
---------------------------------
+----------------------------------------------------------------
+-- CPU ---------------------------
+--------------------------------------------------------
 	CPU_ROW_ADR[] = FB_ADR[26..14];
 	CPU_BA[] = FB_ADR[13..12];
 	CPU_COL_ADR[] = FB_ADR[11..2];
-	nVRAS = !VRAS;
-	nVCAS = !VCAS;
-	nVWE = !VWE;
-	SR_DDR_WR.CLK = DDRCLK0;
-	SR_DDRWR_D_SEL.CLK = DDRCLK0;
-	SR_VDMP[7..0].CLK = DDRCLK0;
-	SR_FIFO_WRE.CLK = DDRCLK0; 
 	CPU_AC.CLK = DDRCLK0;
-	FIFO_AC.CLK = DDRCLK0;
-	BLITTER_AC.CLK = DDRCLK0;
-	DDRWR_D_SEL1 = BLITTER_AC;
--- SELECT LOGIC
-	DDR_SEL  = FB_ALE & FB_AD[31..30]==B"01";
-	DDR_CS.CLK = MAIN_CLK;
-	DDR_CS.ENA = FB_ALE;
-	DDR_CS	 = DDR_SEL;
 -- WENN READ ODER WRITE B,W,L DDR SOFORT ANFORDERN, BEI WRITE LINE SPÄTER
 	CPU_SIG = DDR_SEL & (nFB_WR # !LINE)  & !DDR_CONFIG					-- NICHT LINE ODER READ SOFORT LOS WENN NICHT CONFIG
 			# DDR_SEL          			  &  DDR_CONFIG					-- CONFIG SOFORT LOS
@@ -234,6 +221,30 @@ BEGIN
 			# CPU_REQ & FB_REGDDR!=FR_S1 & FB_REGDDR!=FR_S3 & !BUS_CYC_END & !BUS_CYC;		-- HALTEN BUS CYC BEGONNEN ODER FERTIG
 	BUS_CYC.CLK = DDRCLK0;
 	BUS_CYC = BUS_CYC & !BUS_CYC_END;
+-- SELECT LOGIC
+	DDR_SEL  = FB_ALE & FB_AD[31..30]==B"01";
+	DDR_CS.CLK = MAIN_CLK;
+	DDR_CS.ENA = FB_ALE;
+	DDR_CS	 = DDR_SEL;
+---------------------------------------------------------------
+-- BLITTER ----------------------
+-----------------------------------------
+	BLITTER_REQ.CLK = DDRCLK0;
+	BLITTER_REQ = BLITTER_SIG & !DDR_CONFIG & VCKE & !nVCS;
+	BLITTER_ROW_ADR[] = BLITTER_ADR[26..14];
+	BLITTER_BA[] = BLITTER_ADR[13..12];
+	BLITTER_COL_ADR[] = BLITTER_ADR[11..2];
+	BLITTER_AC.CLK = DDRCLK0;
+	DDRWR_D_SEL1 = BLITTER_AC;
+---------------------------------------------------
+	nVRAS = !VRAS;
+	nVCAS = !VCAS;
+	nVWE = !VWE;
+	SR_DDR_WR.CLK = DDRCLK0;
+	SR_DDRWR_D_SEL.CLK = DDRCLK0;
+	SR_VDMP[7..0].CLK = DDRCLK0;
+	SR_FIFO_WRE.CLK = DDRCLK0; 
+	FIFO_AC.CLK = DDRCLK0;
 	-- STATE MACHINE SYNCHRONISIEREN -----------------
 	MCS[].CLK = DDRCLK0;
 	MCS0 = MAIN_CLK;
@@ -563,15 +574,6 @@ BEGIN
 			DDR_SM = DS_T1;
 	END CASE;
 
----------------------------------------------------------------
--- BLITTER ----------------------
------------------------------------------
-	BLITTER_REQ.CLK = DDRCLK0;
-	BLITTER_REQ = BLITTER_SIG & !DDR_CONFIG & VCKE & !nVCS;
-	BLITTER_ROW_ADR[] = BLITTER_ADR[26..14];
-	BLITTER_BA1 = BLITTER_ADR13;
-	BLITTER_BA0 = BLITTER_ADR12;
-	BLITTER_COL_ADR[] = BLITTER_ADR[11..2];
 ------------------------------------------------------------------------------	
 -- FIFO ---------------------------------
 --------------------------------------------------------

@@ -490,7 +490,7 @@ VDM[2]                       : U20       : output : 2.5 V             :         
 VD[7]                        : U21       : bidir  : 2.5 V             :         : 5         : Y              
 VDQS[2]                      : U22       : bidir  : 2.5 V             :         : 5         : Y              
 nPD_VGA                      : V1        : output : 3.3-V LVTTL       :         : 2         : Y              
-RESERVED_INPUT_WITH_WEAK_PULLUP : V2        :        :                   :         : 2         :                
+nDREQ0                       : V2        : output : 3.3-V LVTTL       :         : 2         : Y              
 nPCI_INTC                    : V3        : input  : 3.3-V LVTTL       :         : 2         : Y              
 nPCI_INTB                    : V4        : input  : 3.3-V LVTTL       :         : 2         : Y              
 RESERVED_INPUT_WITH_WEAK_PULLUP : V5        :        :                   :         : 3         :                

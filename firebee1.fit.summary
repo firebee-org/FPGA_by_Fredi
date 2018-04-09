@@ -1,16 +1,16 @@
-Fitter Status : Successful - Fri Aug 28 13:39:32 2015
+Fitter Status : Successful - Thu Apr 13 11:08:12 2017
 Quartus II Version : 9.1 Build 350 03/24/2010 SP 2 SJ Web Edition
 Revision Name : firebee1
 Top-level Entity Name : firebee1
 Family : Cyclone III
 Device : EP3C40F484C6
 Timing Models : Final
-Total logic elements : 10,207 / 39,600 ( 26 % )
-    Total combinational functions : 8,661 / 39,600 ( 22 % )
-    Dedicated logic registers : 5,025 / 39,600 ( 13 % )
-Total registers : 5162
-Total pins : 295 / 332 ( 89 % )
+Total logic elements : 20,945 / 39,600 ( 53 % )
+    Total combinational functions : 19,059 / 39,600 ( 48 % )
+    Dedicated logic registers : 5,696 / 39,600 ( 14 % )
+Total registers : 5845
+Total pins : 296 / 332 ( 89 % )
 Total virtual pins : 0
-Total memory bits : 109,600 / 1,161,216 ( 9 % )
-Embedded Multiplier 9-bit elements : 6 / 252 ( 2 % )
+Total memory bits : 355,360 / 1,161,216 ( 31 % )
+Embedded Multiplier 9-bit elements : 12 / 252 ( 5 % )
 Total PLLs : 4 / 4 ( 100 % )
