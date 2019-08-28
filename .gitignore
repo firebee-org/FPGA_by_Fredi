@@ -6,5 +6,7 @@ incremental_db
 *.sof
 *.rbf
 *.pin
+*.smsg
+*.jdi
 PLLJ_PLLSPE_INFO.txt
 
