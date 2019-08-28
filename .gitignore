@@ -3,3 +3,7 @@ db
 incremental_db
 *.rpt
 *.summary
+*.sof
+*.rbf
+PLLJ_PLLSPE_INFO.txt
+
