@@ -8,7 +8,7 @@ endif
 BITSTREAM=output_files/$(PROJ).sof
 BUILD_DIR=.
 
-PROJ=firebee1
+PROJ=firebeei1
 
 all: synthesis fitter assembler timing_analyzer eda
 
