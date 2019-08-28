@@ -753,8 +753,8 @@ set_global_assignment -name SOURCE_FILE altpll1.cmp
 set_global_assignment -name BDF_FILE firebee1.bdf
 set_global_assignment -name QIP_FILE altpll0.qip
 set_global_assignment -name QIP_FILE lpm_counter0.qip
-set_global_assignment -name VHDL_FILE "C:\\firebee\\FPGA\\FalconIO_SDCard_IDE_CF\\FalconIO_SDCard_IDE_CF.vhd"
-set_global_assignment -name VHDL_FILE "C:\\firebee\\FPGA\\DSP\\DSP.vhd"
+set_global_assignment -name VHDL_FILE "FalconIO_SDCard_IDE_CF/FalconIO_SDCard_IDE_CF.vhd"
+set_global_assignment -name VHDL_FILE "DSP/DSP.vhd"
 set_global_assignment -name QIP_FILE Video/lpm_shiftreg0.qip
 set_global_assignment -name QIP_FILE Video/altdpram0.qip
 set_global_assignment -name QIP_FILE Video/lpm_bustri1.qip
@@ -777,7 +777,7 @@ set_global_assignment -name QIP_FILE Video/lpm_latch1.qip
 set_global_assignment -name QIP_FILE Video/lpm_constant4.qip
 set_global_assignment -name QIP_FILE Video/lpm_shiftreg2.qip
 set_global_assignment -name QIP_FILE Video/lpm_compare1.qip
-set_global_assignment -name AHDL_FILE "C:\\firebee\\FPGA\\Interrupt_Handler\\interrupt_handler.tdf"
+set_global_assignment -name AHDL_FILE "Interrupt_Handler/interrupt_handler.tdf"
 set_global_assignment -name QIP_FILE lpm_bustri_LONG.qip
 set_global_assignment -name QIP_FILE lpm_bustri_BYT.qip
 set_global_assignment -name QIP_FILE lpm_bustri_WORD.qip
