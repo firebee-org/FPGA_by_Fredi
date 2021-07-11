@@ -35,13 +35,14 @@
 #
 # -------------------------------------------------------------------------- #
 
+set_global_assignment -name PRE_FLOW_SCRIPT_FILE "quartus_sh:precmd.tcl"
 
 
 # Project-Wide Assignments
 # ========================
 set_global_assignment -name ORIGINAL_QUARTUS_VERSION 8.1
 set_global_assignment -name PROJECT_CREATION_TIME_DATE "10:07:29  SEPTEMBER 03, 2009"
-set_global_assignment -name LAST_QUARTUS_VERSION 8.1
+set_global_assignment -name LAST_QUARTUS_VERSION 13.1
 set_global_assignment -name MISC_FILE "C:/firebee/FPGA/firebee1.dpf"
 
 # Pin & Location Assignments
@@ -348,7 +349,6 @@ set_global_assignment -name TSU_REQUIREMENT "1 ns"
 set_global_assignment -name TCO_REQUIREMENT "1 ns"
 set_global_assignment -name TH_REQUIREMENT "1 ns"
 set_global_assignment -name FMAX_REQUIREMENT "33 MHz"
-set_global_assignment -name USE_TIMEQUEST_TIMING_ANALYZER OFF
 
 # Analysis & Synthesis Assignments
 # ================================
@@ -635,6 +635,29 @@ set_instance_assignment -name IO_STANDARD "3.0-V LVCMOS" -to IO[8]
 set_instance_assignment -name SLEW_RATE 0 -to LP_D
 set_instance_assignment -name SLEW_RATE 0 -to LP_STR
 set_instance_assignment -name SLEW_RATE 0 -to LPDIR
+set_global_assignment -name CUT_OFF_PATHS_BETWEEN_CLOCK_DOMAINS ON
+set_global_assignment -name CUT_OFF_READ_DURING_WRITE_PATHS ON
+set_global_assignment -name CUT_OFF_IO_PIN_FEEDBACK ON
+set_global_assignment -name ANALYZE_LATCHES_AS_SYNCHRONOUS_ELEMENTS ON
+set_global_assignment -name FMAX_REQUIREMENT "33 MHz" -section_id Main
+set_instance_assignment -name CLOCK_SETTINGS Main -to MAIN_CLK
+set_global_assignment -name EDA_DESIGN_ENTRY_SYNTHESIS_TOOL "Design Compiler"
+set_global_assignment -name EDA_INPUT_VCC_NAME VDD -section_id eda_design_synthesis
+set_global_assignment -name EDA_LMF_FILE altsyn.lmf -section_id eda_design_synthesis
+set_global_assignment -name EDA_INPUT_DATA_FORMAT EDIF -section_id eda_design_synthesis
+set_global_assignment -name TIMEQUEST_DO_REPORT_TIMING ON
+set_global_assignment -name SYNCHRONIZER_IDENTIFICATION OFF
+set_global_assignment -name TIMEQUEST_DO_CCPP_REMOVAL ON
+set_instance_assignment -name AUTO_GLOBAL_CLOCK ON -to MAIN_CLK
+set_location_assignment PLL_1 -to "altpll3:inst13|altpll:altpll_component|altpll_9j03:auto_generated|pll1"
+set_location_assignment PLL_3 -to "altpll2:inst12|altpll:altpll_component|altpll_1r33:auto_generated|pll1"
+set_location_assignment PLL_2 -to "altpll4:inst22|altpll:altpll_component|altpll_r4n2:auto_generated|pll1"
+
+set_location_assignment PLL_4 -to "altpll1:inst|altpll:altpll_component|altpll_hsp2:auto_generated|pll1"
+
+set_global_assignment -name SDC_FILE firebee1.sdc
+set_global_assignment -name VHDL_FILE compile_date.vhd
+set_global_assignment -name VHDL_FILE datetime.vhd
 set_global_assignment -name SOURCE_FILE Video/BLITTER/lpm_ror128.cmp
 set_global_assignment -name AHDL_FILE Video/BLITTER/lpm_ror128.tdf
 set_global_assignment -name AHDL_FILE Video/BLITTER/lpm_clshift144.tdf
@@ -753,8 +776,8 @@ set_global_assignment -name SOURCE_FILE altpll1.cmp
 set_global_assignment -name BDF_FILE firebee1.bdf
 set_global_assignment -name QIP_FILE altpll0.qip
 set_global_assignment -name QIP_FILE lpm_counter0.qip
-set_global_assignment -name VHDL_FILE "FalconIO_SDCard_IDE_CF/FalconIO_SDCard_IDE_CF.vhd"
-set_global_assignment -name VHDL_FILE "DSP/DSP.vhd"
+set_global_assignment -name VHDL_FILE FalconIO_SDCard_IDE_CF/FalconIO_SDCard_IDE_CF.vhd
+set_global_assignment -name VHDL_FILE DSP/DSP.vhd
 set_global_assignment -name QIP_FILE Video/lpm_shiftreg0.qip
 set_global_assignment -name QIP_FILE Video/altdpram0.qip
 set_global_assignment -name QIP_FILE Video/lpm_bustri1.qip
@@ -777,7 +800,7 @@ set_global_assignment -name QIP_FILE Video/lpm_latch1.qip
 set_global_assignment -name QIP_FILE Video/lpm_constant4.qip
 set_global_assignment -name QIP_FILE Video/lpm_shiftreg2.qip
 set_global_assignment -name QIP_FILE Video/lpm_compare1.qip
-set_global_assignment -name AHDL_FILE "Interrupt_Handler/interrupt_handler.tdf"
+set_global_assignment -name AHDL_FILE Interrupt_Handler/interrupt_handler.tdf
 set_global_assignment -name QIP_FILE lpm_bustri_LONG.qip
 set_global_assignment -name QIP_FILE lpm_bustri_BYT.qip
 set_global_assignment -name QIP_FILE lpm_bustri_WORD.qip
@@ -801,7 +824,6 @@ set_global_assignment -name QIP_FILE FalconIO_SDCard_IDE_CF/dcfifo0.qip
 set_global_assignment -name QIP_FILE FalconIO_SDCard_IDE_CF/dcfifo1.qip
 set_global_assignment -name QIP_FILE Video/lpm_muxDZ.qip
 set_global_assignment -name QIP_FILE Video/lpm_muxVDM.qip
-set_global_assignment -name SOURCE_FILE firebee1.fit.summary_alt
 set_global_assignment -name QIP_FILE altpll_reconfig1.qip
 set_global_assignment -name QIP_FILE altpll4.qip
 set_global_assignment -name QIP_FILE lpm_mux0.qip
@@ -819,10 +841,4 @@ set_global_assignment -name QIP_FILE FPGA_DATE.qip
 set_global_assignment -name QIP_FILE Video/Doppelzeilen_Fifo.qip
 set_global_assignment -name QIP_FILE Video/shiftreg_dpz.qip
 set_global_assignment -name QIP_FILE Video/BLITTER/lpm_ror128.qip
-set_global_assignment -name CUT_OFF_PATHS_BETWEEN_CLOCK_DOMAINS ON
-set_global_assignment -name CUT_OFF_READ_DURING_WRITE_PATHS ON
-set_global_assignment -name CUT_OFF_IO_PIN_FEEDBACK ON
-set_global_assignment -name ANALYZE_LATCHES_AS_SYNCHRONOUS_ELEMENTS ON
-set_global_assignment -name FMAX_REQUIREMENT "33 MHz" -section_id Main
-set_instance_assignment -name CLOCK_SETTINGS Main -to MAIN_CLK
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

@@ -1,6 +1,8 @@
-
+datetime.vhd
 db
 incremental_db
+greybox_tmp
+*.bak
 *.rpt
 *.summary
 *.sof
@@ -8,5 +10,6 @@ incremental_db
 *.pin
 *.smsg
 *.jdi
+*.cdf
 PLLJ_PLLSPE_INFO.txt
 
